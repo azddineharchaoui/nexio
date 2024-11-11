@@ -66,6 +66,75 @@
 
     </header>
     
+
+    <section class="personnaliser px-24 w-2/3">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <label class="block w-2/3" for="processeur">Processeur : </label>
+    
+            </div>
+            <div class="col-span-1">
+                <select class="bg-gray-300 rounded w-2/3" id="processeur">
+                    <option label="intel">Intel</option>
+                    <option label="AMD">AMD</option>
+                </select>
+            </div>
+            <div class="col-span-1">
+                <select class="bg-gray-300 rounded w-2/3" id="intel">
+                    <option value="0">Core i3-13100F</option>
+                    <option value="1">Core i5-13600K</option>
+                    <option value="2">Core i9-13900K</option>
+                    <option value="3">Core i7-13700K</option>
+                    <option value="4">Core i5-13400</option>
+                </select>
+            </div>
+            
+            <div class="col-span-1">
+                <label class="block w-2/3" for="CG">Carte Graphique  : </label>
+            </div>
+            <div class="col-span-1">
+                <select class="bg-gray-300 rounded w-2/3" id="CG">
+                    <option label="Nvidia">Nvidia</option>
+                    <option label="AMD">AMD</option>
+                    <option label="Intel">Intel</option>
+                </select>
+            </div>
+            <div class="col-span-1">
+                <select class="bg-gray-300 rounded w-2/3" id="Nvidia">
+                    <option value="0">RTX 4090</option>
+                    <option value="1">RTX 4070</option>
+                    <option value="2">GeForce RTX 4060</option>
+                    <option value="3">GeForce RTX 4080</option>
+                    <option value="4">RTX 4060 Ti</option>
+                </select>
+            </div>
+            
+            <div class="col-span-1 ">
+                <label class="block w-2/3" for="Stockage">Stockage : </label>
+            </div>
+            <div class="col-span-1">
+                <select class="bg-gray-300 rounded w-2/3" id="Stockage">
+                    <option label="250">250 Gb</option>
+                    <option label="500">500 Gb</option>
+                    <option label="1000">1 Tb</option>
+                </select>
+            </div>
+            <div class="col-span-1"></div>
+    
+            <div class="col-span-1">
+                <label class="block w-2/3" for="Stockage">Stockage : </label>
+            </div>
+            <div class="col-span-1 flex ">
+                <img src="./img/boutonmoins.png"> <span class="quantity text-2xl px-4">1</span> <img src="./img/buttonplus.png">
+            </div>
+            <div class="col-span-1">
+                <button class="bg-yellow-400 rounded-2xl p-2">Ajouter au panier</button>
+            </div>
+          </div>
+        </section>
+
+
+        
     <!--footer-->
     <footer class="bg-black dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
