@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier</title>
+    <title>Panier Nexio</title>
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .sticky-container {
+            bottom: 0;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
+<body class="bg-gray-100 flex flex-col font-sans min-h-screen">
 
     <!--header-->
     <header class="bg-black text-white p-4">
@@ -32,12 +37,11 @@
                 </button>
             </div>
 
-            <nav id="menu" class="hidden lg:flex  space-x-6 justify-center 
-            border-2 border-white rounded-full ml-96">
-                <a href="index.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Home</a>
-                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Catalogue</a>
-                <a href="contact.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Contact Us </a>
-                <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">About Us</a>
+            <nav id="menu" class="hidden lg:flex space-x-6 justify-center flex-1">
+                <a href="index.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Home</a>
+                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Catalogue</a>
+                <a href="contact.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Contact Us </a>
+                <a href="about.html" class="hover:bg-white hover:text-black rounded px-3 py-1">About Us</a>
             </nav>
 
             <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1 justify-end lg:justify-end">
@@ -51,6 +55,7 @@
 
                 <a href="#panier" class="text-white hover:text-gray-300">
                     <img src="./img/Cart.png" alt="cart logo">
+                    <span id="cart-count" class="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
                 </a>
             </div>
         </div>
@@ -66,6 +71,27 @@
 
     </header>
 
+    <main class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Panier <span id="compteurPanier">0</span></h1>
+        <div  class="grid lg:grid-cols-4 gap-4">
+            <div class="lg:col-span-3" id="cart-items">
+                <!-- insert items added here  -->
+            </div>
+        
+
+
+        <div class="lg:col-span-1">
+            <div class="bg-white p-4 rounded-lg shadow sticky-container">
+                <h2 class="text-lg font-bold mb-4">Résumé de votre commande</h2>
+                <p>Prix total: <span id="total-price">0,00dhs</span></p>
+                <p>Total (0 articles): <span id="total-items">0,00dhs</span></p>
+                <button class="w-full bg-yellow-500 text-white py-2 rounded-lg mt-4" onclick="validateOrder()">Valider ma commande</button>
+                <button class="w-full bg-gray-500 text-white py-2 rounded-lg mt-2" onclick="requestQuote()">Demander un devis</button>
+                <button class="w-full bg-red-500 text-white py-2 rounded-lg mt-2" onclick="clearCart()">Vider mon panier</button>
+            </div>
+        </div>
+        </div>
+    </main>
 
     <!--footer-->
     <footer class="bg-black dark:bg-gray-900">
@@ -154,8 +180,114 @@
             </div>
         </div>
     </footer>
+    <script src="js/data.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Chargement des produits dans le panier depuis localStorage
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Réinitialiser les éléments du panier
+            let totalPrice = 0;
+            let totalItems = 0;
 
-    <script src="./src/main.js"></script>
+            cart.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow', 'mb-4');
+                productElement.setAttribute('data-product-id', product.id);
+
+                productElement.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h2 class="text-xl font-bold">${product.nom}</h2>
+                            <p>${product.description}</p>
+                            <p>${product.prix}dhs</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <button class="text-red-500" onclick="removeItem(${product.id})">🗑️</button>
+                            <div class="flex items-center">
+                                <button class="px-2 py-1 bg-yellow-500 text-white rounded-l" onclick="decrementQuantity(${product.id})">-</button>
+                                <span class="px-4 py-1 bg-gray-200" id="quantity-${product.id}">${product.quantite}</span>
+                                <button class="px-2 py-1 bg-yellow-500 text-white rounded-r" onclick="incrementQuantity(${product.id})">+</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                cartItemsContainer.appendChild(productElement);
+
+                totalItems += product.quantite;
+                totalPrice += product.prix * product.quantite;
+            });
+
+            // Mettre à jour le résumé de la commande
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2) + 'dhs';
+            document.getElementById('total-items').textContent = totalItems.toFixed(2) + ' articles';
+        }
+
+        function updateCart() {
+            const cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
+            let totalItems = 0;
+
+            // Calcul du nombre total d'articles dans le panier
+            cart.forEach(product => {
+                totalItems += product.quantite;
+            });
+
+            // Mettre à jour le nombre d'articles dans le compteur du panier
+            document.getElementById('cart-count').textContent = totalItems;
+
+            // Mettre à jour l'affichage du panier
+            localStorage.setItem('arr_produits', JSON.stringify(cart));
+            loadCart(); // Recharger le panier avec les nouvelles valeurs
+        }
+
+
+        function removeItem(id) {
+            let cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
+            cart = cart.filter(item => item.id !== id);
+            localStorage.setItem('arr_produits', JSON.stringify(cart));
+            updateCart();
+        }
+
+        function incrementQuantity(id) {
+            let cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
+            const product = cart.find(item => item.id === id);
+            if (product) {
+                product.quantite += 1;
+                updateCart();
+            }
+        }
+
+        function decrementQuantity(id) {
+            let cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
+            const product = cart.find(item => item.id === id);
+            if (product && product.quantite > 1) {
+                product.quantite -= 1;
+                updateCart();
+            }
+        }
+
+        function clearCart() {
+            localStorage.removeItem('arr_produits');
+            updateCart();
+        }
+
+        // Fonction de validation de commande
+        function validateOrder() {
+            alert("Commande validée!");
+            clearCart();
+        }
+
+        // Fonction pour demander un devis
+        function requestQuote() {
+            alert("Demande de devis envoyée!");
+        }
+
+        // Charger le panier au démarrage
+        window.onload = loadCart;
+</script>
 
 </body>
 
