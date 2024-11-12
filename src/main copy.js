@@ -170,14 +170,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="flex flex-col justify-center p-2.5 w-full lg:p-10 lg:w-1/2 ">
                     <h3 class="lg:text-2xl  font-normal tracking-normal  leading-8  lg:leading-10">${prod.nom}-${prod.spec}</h3>
                     <br>
-                    <p class="lg:text-2xl  text-xl">Prix : $${prod.prix} </p>
+                    <p class="lg:text-2xl  text-xl">Prix : ${prod.prix} </p>
                 </div>
             </div>
     `;
     card.innerHTML = codeHtml ; 
     document.getElementById('product-list').appendChild(card);
     afficheSpec(prod.id_cat)
-    prixBase.innerHTML = `$${prod.prix}`; 
+    prixBase.innerHTML = prod.prix ; 
     prodAfficheSurPageDetail = prod ;  // au debut le produt a meme caracteristique de produit basic avant changement selon l option 
     
   }
@@ -326,76 +326,75 @@ document.addEventListener('DOMContentLoaded', function () {
   
  /** Event listener */
  //https://stackoverflow.com/questions/11957677/html-how-to-get-custom-attribute-of-option-tag-in-dropdown
-
-
-
-function gestionChangementPrix(selectElement, selectElementPrix,categorie) {
-  // si l prix d element   existe deja, on le supprime pour eviter les doublons
-  const elementPrixExist = document.getElementById(selectElementPrix);
-  if (elementPrixExist) {
-    elementPrixExist.remove();
+  selectStockagePhone.addEventListener("change" , function(){
+          // si l element exist on le supprime abord sinon on aura plusieur valeur a chaque fois qu il choisi un stock
+        if(document.getElementById("prixStockage")){
+          document.getElementById("prixStockage").remove() ; 
+        }
+        const   d = document.createElement("div") ;
+        d.setAttribute("id" , "prixStockage")
+        const selectoption =this.options[this.selectedIndex]
+        prix = selectoption.getAttribute('prix');
+        console.log(prix) ; 
+        d.innerHTML = ``
+        d.innerHTML = prix;
+        prixOptions.appendChild(d) ;   
+        calculPrixProduit(prodAfficheSurPageDetail, prix , "Memoire de stokage")
+  })
+  
+  
+  selectStockagePC.addEventListener("change" , function(){
+    // si l element exist on le supprime abord sinon on aura plusieur valeur a chaque fois qu il choisi un stock
+  if(document.getElementById("prixStockage")){
+    document.getElementById("prixStockage").remove() ;
   }
-  const divPrix = document.createElement("div");
-  divPrix.setAttribute("id", selectElementPrix); // prix de processeur / stock precise prix de quoi 
-  const optionSelect = selectElement.options[selectElement.selectedIndex];
-  const prix = optionSelect.getAttribute('prix');
-  divPrix.innerHTML =  `${categorie}  : $${prix} `;
-  prixOptions.appendChild(divPrix);
-  calculPrixProduit(prodAfficheSurPageDetail, prix, categorie);
+  const   d = document.createElement("div") ;
+  d.setAttribute("id" , "prixStockage")
+  const selectoption =this.options[this.selectedIndex]
+  prix = selectoption.getAttribute('prix');
+  console.log(prix) ; 
+  d.innerHTML = ``
+  d.innerHTML = prix;
+  divdetailPrix.appendChild(d) ;   
+  
+  calculPrixProduit(prodAfficheSurPageDetail, prix , "Memoire de stockage")
+})
+  
+  
+
+TypeProcesseur.addEventListener("change" , function(){
+  // si l element exist on le supprime abord sinon on aura plusieur valeur a chaque fois qu il choisi un stock
+if(document.getElementById("prixProcesseur")){
+  document.getElementById("prixProcesseur").remove() ; 
 }
+const   d = document.createElement("div") ;
+d.setAttribute("id" , "prixProcesseur")
+const selectoption =this.options[this.selectedIndex]
+prix = selectoption.getAttribute('prix');
+console.log(prix) ; 
+d.innerHTML = ``
+d.innerHTML = prix;
+divdetailPrix.appendChild(d) ;   
+calculPrixProduit(prodAfficheSurPageDetail, prix , "Processeur")
+})
 
 
-selectStockagePhone.addEventListener("change", function () {
-  gestionChangementPrix(this, "prixStockage", "Mémoire de stockage");
-});
-
-// Attacher l'événement pour le stockage du PC
-selectStockagePC.addEventListener("change", function () {
-  gestionChangementPrix(this, "prixStockage", "Mémoire de stockage");
-});
-
-// Attacher l'événement pour le processeur
-TypeProcesseur.addEventListener("change", function () {
-  gestionChangementPrix(this, "prixProcesseur", "Processeur");
-});
-
-// Attacher l'événement pour la carte graphique
-TypeGraphic.addEventListener("change", function () {
-  gestionChangementPrix(this, "prixGraphic",  "Carte Graphique");
-});
-
-
-document.getElementById("btnDecrement").addEventListener('click' ,  DecrementQteProdDetailProduit);
-document.getElementById("btnIncrement").addEventListener('click' ,  IncrementQteProdDetailProduit);
-
-
-const qteDetailProduit = document.getElementById("qteDetailProduit"); 
-
-function IncrementQteProdDetailProduit(){
-  let qte = parseInt(qteDetailProduit.getAttribute("cmp")); 
-  qte++;
-  console.log(qte);
-  qteDetailProduit.setAttribute("qte" , qte); 
-  qteDetailProduit.innerHTML = qte
+TypeGraphic.addEventListener("change" , function(){
+  // si l element exist on le supprime abord sinon on aura plusieur valeur a chaque fois qu il choisi un stock
+if(document.getElementById("prixGraphic")){
+  document.getElementById("prixGraphic").remove() ; 
 }
-function DecrementQteProdDetailProduit(){
-  console.log("hhhh") ; 
-  let qte = qteDetailProduit.getAttribute("cmp"); 
-  qte--;
-  console.log(qte);
-  qteDetailProduit.setAttribute("qte" , qte); 
-  qteDetailProduit.innerHTML = qte
+const   d = document.createElement("div") ;
+d.setAttribute("id" , "prixGraphic")
+const selectoption =this.options[this.selectedIndex]
+prix = selectoption.getAttribute('prix');
+console.log(prix) ;  
+d.innerHTML = ``
+d.innerHTML = prix;
+divdetailPrix.appendChild(d) ;  
 
-}
-
-
-
-
-
-
-
-
-
+calculPrixProduit(prodAfficheSurPageDetail, prix , "Carte Graphique")
+})
 
   //prodAfficheSurPageDetail
 function calculPrixProduit(prod, prixOption , option){
@@ -404,7 +403,7 @@ function calculPrixProduit(prod, prixOption , option){
  console.log(option );
    prixUnitaire = prod.prix ; 
   prixUnitaire  = parseInt(prixUnitaire) + parseInt(prixOption)
-  prixTotal.innerHTML = `$${prixUnitaire }` ; 
+  prixTotal.innerHTML = prixUnitaire ; 
   prod.prix = prixUnitaire ; 
   return prod; 
 } 
