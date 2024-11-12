@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détail</title>
     <link rel="stylesheet" href="./src/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: "kanit";
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
@@ -65,7 +75,124 @@
         </div>
 
     </header>
-    
+    <!-- principal -->
+    <section class="bg-white  w-full mb-10">
+        <div id="product-list" class="  m-4">
+            <!-- <div class="product-card flex   border-2 border-gray-200 m-2.5  p-2.5">
+                <img class="w-1/2 h-100  m-10" src="img/laptop1.jpg" alt="${prod.nom}">
+                <div class="flex flex-col justify-center p-10 ">
+                    <h3 class="text-4xl font-normal tracking-normal  leading-10">Nexio Elitebook pro-intel core i5-RAM
+                        8Go-SSD 256Go</h3>
+                    <br>
+                    <p class="text-4xl">Prix : $329.00 </p>
+                </div>
+            </div>-->
+        </div>
+    </section>
+    <section class="bg-white  w-full  ">
+        <diV class="p-10 px-20">
+            <h3 class="text-4xl font-normal leading-6  mb-10">Fiche technique :</h3>
+            <ul class="list-disc m-5  text-xl">
+                <li>Processeur Intel Core i5 2,70 GHz (3,10 GHz turbo)</li>
+                <li> 8 Go de mémoire vive.</li>
+                <li> Stockage disque 256 Go  SSD.</li>
+                <li> Wifi AC.</li>
+                <li> Bluetooth 4.0.</li>
+                <li> Webcam FaceTime HD 720p.</li>
+                <li> Carte graphique intégrée Intel Iris Graphics 6100. </li>
+            </ul>
+        </diV>
+    </section>
+    <section>
+        <diV class="p-10 px-20">
+            <h3 class="text-4xl font-normal leading-6  mb-10"> Personnaliser :</h3>
+
+            <div id="specPC" class="grid grid-cols-2 justify-bettwen  gap-10 border-1 border-gray-500  m-10 hidden">
+
+                <label> Espace de stokage </label>
+                <select id="selectStockagePC">
+
+                </select>
+                <label> Type de processeur </label>
+                <select id="selectProcesseur">
+
+                </select>
+                <label> Option de processeur </label>
+                <select id="selectTypeProcesseur">
+
+                </select>
+                <label> Type carte graphiquc</label>
+                <select id="SelectCarteGraphic">
+
+                </select>
+                <label> Type carte graphiquc</label>
+                <select id="SelectTypeCarteGraphic">
+
+                </select>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div id="specPhone" class="hidden border-2 border-red-500 m-4 bg-red-300">
+
+                <select id="selectStockagePhone">
+
+                </select>
+                <select id="processeur">
+                    <option value="Exynos"> Exynos </option>
+                    <option value="Snapdragon">Snapdragon</option>
+                </select>
+            </div>
+
+            <div id="specTelevision" class="flex justify-bettwen  gap-10 border-1 border-gray-500  m-4 hidden">
+                <select id="SelectTauxRafraichissemnt">
+
+                </select>
+            </div>
+
+
+            <div id="specElectro" class="flex justify-bettwen  gap-10 border-1 border-gray-500  m-4 hidden">
+                <select id="SelectlitrageElectro">
+
+                </select>
+            </div>
+
+            <div id="specSouris" class="flex justify-bettwen  gap-10 border-1 border-gray-500  m-4 hidden">
+                <select id="SelectDpi">
+
+                </select>
+            </div>
+
+            <div id="specCasque" class="flex justify-bettwen  gap-10 border-1 border-gray-500  m-4 hidden">
+                <select id="SelectTaille">
+
+                </select>
+            </div>
+
+
+
+
+            <h3 class="text-4xl font-normal leading-6  mb-10 ">Details Prix produit</h3>
+            <div id="detailPrix" class=" flex flex-col gap-2.5 bg-gray-100 ">
+              Total :  <div id="prixTotal"></div>
+              Prix Base : <div id="prixBase"></div>
+              Detail option :
+                
+            </div>
+        </div>
+
+    </section>
+
+
     <!--footer-->
     <footer class="bg-black dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -76,7 +203,7 @@
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                    
+
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Explore</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -122,7 +249,8 @@
                     </div>
 
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Evénement à venir</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Evénement à venir
+                        </h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li>
                                 <a href="#" class="hover:underline">Black Friday 2024</a>
@@ -133,7 +261,8 @@
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between flex justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Nexio™</a>. All Rights Reserved.</span>
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+                        class="hover:underline">Nexio™</a>. All Rights Reserved.</span>
                 <div class="flex space-x-4">
                     <a href="#" class="text-white hover:text-gray-300 text-2xl">
                         <i class="fab fa-facebook-f"></i>
