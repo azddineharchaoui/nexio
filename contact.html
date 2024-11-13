@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Play:wght@400;700&family=Sansita+Swashed:wght@300..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
@@ -65,10 +69,37 @@
         </div>
 
     </header>
-    
-    
+     <!--contact-->
+
+     <div class="flex flex-col items-center  mt-[50px] ml-[90px] w-2/4 ">
+        <p class="text-[#ECC013] text-3xl " >say hi to the team</p>
+        <h1 class="text-6xl">Contact us </h1>
+        <p class="text-[#ECC013] text-center text-3xl">feel free to contact us and we well get back <br>
+            to you a soon as we can</p>
+    </div>
+    <div class="grid grid-cols-2 mb-[50px] mx-[150px]">
+    <div class="flex flex-col flex-center mt-[50px] items-center ">
+        <label for="fullname"></label>
+        <input type="text" id="fullname" placeholder="   Fuul Name" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded"><br>
+        <label for="number"></label>
+        <input type="text"id="number" placeholder="   Phone number" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded"><br>
+        <label for="email"></label>
+        <input type="email"id="email" placeholder="   Enter your Email" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded"><br>
+        <textarea name="message" id="message" placeholder="   Enter your Message" class="w-[300px] bg-[#EFEEEE] h-[100px] rounded"></textarea><br>
+        <label for="Send"></label>
+        <input type="button" value="Send" id="Send" class="w-[300px] bg-[#ECC013] rounded-lg cursor-pointer text-xl">
+    </div>
+    <div class="mt-[50px] flex flex-col items-center  ">
+        <p class="text-[#ECC013] text-2xl">opening hours</p>
+        <p class="text-xl">Monday-Friday <br> 24/7</p>
+        <p class="text-[#ECC013] text-2xl">Addresse</p>
+        <p class="text-xl">Nexio Electronics <br>10 Rue de Rivoli <br>75004 Paris<br>France</p>
+        <p class="text-[#ECC013] text-2xl">Support</p>
+        <p class="text-xl">nexio@gmail.com <br> +02 31 6539-0636</p>
+    </div>
+   </div>    
     <!--footer-->
-    <footer class="bg-black dark:bg-gray-900">
+    <footer class="bg-black ">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
