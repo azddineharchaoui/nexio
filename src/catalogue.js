@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let btnelectro = document.getElementById("btn_electro");
     let btnheadphone = document.getElementById("btn_headphone");
     let btnMontre = document.getElementById("btn_Montre");
+    let btnMouse = document.getElementById("btn_Mouse");
     let btnPc = document.getElementById("btn_Pc");
     function filtreCategorie(id) {
         let newArr = arr_produits.filter((prod) => prod.id_cat === id);
@@ -98,6 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnMontre.addEventListener("click", function () {
         filtreCategorie(3);
+    })
+
+    btnMouse.addEventListener("click", function () {
+        filtreCategorie(5);
     })
 
     btnPc.addEventListener("click", function () {

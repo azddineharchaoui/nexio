@@ -442,55 +442,55 @@ let casq12 = {
 // Souris
 let souris1 = {
     id: 46,
-    nom: "mousNex",
+    nom: "Logitech MX Master 3",  // Marque réelle
     spec: "Sans fil, Bluetooth, capteur optique, 2 boutons programmables",
     couleur: "noir",
     dpi: 10,
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/souris.png",
     prix: 30,
     id_cat: 5, // Correspond à "souris"
 };
 
 let souris2 = {
     id: 47,
-    nom: "mSNex",
+    nom: "Razer DeathAdder V2",  // Marque réelle
     spec: "Filaire, USB, capteur laser, 3 boutons programmables",
     couleur: "noir",
     dpi: 10,
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/souris1.png",
     prix: 25,
     id_cat: 5
 };
 
 let souris3 = {
     id: 48,
-    nom: "Souris full",
+    nom: "Logitech G Pro X Superlight",  // Marque réelle
     spec: "Sans fil, Bluetooth, capteur optique, 5 boutons programmables",
     couleur: "noir",
     dpi: 10,
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/souris2.png",
     prix: 40,
     id_cat: 5
 };
 
 let souris4 = {
     id: 49,
-    nom: "mousPro",
+    nom: "SteelSeries Rival 600",  // Marque réelle
     spec: "Filaire, USB, capteur optique, 6 boutons programmables",
     couleur: "rouge",
     dpi: 1600,
-    image: "url_vers_image_mouspro.jpg",
+    image: "img/souris3.png",
     prix: 20,
     id_cat: 5
 };
 
 let souris5 = {
     id: 50,
-    nom: "NexAir Mouse",
+    nom: "Corsair Dark Core RGB/SE",  // Marque réelle
     spec: "Sans fil, Bluetooth, rechargeable, capteur laser",
     couleur: "argent",
     dpi: 2000,
-    image: "url_vers_image_air_mouse.jpg",
+    image: "img/souris4.png",
     prix: 50,
     id_cat: 5
 };
