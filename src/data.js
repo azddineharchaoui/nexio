@@ -1,25 +1,36 @@
-let produits ;
+let produits;
 
-  // data 
-  let phone1 = {
+// data 
+// smartphone
+let phone1 = {
     id: 10,
-    nom: "Nexio 14 Pro",
+    nom: "Samsung Galaxy A05",
     spec: "Smartphone Apple avec écran OLED 6.1 pouces",
     prix: 2000,
     id_cat: 1,
-    image: "./img/",
+    image: "img/phone.png",
     couleur: "noir",
     stockage: "250gb",
-    processeur: "Exynos"
+    processeur: "Exynos",
+    FicheTechnique: [
+        "Écran OLED 6.1 pouces",
+        "Processeur Exynos",
+        "Caméra arrière 50 MP",
+        "Batterie 5000 mAh",
+        "Mémoire RAM 4 GB",
+        "Stockage interne 250 GB",
+        "Support 5G",
+        "Android 13"
+    ],
 };
 
 let phone2 = {
     id: 11,
-    nom: "Nexio S23 Ultra",
+    nom: "REDMI 14C",
     spec: "Smartphone avec écran Dynamic AMOLED 6.8 pouces et caméra 200 MP",
     prix: 1300,
     id_cat: 1,
-    image: "url_vers_image_s23_ultra.jpg",
+    image: "img/phone1.png",
     couleur: "noir",
     stockage: "256gb",
     processeur: "Exynos"
@@ -27,22 +38,23 @@ let phone2 = {
 
 let phone3 = {
     id: 12,
-    nom: "Nexio S23 Ultra",
+    nom: "XIAOMI Redmi A3x",
     spec: "Smartphone avec écran Dynamic AMOLED 6.8 pouces et caméra 200 MP",
     prix: 1300,
     id_cat: 1,
-    image: "url_vers_image_s23_ultra.jpg",
+    image: "img/phone2.png",
     couleur: "noir",
     stockage: "250gb",
     processeur: "Exynos"
-};4
+};  
+
 let phone4 = {
     id: 13,
-    nom: "Nexio Fold",
+    nom: "OPPO Reno8 T",
     spec: "Smartphone pliable avec écran flexible AMOLED 7.2 pouces",
     prix: 2500,
     id_cat: 1,
-    image: "url_vers_image_fold.jpg",
+    image: "img/phone3.png",
     couleur: "argent",
     stockage: "512gb",
     processeur: "Snapdragon"
@@ -50,25 +62,109 @@ let phone4 = {
 
 let phone5 = {
     id: 14,
-    nom: "Nexio 13 Mini",
+    nom: "Samsung Galaxy S23+",
     spec: "Smartphone compact avec écran OLED 5.4 pouces",
     prix: 900,
     id_cat: 1,
-    image: "url_vers_image_mini.jpg",
+    image: "img/phone4.png",
     couleur: "rose",
     stockage: "128gb",
     processeur: "A15 Bionic"
 };
 
+let phone6 = {
+    id: 15,
+    nom: "Xiaomi Redmi Note 13 Pro",
+    spec: "Smartphone haut de gamme avec écran AMOLED 6.1 pouces",
+    prix: 849,
+    id_cat: 1,
+    image: "img/phone5.png",
+    couleur: "noir",
+    stockage: "128GB",
+    processeur: "Snapdragon 8 Gen 2"
+};
 
+let phone7 = {
+    id: 16,
+    nom: "Nokia C20",
+    spec: "Smartphone avec caméra 50MP et écran OLED 6.2 pouces",
+    prix: 699,
+    id_cat: 1,
+    image: "img/phone6.png",
+    couleur: "blanc",
+    stockage: "128GB",
+    processeur: "Google Tensor G3"
+};
 
-let PC1 = {
+let phone8 = {
+    id: 17,
+    nom: "Samsung Galaxy M53",
+    spec: "Smartphone performant avec écran AMOLED 6.7 pouces",
+    prix: 799,
+    id_cat: 1,
+    image: "img/phone7.png",
+    couleur: "vert",
+    stockage: "256GB",
+    processeur: "Snapdragon 8 Gen 2"
+};
+
+let phone9 = {
+    id: 18,
+    nom: "INFINIX NOTE 30",
+    spec: "Smartphone avec écran AMOLED 6.73 pouces et caméra Leica",
+    prix: 999,
+    id_cat: 1,
+    image: "img/phone8.png",
+    couleur: "bleu",
+    stockage: "256GB",
+    processeur: "Snapdragon 8 Gen 2"
+};
+
+let phone10 = {
+    id: 19,
+    nom: "HUAWEI NOVA",
+    spec: "Smartphone premium avec écran AMOLED 6.7 pouces et 5G",
+    prix: 1100,
+    id_cat: 1,
+    image: "img/phone9.png",
+    couleur: "gris",
+    stockage: "256GB",
+    processeur: "Snapdragon 8 Gen 1"
+};
+
+let phone11 = {
     id: 20,
-    nom: "Nex XPS 15",
+    nom: "APPLE iPhone 14 Pro",
+    spec: "Smartphone haut de gamme avec écran AMOLED 6.7 pouces et 5G",
+    prix: 749,
+    id_cat: 1,
+    image: "img/phone10.png",
+    couleur: "vert",
+    stockage: "128GB",
+    processeur: "Snapdragon 8 Gen 1"
+};
+
+let phone12 = {
+    id: 21,
+    nom: "OPPO A77s",
+    spec: "Smartphone haut de gamme avec écran AMOLED 6.7 pouces et 5G",
+    prix: 749,
+    id_cat: 1,
+    image: "img/phone11.png",
+    couleur: "vert",
+    stockage: "128GB",
+    processeur: "Snapdragon 8 Gen 1"
+};
+
+
+//laptop
+let PC1 = {
+    id: 22,
+    nom: "PC PORTABLE W11 LENOVO",
     spec: "Ordinateur portable Dell avec écran 15.6 pouces 4K OLED, processeur Intel i7-12700H, carte graphique Nvidia RTX 3050, 16GB RAM",
     prix: 1500,
     id_cat: 2,
-    image: "url_vers_image_dell_xps_15.jpg",
+    image: "img/lap.png",
     couleur: "noir",
     stockage: "250gb",
     processeur: { id: 1, marque: "AMD", nom: "Ryzen 5 7600", prix: 0 },
@@ -76,12 +172,12 @@ let PC1 = {
 };
 
 let PC2 = {
-    id: 21,
-    nom: "Nex OL 16",
+    id: 23,
+    nom: "ASUS ExpertBook B1",
     spec: "PC de jeu HP Omen 16 avec écran 16.1 pouces Full HD, processeur AMD Ryzen 7 5800H, carte graphique Nvidia RTX 3060, 32GB RAM",
     prix: 2200,
     id_cat: 2,
-    image: "url_vers_image_hp_omen_16.jpg",
+    image: "img/lap1.png",
     couleur: "noir",
     stockage: "250gb",
     processeur: { id: 1, marque: "AMD", nom: "Ryzen 5 7600", prix: 0 },
@@ -89,100 +185,273 @@ let PC2 = {
 };
 
 let PC3 = {
-    id: 22,
-    nom: "Nex MacBook Pro 16",
+    id: 24,
+    nom: "HP Victus PC Portable Gaming",
     spec: "Ordinateur portable Apple avec écran Retina 16 pouces, processeur Apple M1 Pro, carte graphique intégrée Apple, 32GB RAM",
     prix: 2800,
     id_cat: 2,
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/lap2.png",
     couleur: "noir",
     stockage: "250gb",
     processeur: { id: 1, marque: "AMD", nom: "Ryzen 5 7600", prix: 0 },
     carteGraphique: { id: 1, marque: "Nvidia", nom: "RTX 4090", prix: 0 }
 };
+
 let PC4 = {
-    id: 23,
-    nom: "Nex ZenBook Pro",
-    spec: "Ordinateur portable ASUS avec écran 14 pouces OLED, processeur Ryzen 9, 16GB RAM",
-    prix: 1800,
+    id: 25,
+    nom: "HUAWEI MateBook 14 2023", 
+    spec: "Ordinateur portable HUAWEI avec écran 14 pouces OLED, processeur Ryzen 9 5900HX, 16GB RAM", 
+    prix: 2000, 
     id_cat: 2,
-    image: "url_vers_image_zenbook_pro.jpg",
-    couleur: "bleu",
-    stockage: "512gb",
-    processeur: { id: 2, marque: "AMD", nom: "Ryzen 9 5900HX", prix: 0 },
+    image: "img/lap4.png",
+    couleur: "noir",
+    stockage: "1TB",
+    processeur: { id: 2, marque: "AMD", nom: "Ryzen 9 5900HX", prix: 100 },
     carteGraphique: { id: 2, marque: "Nvidia", nom: "RTX 3060", prix: 0 }
 };
 
 let PC5 = {
-    id: 24,
-    nom: "Nex Surface Laptop 5",
-    spec: "Ordinateur portable Microsoft avec écran 13.5 pouces PixelSense, Intel i5, 8GB RAM",
-    prix: 1200,
+    id: 26,
+    nom: "PC Portable INFINIX Inbook X1 Pro", 
+    spec: "Ordinateur portable INFINIX avec écran 13.5 pouces Full HD, Intel i5-1135G7, 8GB RAM, SSD 512GB", 
+    prix: 1300,
     id_cat: 2,
-    image: "url_vers_image_surface.jpg",
-    couleur: "platine",
-    stockage: "256gb",
-    processeur: { id: 3, marque: "Intel", nom: "Core i5-1135G7", prix: 0 },
+    image: "img/lap5.png",
+    couleur: "argenté", 
+    stockage: "512gb", 
+    processeur: { id: 3, marque: "Intel", nom: "Core i5-1135G7", prix: 50 }, 
     carteGraphique: { id: 3, marque: "Intel", nom: "Iris Xe", prix: 0 }
 };
+
+let PC6 = {
+    id: 27,
+    nom: "ACER PC PORTABLE ASPIRE 3 Pro", 
+    spec: "Ordinateur portable ACER avec écran 15.6 pouces, Intel i7-1165G7, 16GB RAM, SSD 512GB", 
+    prix: 1400, 
+    id_cat: 2,
+    image: "img/lap7.png",
+    couleur: "gris", 
+    stockage: "512gb", 
+    processeur: { id: 4, marque: "Intel", nom: "Core i7-1165G7", prix: 150 },
+    carteGraphique: { id: 4, marque: "Intel", nom: "Iris Xe", prix: 0 }
+};
+
+let PC7 = {
+    id: 28,
+    nom: "HP ProBook 440 G8 2023", 
+    spec: "HP ProBook 440 G8 avec écran 14 pouces, Intel i7-1185G7, 16GB RAM, 512GB SSD", 
+    prix: 1500, 
+    id_cat: 2,
+    image: "img/lap6.png",
+    couleur: "argent", 
+    stockage: "512gb", 
+    processeur: { id: 5, marque: "Intel", nom: "Core i7-1185G7", prix: 200 },
+    carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 }
+};
+
+let PC8 = {
+    id: 29,
+    nom: "PC portable Acer Aspire 2023", 
+    spec: "Ordinateur portable Acer avec écran 15.6 pouces, Intel i7-1165G7, 16GB RAM, 512GB SSD",
+    prix: 1450, 
+    id_cat: 2,
+    image: "img/lap8.png",
+    couleur: "argent", 
+    stockage: "512gb",
+    processeur: { id: 4, marque: "Intel", nom: "Core i7-1165G7", prix: 150 },
+    carteGraphique: { id: 4, marque: "Intel", nom: "Iris Xe", prix: 0 }
+};
+
+let PC9 = {
+    id: 30,
+    nom: "DELL LATITUDE 5540 2023", 
+    spec: "Ordinateur portable Dell avec écran 14 pouces, Intel i7-1185G7, 16GB RAM, 512GB SSD", 
+    prix: 1600, 
+    id_cat: 2,
+    image: "img/lap8.png",
+    couleur: "noir", 
+    stockage: "512gb",
+    processeur: { id: 5, marque: "Intel", nom: "Core i7-1185G7", prix: 200 },
+    carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 }
+};
+
+let PC10 = {
+    id: 31,
+    nom: "Acer Swift 3 2023", 
+    spec: "Ordinateur portable Acer avec écran 13.5 pouces, Intel i7-1165G7, 16GB RAM, 512GB SSD", 
+    prix: 1550, 
+    id_cat: 2,
+    image: "img/lap10.png",
+    couleur: "noir", 
+    stockage: "512gb",
+    processeur: { id: 5, marque: "Intel", nom: "Core i7-1165G7", prix: 200 },
+    carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 }
+};
+
+let PC11 = {
+    id: 32,
+    nom: "HUAWEI MateBook X Pro", 
+    spec: "Ordinateur portable Huawei avec écran 13.9 pouces, Intel i7-1185G7, 16GB RAM, SSD 512GB", 
+    prix: 1700, 
+    id_cat: 2,
+    image: "img/lap11.png",
+    couleur: "argenté", 
+    stockage: "512gb",    
+    processeur: { id: 5, marque: "Intel", nom: "Core i7-1185G7", prix: 200 },
+    carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 }
+};
+
+let PC12 = {
+    id: 33,
+    nom: "Apple MacBook Air M2 2023", 
+    spec: "MacBook Air avec puce M2, écran 15.3 pouces, 16GB RAM, 512GB SSD", 
+    prix: 1800, 
+    id_cat: 2,
+    image: "img/lap3.png",
+    couleur: "argenté", 
+    stockage: "512gb", 
+    processeur: { id: 6, marque: "Apple", nom: "Puce Apple M2", prix: 0 }, 
+    carteGraphique: { id: 6, marque: "Apple", nom: "Puce Apple M2", prix: 0 }
+};
+
 // Casques
 let casq1 = {
-    id: 30,
+    id: 34,
     spec: "Circum-aural, réduction de bruit active, Bluetooth 5.0, autonomie 20 heures",
     nom: "casque Nex 1",
     taille: "s",
     couleur: "noir",
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/headphone.png",
     prix: 120,
     id_cat: 6,// Correspond à "casque"
 };
 
 let casq2 = {
-    id: 31,
+    id: 35,
     spec: "Supra-aural, Bluetooth, autonomie 15 heures",
     nom: "cask N1",
     taille: "l",
     couleur: "noir",
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/headphone1.png",
     prix: 90,
     id_cat: 6,
 };
 
 let casq3 = {
-    id: 32,
+    id: 36,
     spec: "Intra-auriculaire, réduction de bruit passive, filaire",
     nom: "cask N1",
     taille: "m",
     couleur: "noir",
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/headphone2.png",
     prix: 50,
     id_cat: 6,
 };
+
+
 let casq4 = {
-    id: 33,
+    id: 37,
     spec: "Over-ear, réduction de bruit, autonomie 30 heures",
     nom: "casque Nex SoundMax",
     taille: "m",
     couleur: "blanc",
-    image: "url_vers_image_soundmax.jpg",
+    image: "img/headphone3.png",
     prix: 140,
     id_cat: 6,
 };
 
 let casq5 = {
-    id: 34,
+    id: 38,
     spec: "Intra-auriculaire, sans fil, Bluetooth 5.2, autonomie 10 heures",
     nom: "casque Nex AirPods",
     taille: "s",
     couleur: "argent",
-    image: "url_vers_image_airpods.jpg",
+    image: "img/headphone4.png",
     prix: 200,
     id_cat: 6,
 };
 
+let casq6 = {
+    id: 39,
+    spec: "Over-ear, sans fil, Bluetooth 5.3, autonomie 30 heures, réduction active du bruit",
+    nom: "Casque Audio NexSound Pro",
+    taille: "M",
+    couleur: "Noir",
+    image: "img/headphone5.png",
+    prix: 250,
+    id_cat: 6,
+};
+
+let casq7 = {
+    id: 40,
+    spec: "Intra-auriculaire, sans fil, Bluetooth 5.2, autonomie 10 heures, son haute fidélité",
+    nom: "Casque Audio Nex AirPods",
+    taille: "S",
+    couleur: "Argent",
+    image: "img/headphone6.png",
+    prix: 200,
+    id_cat: 6,
+};
+
+let casq8 = {
+    id: 41,
+    spec: "Casque supra-auriculaire, sans fil, Bluetooth 5.0, autonomie 15 heures, commande tactile",
+    nom: "Casque Bluetooth NexWave",
+    taille: "L",
+    couleur: "Bleu électrique",
+    image: "img/headphone4.png",
+    prix: 180,
+    id_cat: 6,
+};
+
+let casq9 = {
+    id: 42,
+    spec: "Intra-auriculaire, sans fil, Bluetooth 5.3, autonomie 12 heures, résistance à l'eau IPX7",
+    nom: "Casque Audio NexFit",
+    taille: "M",
+    couleur: "Noir mat",
+    image: "img/headphone7.png",
+    prix: 220,
+    id_cat: 6,
+};
+
+let casq10 = {
+    id: 43,
+    spec: "Over-ear, sans fil, Bluetooth 5.0, autonomie 20 heures, réduction passive du bruit",
+    nom: "Casque Audio NexMaster",
+    taille: "L",
+    couleur: "Gris argenté",
+    image: "img/headphone8.png",
+    prix: 230,
+    id_cat: 6,
+};
+
+let casq11 = {
+    id: 44,
+    spec: "Intra-auriculaire, sans fil, Bluetooth 5.1, autonomie 8 heures, son stéréo dynamique",
+    nom: "Casque NexBass",
+    taille: "S",
+    couleur: "Rouge",
+    image: "img/headphone9.png",
+    prix: 150,
+    id_cat: 6,
+};
+
+let casq12 = {
+    id: 45,
+    spec: "Casque supra-auriculaire, sans fil, Bluetooth 5.0, autonomie 25 heures, confortable et léger",
+    nom: "Casque Audio NexSport",
+    taille: "M",
+    couleur: "Vert",
+    image: "img/headphone7.png",
+    prix: 200,
+    id_cat: 6,
+};
+
+
 // Souris
 let souris1 = {
-    id: 40,
+    id: 46,
     nom: "mousNex",
     spec: "Sans fil, Bluetooth, capteur optique, 2 boutons programmables",
     couleur: "noir",
@@ -193,7 +462,7 @@ let souris1 = {
 };
 
 let souris2 = {
-    id: 41,
+    id: 47,
     nom: "mSNex",
     spec: "Filaire, USB, capteur laser, 3 boutons programmables",
     couleur: "noir",
@@ -204,7 +473,7 @@ let souris2 = {
 };
 
 let souris3 = {
-    id: 42,
+    id: 48,
     nom: "Souris full",
     spec: "Sans fil, Bluetooth, capteur optique, 5 boutons programmables",
     couleur: "noir",
@@ -213,19 +482,20 @@ let souris3 = {
     prix: 40,
     id_cat: 5
 };
+
 let souris4 = {
-    id: 43,
+    id: 49,
     nom: "mousPro",
     spec: "Filaire, USB, capteur optique, 6 boutons programmables",
     couleur: "rouge",
     dpi: 1600,
     image: "url_vers_image_mouspro.jpg",
     prix: 20,
-    id_cat:5
+    id_cat: 5
 };
 
 let souris5 = {
-    id: 44,
+    id: 50,
     nom: "NexAir Mouse",
     spec: "Sans fil, Bluetooth, rechargeable, capteur laser",
     couleur: "argent",
@@ -237,7 +507,7 @@ let souris5 = {
 
 // Télévisions
 let television1 = {
-    id: 50,
+    id: 51,
     nom: "TV Ultra HD Samsung",
     spec: "Résolution 4K, OLED, Smart TV, HDMI 2.1",
     image: "url_vers_image_tv_samsung.jpg",
@@ -248,35 +518,36 @@ let television1 = {
 };
 
 let television2 = {
-    id: 51,
+    id: 52,
     nom: "LG NanoCell",
     spec: "Résolution 8K, NanoCell, AI ThinQ, HDMI 2.1",
     image: "url_vers_image_tv_lg.jpg",
     couleur: "gris",
     tauxDeRafraichissement: "60Hz",
     prix: 1200,
-    id_cat: 3 
+    id_cat: 3
 };
+
 let television3 = {
-    id: 52,
+    id: 53,
     nom: "Sony Bravia 65\"",
     spec: "Résolution 4K, OLED, Google TV intégré",
     image: "url_vers_image_bravia.jpg",
     couleur: "noir",
     tauxDeRafraichissement: "120Hz",
     prix: 1500,
-    id_cat: 3 
+    id_cat: 3
 };
 
 let television4 = {
-    id: 53,
+    id: 54,
     nom: "TCL 50\" QLED",
     spec: "Résolution 4K, QLED, Dolby Vision, HDMI 2.1",
     image: "url_vers_image_tcl.jpg",
     couleur: "noir",
     tauxDeRafraichissement: "60Hz",
     prix: 600,
-    id_cat: 3 
+    id_cat: 3
 };
 // Moniteurs
 let moniteur1 = {
@@ -287,7 +558,7 @@ let moniteur1 = {
     couleur: "noir",
     tauxDeRafraichissement: "144Hz",
     prix: 250,
-    id_cat: 3 
+    id_cat: 3
 };
 
 let moniteur2 = {
@@ -298,8 +569,9 @@ let moniteur2 = {
     couleur: "argent",
     tauxDeRafraichissement: "60Hz",
     prix: 350,
-    id_cat: 3 
+    id_cat: 3
 };
+
 let moniteur3 = {
     id: 62,
     nom: "Samsung Odyssey G9",
@@ -308,7 +580,7 @@ let moniteur3 = {
     couleur: "noir",
     tauxDeRafraichissement: "240Hz",
     prix: 1200,
-    id_cat: 3 
+    id_cat: 3
 };
 
 let moniteur4 = {
@@ -319,7 +591,7 @@ let moniteur4 = {
     couleur: "noir",
     tauxDeRafraichissement: "144Hz",
     prix: 450,
-    id_cat: 3 
+    id_cat: 3
 };
 
 // Réfrigérateurs
@@ -342,8 +614,9 @@ let refrigerateur2 = {
     image: "url_vers_image_refrigerateur_lg.jpg",
     litrage: "500L",
     prix: 1000,
-    id_cat: 4 
+    id_cat: 4
 };
+
 let refrigerateur3 = {
     id: 72,
     nom: "Réfrigérateur Haier 3D",
@@ -352,7 +625,7 @@ let refrigerateur3 = {
     image: "url_vers_image_haier.jpg",
     litrage: "400L",
     prix: 700,
-    id_cat: 4 
+    id_cat: 4
 };
 
 let refrigerateur4 = {
@@ -363,7 +636,7 @@ let refrigerateur4 = {
     image: "url_vers_image_sharp.jpg",
     litrage: "450L",
     prix: 950,
-    id_cat: 4 
+    id_cat: 4
 };
 
 // Machines à Laver
@@ -375,7 +648,7 @@ let machineLaver1 = {
     image: "url_vers_image_machine_laver_bosch.jpg",
     litrage: "8kg",
     prix: 400,
-    id_cat: 4 
+    id_cat: 4
 };
 
 let machineLaver2 = {
@@ -386,7 +659,7 @@ let machineLaver2 = {
     image: "url_vers_image_machine_laver_whirlpool.jpg",
     litrage: "7kg",
     prix: 350,
-    id_cat: 4 
+    id_cat: 4
 };
 let machineLaver3 = {
     id: 82,
@@ -396,7 +669,7 @@ let machineLaver3 = {
     image: "url_vers_image_lg_turbowash.jpg",
     litrage: "9kg",
     prix: 500,
-    id_cat: 4 
+    id_cat: 4
 };
 
 let machineLaver4 = {
@@ -407,7 +680,7 @@ let machineLaver4 = {
     image: "url_vers_image_electrolux.jpg",
     litrage: "8kg",
     prix: 450,
-    id_cat: 4  
+    id_cat: 4
 };
 
 
@@ -420,7 +693,7 @@ let microOnde1 = {
     image: "url_vers_image_micro_ondes_panasonic.jpg",
     litrage: "30L",
     prix: 150,
-    id_cat: 4 
+    id_cat: 4
 };
 
 let microOnde2 = {
@@ -431,7 +704,7 @@ let microOnde2 = {
     image: "url_vers_image_micro_ondes_samsung.jpg",
     litrage: "23L",
     prix: 120,
-    id_cat: 4 
+    id_cat: 4
 };
 let microOnde3 = {
     id: 92,
@@ -441,10 +714,10 @@ let microOnde3 = {
     image: "url_vers_image_neochef.jpg",
     litrage: "25L",
     prix: 160,
-    id_cat: 4 
+    id_cat: 4
 };
 
-let microOnde4 = {  
+let microOnde4 = {
     id: 93,
     nom: "Micro-ondes Bosch Serie 4",
     spec: "AutoPilot, fonction grill, 5 niveaux de puissance",
@@ -452,7 +725,7 @@ let microOnde4 = {
     image: "url_vers_image_bosch.jpg",
     litrage: "28L",
     prix: 200,
-    id_cat: 4 
+    id_cat: 4
 };
 
 
@@ -460,11 +733,11 @@ let microOnde4 = {
 
 
 
-  produits =[phone1 , phone2 , phone3 , phone4 , phone5 , PC1 , PC2 , PC3 , PC4 , PC5 , casq1 , casq2 , casq3 , casq4 , casq5 , souris1
-    , souris2 , souris3 , souris4 , souris5 , television1 , television2 , television3 , television4 , moniteur1 , moniteur2 , moniteur3 , moniteur4 , 
-    machineLaver1 , machineLaver2 , machineLaver3 , machineLaver4 , microOnde1 , microOnde2, microOnde3 , microOnde4 , refrigerateur1 , refrigerateur2 , 
-    refrigerateur3 , refrigerateur4
-  ] ; 
+produits = [phone1, phone2, phone3, phone4, phone5, phone6, phone7, phone8, phone9, phone10, phone11, phone12, PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, PC11, PC12, casq1, casq2, casq3, casq4, casq5, casq6, casq7, casq8, casq9, casq10, casq11, casq12, souris1
+    , souris2, souris3, souris4, souris5, television1, television2, television3, television4, moniteur1, moniteur2, moniteur3, moniteur4,
+    machineLaver1, machineLaver2, machineLaver3, machineLaver4, microOnde1, microOnde2, microOnde3, microOnde4, refrigerateur1, refrigerateur2,
+    refrigerateur3, refrigerateur4
+];
 
 
 
@@ -472,6 +745,6 @@ let microOnde4 = {
 
 
 
-  /* stock en local storage */
-  
-  localStorage.setItem("arr_produits" , JSON.stringify(produits)) ; 
+/* stock en local storage */
+
+localStorage.setItem("arr_produits", JSON.stringify(produits)); 

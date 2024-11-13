@@ -19,18 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// appel au fonction sur les pages :
-if (window.location.pathname === "/index.html") {
-  affihcheAll(arr_produits, pageStart, pageEnd);
-} else if (window.location.pathname === "/detail.html") {
-  // console.log(location.search)  //  par exemple ?id=12
-  const param = new URLSearchParams(window.location.search);
-  const id = param.get("id"); // Récupère la valeur de 'id'
-  //  console.log(id); // Affiche 12
-  afficheDetail(id);
-}
-
-
 
 let arr_produits = JSON.parse(localStorage.getItem("arr_produits"));
 //console.log( arr_produits ) ;
@@ -181,13 +169,15 @@ function getproduit(id_produit) {
   return prod;
 }
 function afficheProduit(id_produit) {
-  let prod = getproduit(id_produit);
-
+  console.log("produit") ;
+  console.log(produit) ;
+    let prod = getproduit(id_produit);
+    console.log(prod) ;
   let card = document.createElement("card");
 
   let codeHtml = `
           <div class="product-card  border-2 border-gray-200 m-2.5  p-2.5">
-              <img class="mx-auto "src="img/10.jpg" alt="${prod.nom}">
+              <img class="mx-auto "src="${prod.image}" alt="${prod.nom}">
               <h3>${prod.nom}</h3>
               <p>${prod.spec}</p>
               <p>Prix : ${prod.prix} €</p>
@@ -217,13 +207,17 @@ function affihcheAll(arr_produits, start, end) {
 /********  Mina *********************** */
 /************************************** */
 
+
+const SelectTauxDeRafraich = document.getElementById("SelectTauxRafraichissemnt");
+const SelectLitrage = document.getElementById("SelectlitrageElectro");
+const SelectTaille = document.getElementById("SelectTaille");
+const SelectDpi = document.getElementById("SelectDpi");
+
+const selectStockagePhone = document.getElementById("selectStockagePhone");
+const selectProcesseurPhone = document.getElementById("selectProcesseurPhone");
+const selectStockagePC = document.getElementById("selectStockagePC");
 const SelectProcesseur = document.getElementById("selectProcesseur");
 const SelectCarteGraphic = document.getElementById("SelectCarteGraphic");
-const TypeTauxDeRafraich = document.getElementById("SelectTauxRafraichissemnt");
-const TypeLitrage = document.getElementById("SelectlitrageElectro");
-const TypeTaille = document.getElementById("SelectTaille");
-const selectStockagePhone = document.getElementById("selectStockagePhone");
-const selectStockagePC = document.getElementById("selectStockagePC");
 // const divdetailPrix= document.getElementById("detailPrix");
 const TypeProcesseur = document.getElementById("selectTypeProcesseur");
 const TypeGraphic = document.getElementById("SelectTypeCarteGraphic");
@@ -232,13 +226,14 @@ const divPrixConfigure = document.getElementById("PrixConfigure");
 const prixOptions = document.getElementById("prixOptions");
 const prixTotal = document.getElementById("prixTotal");
 const divQte = document.getElementById("divqte");
+
 let prodAfficheSurPageDetail; // faire une copie de produit pour manipule et le rendre ligne de cmd apres
 
 function afficheDetail(id_produit) {
   let prod = getproduit(id_produit);
   let card = document.createElement("card");
   let codeHtml = ` <div class="product-card flex lg:flex-row flex-col  ">
-                <div class="w-full lg:w-1/2"><img class="w-full h-100  lg-m-10" src="img/laptop1.jpg" alt="${prod.nom}"></div>
+                <div class="w-full lg:w-1/2"><img class="w-full h-100  lg-m-10" src="${prod.image}" alt="${prod.nom}"></div>
                 <div class="flex flex-col justify-center p-2.5 w-full lg:p-10 lg:w-1/2 ">
                     <h3 class="lg:text-2xl  font-normal tracking-normal  leading-8  lg:leading-10">${prod.nom}-${prod.spec}</h3>
                     <br>
@@ -248,6 +243,14 @@ function afficheDetail(id_produit) {
     `;
   card.innerHTML = codeHtml;
   document.getElementById("product-list").appendChild(card);
+
+  let codeHTMLficheTechnique="" ; 
+ prod.FicheTechnique.forEach((f)=>{
+  codeHTMLficheTechnique +=`<li>${f}</li>`
+
+ }) ; 
+  codeHTMLficheTechnique +=` <li id="couleur"> couleur : <span> ${prod.couleur} <span> </li>`
+  document.getElementById("ulFicheTechnique").innerHTML = codeHTMLficheTechnique;
   afficheSpec(prod.id_cat);
   
 
@@ -267,14 +270,22 @@ function afficheDetail(id_produit) {
 }
 
 function afficheSpec(id_cat) {
-  //  console.log(" hello 2 : " +prod.id_cat)
+    console.log(" hello 2 : " +prod.id_cat)
 
-  const TypeDpi = document.getElementById("SelectDpi");
+ 
   switch (id_cat) {
     case 1: // phone
       //console.log("case 1  : " +prod.id_cat)
       document.getElementById("specPhone").classList.remove("hidden");
       afficheTypeStockagePhone();
+      processeurPhone.forEach((processeur) => {
+        const option = document.createElement("option");
+        option.setAttribute("prix" , processeur.prix);
+        option.value = processeur.id;
+        option.textContent = processeur.nom;
+        selectProcesseurPhone.appendChild(option);
+      });
+      break ; 
     //  console.log(" je suis telephone : " +prod.id_cat) ; break ;
     case 2: // pc
       document.getElementById("specPC").classList.remove("hidden");
@@ -311,17 +322,18 @@ function afficheSpec(id_cat) {
         option.setAttribute("prix", tauxRef.prix);
         option.value = tauxRef.id;
         option.textContent = `${tauxRef.taux}`;
-        TypeTauxDeRafraich.appendChild(option);
+        SelectTauxDeRafraich.appendChild(option);
       });
       break;
     case 4: // electro
       document.getElementById("specElectro").classList.remove("hidden");
+    console.log("fjsdhfs") ; 
       litrage.forEach((lit) => {
         const option = document.createElement("option");
         option.setAttribute("prix", lit.prix);
         option.value = lit.id;
         option.textContent = `${lit.taille}`;
-        TypeLitrage.appendChild(option);
+        SelectLitrage.appendChild(option);
       });
       break;
 
@@ -332,18 +344,18 @@ function afficheSpec(id_cat) {
         option.setAttribute("prix", dp.prix);
         option.value = dp.id;
         option.textContent = `${dp.niveau}`;
-        TypeDpi.appendChild(option);
+        SelectDpi.appendChild(option);
       });
       break;
 
     case 6: // casque
       document.getElementById("specCasque").classList.remove("hidden");
-      taillesCasque.forEach((dp) => {
+      taillesCasque.forEach((tc) => {
         const option = document.createElement("option");
-        option.setAttribute("prix", taillesCasque.prix);
-        option.value = dp.id;
-        option.textContent = `${taillesCasque.niveau}`;
-        TypeTaille.appendChild(option);
+        option.setAttribute("prix", tc.prix);
+        option.value = tc.id;
+        option.textContent = `${tc.taille}`;
+        SelectTaille.appendChild(option);
       });
       break;
     default:
@@ -403,7 +415,7 @@ function afficheTypeGraphic(id_graphic) {
 /** Event listener */
 //https://stackoverflow.com/questions/11957677/html-how-to-get-custom-attribute-of-option-tag-in-dropdown
 
-function gestionChangementPrix(selectElement, selectElementPrix, categorie) {
+function gestionChangementPrix(selectElement, selectElementPrix, option) {
   // si l prix d element   existe deja, on le supprime pour eviter les doublons
   const elementPrixExist = document.getElementById(selectElementPrix);
   if (elementPrixExist) {
@@ -413,30 +425,58 @@ function gestionChangementPrix(selectElement, selectElementPrix, categorie) {
   divPrix.setAttribute("id", selectElementPrix); // prix de processeur / stock precise prix de quoi
   const optionSelect = selectElement.options[selectElement.selectedIndex];
   const prix = optionSelect.getAttribute("prix");
-  divPrix.innerHTML = `<div class="flex justify-between px-2.5"><h5 class="text-gray-500"> ${categorie} : </h5>  <div >$${prix}</div></div>`;
+  divPrix.innerHTML = `<div class="flex justify-between px-2.5"><h5 class="text-gray-500"> ${option} : </h5>  <div >$${prix}</div></div>`;
   
   prixOptions.appendChild(divPrix);
-  calculPrixProduit(prodAfficheSurPageDetail, prix, categorie);
+  calculPrixProduit(prodAfficheSurPageDetail, prix, option);
 }
-
+// pc
 selectStockagePhone.addEventListener("change", function () {
   gestionChangementPrix(this, "prixStockage", "Mémoire de stockage");
 });
 
-// Attacher l'événement pour le stockage du PC
+
 selectStockagePC.addEventListener("change", function () {
   gestionChangementPrix(this, "prixStockage", "Mémoire de stockage");
 });
 
-// Attacher l'événement pour le processeur
+
 TypeProcesseur.addEventListener("change", function () {
   gestionChangementPrix(this, "prixProcesseur", "Processeur");
 });
 
-// Attacher l'événement pour la carte graphique
+
 TypeGraphic.addEventListener("change", function () {
   gestionChangementPrix(this, "prixGraphic", "Carte Graphique");
 });
+
+//phone
+selectProcesseurPhone.addEventListener("change", function () {
+  gestionChangementPrix(this, "prixProcesseur", "Processeur");
+});
+
+// electo 
+SelectLitrage.addEventListener("change", function () {
+  gestionChangementPrix(this, "prixLitrage", "Litrage");
+});
+
+// Television
+SelectTauxDeRafraich.addEventListener("change", function () {
+  gestionChangementPrix(this, "prixRafraich", "Rafraichissement");
+});
+
+// casque
+SelectTaille.addEventListener("change", function () {
+  gestionChangementPrix(this, "prixTraille", "TailleCasque");
+});
+
+// souri 
+SelectDpi.addEventListener("change", function () {
+  gestionChangementPrix(this, "prixDPI", "DPI");
+});
+
+
+
 
 document.getElementById("btnDecrement").addEventListener("click", DecrementQteProdDetailProduit);
 document.getElementById("btnIncrement").addEventListener("click", IncrementQteProdDetailProduit);
@@ -453,6 +493,7 @@ function IncrementQteProdDetailProduit() {
   qteDetailProduit.innerHTML = qte;
   let qpu = qte * prodAfficheSurPageDetail.PrixConfigure; //https://www.w3schools.com/js/js_object_property.asp
   prixTotal.innerHTML = `$${qpu}`;
+  prod.prixTotal = qpu;
   divQte.innerHTML = prodAfficheSurPageDetail.qte ; 
 }
 function DecrementQteProdDetailProduit() {
@@ -463,6 +504,7 @@ function DecrementQteProdDetailProduit() {
     qteDetailProduit.innerHTML = qte;
     let qpu = qte * prodAfficheSurPageDetail.PrixConfigure; //https://www.w3schools.com/js/js_object_property.asp
     prixTotal.innerHTML = `$${qpu}`;
+    prod.prixTotal = qpu;
     divQte.innerHTML = prodAfficheSurPageDetail.qte ; 
   }
 }
@@ -493,6 +535,7 @@ function calculPrixProduit(prod, prixOpt, opt) {
   }
    let qpu = qte * prod.PrixConfigure ;
   prixTotal.innerHTML = `$${qpu}`;
+  prod.prixTotal = qpu
   
   //https://www.w3schools.com/js/js_object_property.asp
 
@@ -517,12 +560,13 @@ function ajouterPanierDepuisPageDetail(){
       if (op.option === opt) {
         op.prixOption = prixOpt;
       }}); 
-    console.log(" prod.option: "  +prod.option.forEach   ) ; 
+    console.log(" prod.option: "  +prod.option  ) ; 
     console.log(" produitDansPanier.PrixConfigure : "  + produitDansPanier.PrixConfigure) ; 
       produitDansPanier.qte += prod.qte ; // Augmente la quantité si le produit existe déjà  
         produitDansPanier.prix = produitDansPanier.qte * produitDansPanier.prixUnitaire; 
         console.log(" exist au panier: "  ) ; 
   } else {
+     //produitDansPanier.prix = prod.prixTotal; 
       panier.push(prod);
   }
   localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier da
@@ -548,3 +592,19 @@ function ajouterPanierDepuisPageDetail(){
 
 
 
+
+
+
+// appel au fonction sur les pages :
+if (window.location.pathname === "/index.html") {
+  console.log("index.html");
+  affihcheAll(arr_produits, pageStart, pageEnd);
+} else if (window.location.pathname === "/detail.html") {
+  // console.log(location.search)  //  par exemple ?id=12
+  const param = new URLSearchParams(window.location.search);
+  const id = param.get("id"); // Récupère la valeur de 'id'
+   console.log("lkjkjlmjkkl"); // Affiche 12
+  afficheDetail(id);
+} else {
+  console.log(window.location.pathname );
+}
