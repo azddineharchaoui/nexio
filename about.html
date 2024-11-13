@@ -42,7 +42,8 @@
                 <a href="index.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Home</a>
                 <a href="catalogue.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Catalogue</a>
                 <a href="contact.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Contact Us </a>
-                <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1 bg-white text-black">About Us</a>
+                <a href="about.html"
+                    class="hover:bg-white hover:text-black rounded-full px-3 py-1 bg-white text-black">About Us</a>
             </nav>
 
             <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1 justify-end lg:justify-end">
@@ -120,18 +121,21 @@
                     new<br> standards in quality and customer<br> experience.</p>
             </div>
         </div>
-        <div class="hidden md:flex justify-around">
+        <div class="hidden md:flex justify-around gap-[6em] relative overflow-hidden" id="carousel-track">
             <img src="img/logo4.png" alt="nokia">
             <img src="img/logo3.png" alt="huawei">
             <img class="h-[162px]" src="img/logo2.png" alt="apple">
             <img src="img/logo1.png" alt="samsung">
+            <img src="img/logo4.png" alt="nokia">
+            <img src="img/logo3.png" alt="huawei">
         </div>
         <div>
             <h2 class="text-center text-[96px]">FAQ</h2>
             <div class="flex justify-around m-[20px]">
                 <div class="flex flex-col m-[20px] gap-y-[2em]">
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">What types of products does Nexio offer?</summary>
+                        <summary class="text-bold text-[24px] cursor-pointer">What types of products does Nexio offer?
+                        </summary>
                         <p class="text-[20px]">Nexio provides a wide range of electronics,<br>
                             including smartphones, laptops, refrigerators,<br>
                             and TVs, all designed with the latest technology<br>
@@ -139,7 +143,8 @@
                     </details>
 
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">How can I purchase Nexio products?</summary>
+                        <summary class="text-bold text-[24px] cursor-pointer">How can I purchase Nexio products?
+                        </summary>
                         <p class="text-[20px]">Nexio products are available on our official website<br> and through
                             select retailers worldwide. Visit
                             our<br> “Catalogue” page for more details.</p>
@@ -148,13 +153,15 @@
                 <br>
                 <div class="flex flex-col m-[20px] gap-y-[2em]">
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">Does Nexio offer product warranties?</summary>
+                        <summary class="text-bold text-[24px] cursor-pointer">Does Nexio offer product warranties?
+                        </summary>
                         <p class="text-[20px]">Yes, all Nexio products come with a one-year<br> warranty. Extended
                             warranty options are also<br>
                             available.</p>
                     </details>
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">Can I return a product if I am not satisfied?</summary>
+                        <summary class="text-bold text-[24px] cursor-pointer">Can I return a product if I am not
+                            satisfied?</summary>
                         <p class="text-[20px]">We want you to be fully satisfied with your purchase.<br> Our return
                             policy allows returns within 30 days
                             of<br> purchase, provided the product is in its original<br> condition. Visit our Returns &
@@ -255,6 +262,21 @@
     </footer>
 
     <script src="./src/main.js"></script>
+    <script>
+        const track = document.getElementById('carousel-track');
+        let position = 0;
+
+        function infiniteScroll() {
+            position -= 3.5;
+
+            if (position <= -track.scrollWidth / 1) {
+                position = 0;
+            }
+            track.style.transform = `translateX(${ position }px)`;
+            requestAnimationFrame(infiniteScroll);
+        }
+        infiniteScroll();
+    </script>
 
 </body>
 
