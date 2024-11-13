@@ -1,3 +1,13 @@
+/************************************** */
+/************************************** */
+/************************************** */
+/***** Partie commune             *****/
+/***************************************/
+/************************************** */
+/********  Mina *********************** */
+/************************************** */
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.getElementById("menu-button");
   const collapsedMenu = document.getElementById("collapsed-menu");
@@ -167,10 +177,14 @@ function affihcheAll(arr_produits, start, end) {
     afficheProduit(prod.id);
   });
 }
-
+/************************************** */
+/************************************** */
 /************************************** */
 /********* Page de Détail Produit : *****/
 /***************************************/
+/************************************** */
+/********  Mina *********************** */
+/************************************** */
 
 const SelectProcesseur = document.getElementById("selectProcesseur");
 const SelectCarteGraphic = document.getElementById("SelectCarteGraphic");
@@ -393,12 +407,8 @@ TypeGraphic.addEventListener("change", function () {
   gestionChangementPrix(this, "prixGraphic", "Carte Graphique");
 });
 
-document
-  .getElementById("btnDecrement")
-  .addEventListener("click", DecrementQteProdDetailProduit);
-document
-  .getElementById("btnIncrement")
-  .addEventListener("click", IncrementQteProdDetailProduit);
+document.getElementById("btnDecrement").addEventListener("click", DecrementQteProdDetailProduit);
+document.getElementById("btnIncrement").addEventListener("click", IncrementQteProdDetailProduit);
 
 const qteDetailProduit = document.getElementById("qteDetailProduit");
 let qte = parseInt(qteDetailProduit.getAttribute("qte"));
@@ -429,11 +439,8 @@ function DecrementQteProdDetailProduit() {
 //prodAfficheSurPageDetail
 function calculPrixProduit(prod, prixOpt, opt) {
   let prodexist = prod.arr_option.findIndex((op) => op.option == opt);
-  console.log(prodexist);
   if (!(prodexist == -1)) {
     // si  l option 'processeur' exist  donc je modifier prixopton sinon j ajout l option au arr option de produit
-    console.log("exist");
-    console.log(prod);
     prod.PrixConfigure = prod.prix;
     prod.arr_option.forEach((op) => {
       if (op.option === opt) {
@@ -448,10 +455,14 @@ function calculPrixProduit(prod, prixOpt, opt) {
     console.log("not exist");
     prod.PrixConfigure = parseFloat(prod.PrixConfigure) + parseFloat(prixOpt); // ici pas de probleme
     divPrixConfigure.innerHTML = `$${prod.PrixConfigure}`;
-    prod.arr_option.push({ option: opt, prixOption: parseFloat(prixOpt) });
+    //https://www.w3schools.com/js/js_object_property.asp
+ 
     //console.log(prod);
+    prod.arr_option.push({ option: opt, prixOption: parseFloat(prixOpt) });
   }
-
+   let qpu = qte * prod.PrixConfigure ;
+  prixTotal.innerHTML = `$${qpu}`;
+  
   //https://www.w3schools.com/js/js_object_property.asp
 
   return prod;
@@ -461,19 +472,43 @@ function calculPrixProduit(prod, prixOpt, opt) {
 document.getElementById("btnAjoutPanier").addEventListener('click' , function(){
   ajouterPanierDepuisPageDetail(prod)
 })
+
+
 function ajouterPanierDepuisPageDetail(){
   let prod = prodAfficheSurPageDetail ;
   let panier = JSON.parse(localStorage.getItem('panier')) || [];
   let produitDansPanier = panier.find(p => prod.id === p.id);
-  if (produitDansPanier && (prod.PrixConfigure ==  produitDansPanier.prixUnitaire) && (prod.PrixConfigure ==  produitDansPanier.PrixConfigure ) ) {
+  let index = panier.findIndex(p => prod.id === p.id);
+  console.log(" index : "  ) ; 
+  console.log( index ) ; 
+  if ((index>-1)   ) { //&& (prod.PrixConfigure  ==  produitDansPanier.PrixConfigure )
+    prod.arr_option.forEach((op) => {
+      if (op.option === opt) {
+        op.prixOption = prixOpt;
+      }}); 
+    console.log(" prod.option: "  +prod.option.forEach   ) ; 
+    console.log(" produitDansPanier.PrixConfigure : "  + produitDansPanier.PrixConfigure) ; 
       produitDansPanier.qte += prod.qte ; // Augmente la quantité si le produit existe déjà  
-        produitDansPanier.prix = produitDansPanier.qte * produitDansPanier.prixUnitaire;      
+        produitDansPanier.prix = produitDansPanier.qte * produitDansPanier.prixUnitaire; 
+        console.log(" exist au panier: "  ) ; 
   } else {
       panier.push(prod);
   }
   localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier da
 }
 
+
+
+
+
+/************************************** */
+/************************************** */
+/************************************** */
+/******Fin Page de Détail Produit : *****/
+/***************************************/
+/************************************** */
+/********  Mina *********************** */
+/************************************** */
 
 
 // appel au fonction sur les pages :
@@ -491,7 +526,20 @@ if (window.location.pathname === "/index.html") {
 
 
 
-//chat 
+/************************************** */
+/************************************** */
+/************************************** */
+/***** Partie commune             *****/
+/***************************************/
+/************************************** */
+/********  Mina *********************** */
+/************************************** */
+
+
+
+
+
+//chat    Color 
 const colorOptions = document.querySelectorAll('.color-option');
 colorOptions.forEach(option => {
   option.addEventListener('click', () => {
@@ -506,3 +554,5 @@ colorOptions.forEach(option => {
       changeProductColor(selectedColor);
   });
 });
+
+
