@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <i class="fa-solid fa-star text-[10px]"></i>
                     <i class="fa-solid fa-star text-[10px]"></i>
                 </div>
-                <p>${produit.prix}</p>
+                <p>${produit.prix} $</p>
                 <div class="flex gap-[9em]">
                     <button onclick="ajoutFavori(${produit.id})"> ❤️ </button>
                     <button onclick="AjoutPanier(${produit.id}, ${produit.prix})"><span class="material-symbols-outlined">shopping_cart</span></button>
@@ -66,13 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Pagination: Load the next set of products
-    function pagination() {
-        paginationStart = paginationEnd;
-        paginationEnd = paginationEnd + 12;
-        afficheAll(arr_produits, paginationStart, paginationEnd);
-    }
-
+    
     // Function to filter products by category
     let btnSmart = document.getElementById("btn_smart");
     let btnelectro = document.getElementById("btn_electro");
@@ -84,34 +78,51 @@ document.addEventListener('DOMContentLoaded', function () {
         let newArr = arr_produits.filter((prod) => prod.id_cat === id);
         afficheAll(newArr, 0, 12);  // Display filtered products
     }
-
+    
     btnSmart.addEventListener("click", function () {
         filtreCategorie(1);
     })
-
+    
     btnelectro.addEventListener("click", function () {
         filtreCategorie(4);
     })
-
+    
     btnheadphone.addEventListener("click", function () {
         filtreCategorie(6);
     })
-
+    
     btnMontre.addEventListener("click", function () {
         filtreCategorie(3);
     })
-
+    
     btnMouse.addEventListener("click", function () {
         filtreCategorie(5);
     })
-
+    
     btnPc.addEventListener("click", function () {
         filtreCategorie(2);
     })
-
+    
     // Initial display of all products
     afficheAll(arr_produits, paginationStart, paginationEnd);
+
+    // Pagination: Load the next set of products
+    function pagination() {
+        paginationStart = paginationEnd;
+        paginationEnd = paginationEnd + 12;
+        afficheAll(arr_produits, paginationStart, paginationEnd);
+    }
+
+    // Optionally, add event listeners for pagination buttons
+    const nextPageButton = document.getElementById('next-page');
+    if (nextPageButton) {
+        nextPageButton.addEventListener('click', function () {
+            pagination();
+        });
+    }
+    
 });
+
 
     // Add a product to the favorites list (just an example)
     let arr_favori = [];  // List of favorites
@@ -132,10 +143,3 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(`Produit ${id_produit} ajouté au panier pour ${prix} €.`);
     }
 
-    // Optionally, add event listeners for pagination buttons
-    const nextPageButton = document.getElementById('next-page');
-    if (nextPageButton) {
-        nextPageButton.addEventListener('click', function () {
-            pagination();
-        });
-    }
