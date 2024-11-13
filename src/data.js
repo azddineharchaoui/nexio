@@ -311,7 +311,7 @@ let casq1 = {
     nom: "casque Nex 1",
     taille: "s",
     couleur: "noir",
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/headphone.png",
     prix: 120,
     id_cat: 6,// Correspond à "casque"
 };
@@ -322,7 +322,7 @@ let casq2 = {
     nom: "cask N1",
     taille: "l",
     couleur: "noir",
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/headphone1.png",
     prix: 90,
     id_cat: 6,
 };
@@ -333,17 +333,19 @@ let casq3 = {
     nom: "cask N1",
     taille: "m",
     couleur: "noir",
-    image: "url_vers_image_macbook_pro_16.jpg",
+    image: "img/headphone2.png",
     prix: 50,
     id_cat: 6,
 };
+
+
 let casq4 = {
     id: 37,
     spec: "Over-ear, réduction de bruit, autonomie 30 heures",
     nom: "casque Nex SoundMax",
     taille: "m",
     couleur: "blanc",
-    image: "url_vers_image_soundmax.jpg",
+    image: "img/headphone3.png",
     prix: 140,
     id_cat: 6,
 };
@@ -354,14 +356,92 @@ let casq5 = {
     nom: "casque Nex AirPods",
     taille: "s",
     couleur: "argent",
-    image: "url_vers_image_airpods.jpg",
+    image: "img/headphone4.png",
     prix: 200,
     id_cat: 6,
 };
 
+let casq6 = {
+    id: 39,
+    spec: "Over-ear, sans fil, Bluetooth 5.3, autonomie 30 heures, réduction active du bruit",
+    nom: "Casque Audio NexSound Pro",
+    taille: "M",
+    couleur: "Noir",
+    image: "img/headphone5.png",
+    prix: 250,
+    id_cat: 6,
+};
+
+let casq7 = {
+    id: 40,
+    spec: "Intra-auriculaire, sans fil, Bluetooth 5.2, autonomie 10 heures, son haute fidélité",
+    nom: "Casque Audio Nex AirPods",
+    taille: "S",
+    couleur: "Argent",
+    image: "img/headphone6.png",
+    prix: 200,
+    id_cat: 6,
+};
+
+let casq8 = {
+    id: 41,
+    spec: "Casque supra-auriculaire, sans fil, Bluetooth 5.0, autonomie 15 heures, commande tactile",
+    nom: "Casque Bluetooth NexWave",
+    taille: "L",
+    couleur: "Bleu électrique",
+    image: "img/headphone4.png",
+    prix: 180,
+    id_cat: 6,
+};
+
+let casq9 = {
+    id: 42,
+    spec: "Intra-auriculaire, sans fil, Bluetooth 5.3, autonomie 12 heures, résistance à l'eau IPX7",
+    nom: "Casque Audio NexFit",
+    taille: "M",
+    couleur: "Noir mat",
+    image: "img/headphone7.png",
+    prix: 220,
+    id_cat: 6,
+};
+
+let casq10 = {
+    id: 43,
+    spec: "Over-ear, sans fil, Bluetooth 5.0, autonomie 20 heures, réduction passive du bruit",
+    nom: "Casque Audio NexMaster",
+    taille: "L",
+    couleur: "Gris argenté",
+    image: "img/headphone8.png",
+    prix: 230,
+    id_cat: 6,
+};
+
+let casq11 = {
+    id: 44,
+    spec: "Intra-auriculaire, sans fil, Bluetooth 5.1, autonomie 8 heures, son stéréo dynamique",
+    nom: "Casque NexBass",
+    taille: "S",
+    couleur: "Rouge",
+    image: "img/headphone9.png",
+    prix: 150,
+    id_cat: 6,
+};
+
+let casq12 = {
+    id: 45,
+    spec: "Casque supra-auriculaire, sans fil, Bluetooth 5.0, autonomie 25 heures, confortable et léger",
+    nom: "Casque Audio NexSport",
+    taille: "M",
+    couleur: "Vert",
+    image: "img/headphone7.png",
+    prix: 200,
+    id_cat: 6,
+};
+
+
 // Souris
 let souris1 = {
-    id: 40,
+    id: 46,
     nom: "mousNex",
     spec: "Sans fil, Bluetooth, capteur optique, 2 boutons programmables",
     couleur: "noir",
@@ -372,7 +452,7 @@ let souris1 = {
 };
 
 let souris2 = {
-    id: 41,
+    id: 47,
     nom: "mSNex",
     spec: "Filaire, USB, capteur laser, 3 boutons programmables",
     couleur: "noir",
@@ -383,7 +463,7 @@ let souris2 = {
 };
 
 let souris3 = {
-    id: 42,
+    id: 48,
     nom: "Souris full",
     spec: "Sans fil, Bluetooth, capteur optique, 5 boutons programmables",
     couleur: "noir",
@@ -392,8 +472,9 @@ let souris3 = {
     prix: 40,
     id_cat: 5
 };
+
 let souris4 = {
-    id: 43,
+    id: 49,
     nom: "mousPro",
     spec: "Filaire, USB, capteur optique, 6 boutons programmables",
     couleur: "rouge",
@@ -404,7 +485,7 @@ let souris4 = {
 };
 
 let souris5 = {
-    id: 44,
+    id: 50,
     nom: "NexAir Mouse",
     spec: "Sans fil, Bluetooth, rechargeable, capteur laser",
     couleur: "argent",
@@ -416,7 +497,7 @@ let souris5 = {
 
 // Télévisions
 let television1 = {
-    id: 50,
+    id: 51,
     nom: "TV Ultra HD Samsung",
     spec: "Résolution 4K, OLED, Smart TV, HDMI 2.1",
     image: "url_vers_image_tv_samsung.jpg",
@@ -427,7 +508,7 @@ let television1 = {
 };
 
 let television2 = {
-    id: 51,
+    id: 52,
     nom: "LG NanoCell",
     spec: "Résolution 8K, NanoCell, AI ThinQ, HDMI 2.1",
     image: "url_vers_image_tv_lg.jpg",
@@ -436,8 +517,9 @@ let television2 = {
     prix: 1200,
     id_cat: 3
 };
+
 let television3 = {
-    id: 52,
+    id: 53,
     nom: "Sony Bravia 65\"",
     spec: "Résolution 4K, OLED, Google TV intégré",
     image: "url_vers_image_bravia.jpg",
@@ -448,7 +530,7 @@ let television3 = {
 };
 
 let television4 = {
-    id: 53,
+    id: 54,
     nom: "TCL 50\" QLED",
     spec: "Résolution 4K, QLED, Dolby Vision, HDMI 2.1",
     image: "url_vers_image_tcl.jpg",
@@ -479,6 +561,7 @@ let moniteur2 = {
     prix: 350,
     id_cat: 3
 };
+
 let moniteur3 = {
     id: 62,
     nom: "Samsung Odyssey G9",
@@ -523,6 +606,7 @@ let refrigerateur2 = {
     prix: 1000,
     id_cat: 4
 };
+
 let refrigerateur3 = {
     id: 72,
     nom: "Réfrigérateur Haier 3D",
@@ -639,7 +723,7 @@ let microOnde4 = {
 
 
 
-produits = [phone1, phone2, phone3, phone4, phone5, phone6, phone7, phone8, phone9, phone10, phone11, phone12, PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, PC11, PC12, casq1, casq2, casq3, casq4, casq5, souris1
+produits = [phone1, phone2, phone3, phone4, phone5, phone6, phone7, phone8, phone9, phone10, phone11, phone12, PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, PC11, PC12, casq1, casq2, casq3, casq4, casq5, casq6, casq7, casq8, casq9, casq10, casq11, casq12, souris1
     , souris2, souris3, souris4, souris5, television1, television2, television3, television4, moniteur1, moniteur2, moniteur3, moniteur4,
     machineLaver1, machineLaver2, machineLaver3, machineLaver4, microOnde1, microOnde2, microOnde3, microOnde4, refrigerateur1, refrigerateur2,
     refrigerateur3, refrigerateur4

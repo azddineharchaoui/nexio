@@ -37,10 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     <i class="fa-solid fa-star text-[10px]"></i>
                     <i class="fa-solid fa-star text-[10px]"></i>
                 </div>
+                <p>${produit.prix}</p>
                 <div class="flex gap-[9em]">
-                    <p>${produit.prix}</p>
+                    <button onclick="ajoutFavori(${produit.id})"> ❤️ </button>
                     <button onclick="AjoutPanier(${produit.id}, ${produit.prix})"><span class="material-symbols-outlined">shopping_cart</span></button>
                 </div>
+            <button><a href="detail.html?id=${produit.id}">more</a></button>
             </div>
         </div>
         `;
@@ -91,36 +93,39 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     btnheadphone.addEventListener("click", function () {
-        filtreCategorie(3);
+        filtreCategorie(6);
     })
 
     btnMontre.addEventListener("click", function () {
-        filtreCategorie(5);
+        filtreCategorie(3);
     })
 
     btnPc.addEventListener("click", function () {
         filtreCategorie(2);
     })
 
+    // Initial display of all products
+    afficheAll(arr_produits, paginationStart, paginationEnd);
+});
 
     // Add a product to the favorites list (just an example)
-    function ajoutFavori(id_produit) {
-        let produit = getproduit(id_produit);
+    let arr_favori = [];  // List of favorites
+    function ajoutFavori(produit) {
+        // let produit = getProduit(id_produit);  // This line is commented out, if necessary, use it
         if (arr_favori.find(f => f.id === produit.id)) {
             alert("Produit déjà ajouté aux favoris!");
         } else {
             arr_favori.push(produit);
-            console.log("Produit ajouté aux favoris:", produit);
+            console.log("Produit ajouté aux favoris:", produit);  // Added closing parenthesis and semicolon
         }
     }
+    
 
     // Add a product to the cart (example function)
+    
     function AjoutPanier(id_produit, prix) {
         console.log(`Produit ${id_produit} ajouté au panier pour ${prix} €.`);
     }
-
-    // Initial display of all products
-    afficheAll(arr_produits, paginationStart, paginationEnd);
 
     // Optionally, add event listeners for pagination buttons
     const nextPageButton = document.getElementById('next-page');
@@ -129,4 +134,3 @@ document.addEventListener('DOMContentLoaded', function () {
             pagination();
         });
     }
-});
