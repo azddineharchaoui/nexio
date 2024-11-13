@@ -11,18 +11,21 @@ let tva = document.getElementById("tva")
 let totalTCC = document.getElementById("totalTCC")
 
 arr_total =[];
-arr_panier= [{id:1 , nom: "phone1" , prix : 70 , qte : "2" , prixprixTotal : ""} , 
+
+panier= [{id:1 , nom: "phone1" , prix : 70 , qte : "2" , prixprixTotal : ""} , 
    {id:2 , nom: "pc" , prix :200, qte : "5" , prixTotal : ""} ,
     {id:3 , nom: "casque" , prix : 300 , qte : "2" , prixTotal : ""}
               
  ]
- devis(arr_panier)
+ localStorage.setItem('panier', JSON.stringify(panier));
+ console.log()
+ devis(panier)
  somme(arr_total)
 
-function devis(arr_panier){
+function devis(panier){
    let  liste = document.getElementById("listDevis"); 
   
-    arr_panier.forEach(p => {
+    panier.forEach(p => {
        let ligne = document.createElement("div")
        ligne.classList.add("grid", "grid-cols-4", "mx-[80px]", "py-5", "px-4", "text-center");
        p.prixprixTotal = p.prix * p.qte 
