@@ -7,7 +7,7 @@
 /********  Mina *********************** */
 /************************************** */
 
-
+// burger 
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.getElementById("menu-button");
   const collapsedMenu = document.getElementById("collapsed-menu");
@@ -16,6 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
     collapsedMenu.classList.toggle("hidden");
   });
 });
+
+
+
+// appel au fonction sur les pages :
+if (window.location.pathname === "/index.html") {
+  affihcheAll(arr_produits, pageStart, pageEnd);
+} else if (window.location.pathname === "/detail.html") {
+  // console.log(location.search)  //  par exemple ?id=12
+  const param = new URLSearchParams(window.location.search);
+  const id = param.get("id"); // Récupère la valeur de 'id'
+  //  console.log(id); // Affiche 12
+  afficheDetail(id);
+}
+
+
 
 let arr_produits = JSON.parse(localStorage.getItem("arr_produits"));
 //console.log( arr_produits ) ;
@@ -136,14 +151,30 @@ const TypeCarteGraphiquePC = [
   { id: 11, id_graphic: 3, marque: "Intel", nom: "Arc A750", prix: 20 },
   { id: 12, id_graphic: 3, marque: "Intel", nom: "Arc A380", prix: 30 },
 ];
+
+
+
+
+
+/************************************** */
+/************************************** */
+/************************************** */
+/*****  FIN Partie commune             *****/
+/***************************************/
+/************************************** */
+/********  Mina *********************** */
+/************************************** */
+
+
+
 /*  declaration variable */
 let pagination = 1;
 let pageStart = 0;
 let pageEnd = 70; // modifier par 12 apres
 
-/***************************** */
-/********* page categorie *****/
-/**************************** */
+/******************************* */
+/********* page categorie Mina *****/
+/******************************* */
 function getproduit(id_produit) {
   index = arr_produits.findIndex((prod) => prod.id == id_produit);
   prod = arr_produits[index];
@@ -511,48 +542,9 @@ function ajouterPanierDepuisPageDetail(){
 /************************************** */
 
 
-// appel au fonction sur les pages :
-if (window.location.pathname === "/index.html") {
-  affihcheAll(arr_produits, pageStart, pageEnd);
-} else if (window.location.pathname === "/detail.html") {
-  // console.log(location.search)  //  par exemple ?id=12
-  const param = new URLSearchParams(window.location.search);
-  const id = param.get("id"); // Récupère la valeur de 'id'
-  //  console.log(id); // Affiche 12
-  afficheDetail(id);
-}
 
 
 
 
-
-/************************************** */
-/************************************** */
-/************************************** */
-/***** Partie commune             *****/
-/***************************************/
-/************************************** */
-/********  Mina *********************** */
-/************************************** */
-
-
-
-
-
-//chat    Color 
-const colorOptions = document.querySelectorAll('.color-option');
-colorOptions.forEach(option => {
-  option.addEventListener('click', () => {
-      // Supprimer la classe 'selected' de toutes les options
-      colorOptions.forEach(op => op.classList.remove('ring-4', 'ring-offset-2', 'ring-yellow-400'));
-
-      // Ajouter la classe 'selected' à l'option cliquée (effet visuel comme un bouton radio)
-      option.classList.add('ring-4', 'ring-offset-2', 'ring-yellow-400');
-
-      // Change la couleur du produit
-      const selectedColor = option.getAttribute('data-color');
-      changeProductColor(selectedColor);
-  });
-});
 
 
