@@ -19,30 +19,37 @@ document.addEventListener('DOMContentLoaded', function () {
     function getproduit(id_produit) {
         return arr_produits.find(prod => prod.id === id_produit);
     }
-
+// w-40 h-44
     // Function to display a product
     function afficheProduit(id_produit) {
         let produit = getproduit(id_produit);
         let codeHtml = `
-            <div class="card col-span-1">
-            <img src=${produit.image} alt="">
-            <div class=" flex flex-col gap-y-2">
-                <p>${produit.nom}</p>
-                <p>${produit.spec}</p>
+            <div class="card col-span-1 bg-white flex flex-col rounded-lg p-5 w-8/10">
+            <div class="flex justify-center"> 
+                <img src=${produit.image} class="  mb-2.5" alt="">
+            </div>
+          
+            <div class=" flex gap-y-2 justify-between m-2">
+                <p class="text-xs px-2 py-1 bg-[#ECC013] rounded-full text-white  ">${produit.marque}</p> 
+                <button onclick="ajoutFavori(${produit.id})" class="left-align"> ❤️ </button>
+            </div>
 
-                <div class="flex">
-                    <i class="fa-solid fa-star text-[10px]"></i>
-                    <i class="fa-solid fa-star text-[10px]"></i>
-                    <i class="fa-solid fa-star text-[10px]"></i>
-                    <i class="fa-solid fa-star text-[10px]"></i>
-                    <i class="fa-solid fa-star text-[10px]"></i>
+            <div class=" flex flex-col gap-y-2">
+                <p >${produit.nom}</p>
+                <p class="text-xs text-gray-400">${produit.spec}</p>
+
+                <div class="flex gap-1">
+                    <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+                    <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+                    <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+                    <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+                    <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
                 </div>
                 <p>${produit.prix} $</p>
-                <div class="flex gap-[9em]">
-                    <button onclick="ajoutFavori(${produit.id})"> ❤️ </button>
+                <div class="flex justify-between">
                     <button onclick="AjoutPanier(${produit.id}, ${produit.prix})"><span class="material-symbols-outlined">shopping_cart</span></button>
+                    <button><a href="detail.html?id=${produit.id}">more</a></button>
                 </div>
-            <button><a href="detail.html?id=${produit.id}">more</a></button>
             </div>
         </div>
         `;
