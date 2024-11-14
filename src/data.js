@@ -1140,9 +1140,18 @@ let microOnde1 = {
     couleur: "noir",
     image: "https://m.media-amazon.com/images/I/51ghoPy3ptL.__AC_SX300_SY300_QL70_ML2_.jpg",
     litrage: "30L",
-    marque:"samsung",
+    marque: "Panasonic",
     prix: 150,
-    id_cat: 4
+    id_cat: 4,
+    FicheTechnique: [
+        "Technologie : Inverter",
+        "Fonction grill : Oui",
+        "Décongélation rapide : Oui",
+        "Capacité : 30L",
+        "Couleur : Noir",
+        "Puissance micro-ondes : 900W",
+        "Dimensions (L x H x P) : 51 x 30 x 40 cm"
+    ]
 };
 
 let microOnde2 = {
@@ -1152,10 +1161,20 @@ let microOnde2 = {
     couleur: "argent",
     image: "img/em9.png",
     litrage: "23L",
-    marque:"samsung",
+    marque: "Samsung",
     prix: 120,
-    id_cat: 4
+    id_cat: 4,
+    FicheTechnique: [
+        "Système de distribution : Triple Distribution System",
+        "Revêtement intérieur : Céramique",
+        "Capacité : 23L",
+        "Puissance micro-ondes : 800W",
+        "Fonction de décongélation : Oui",
+        "Couleur : Argent",
+        "Dimensions (L x H x P) : 48 x 27 x 39 cm"
+    ]
 };
+
 let microOnde3 = {
     id: 92,
     nom: "Micro-ondes LG NeoChef",
@@ -1163,9 +1182,18 @@ let microOnde3 = {
     couleur: "noir",
     image: "img/em10.png",
     litrage: "25L",
-    marque:"samsung",
+    marque: "LG",
     prix: 160,
-    id_cat: 4
+    id_cat: 4,
+    FicheTechnique: [
+        "Technologie : Smart Inverter",
+        "Cuisson uniforme : Oui",
+        "Fonction de décongélation : Oui",
+        "Capacité : 25L",
+        "Puissance micro-ondes : 1000W",
+        "Couleur : Noir",
+        "Dimensions (L x H x P) : 51 x 30 x 40 cm"
+    ]
 };
 
 let microOnde4 = {
@@ -1175,9 +1203,18 @@ let microOnde4 = {
     couleur: "argent",
     image: "img/em11.png",
     litrage: "28L",
-    marque:"samsung",
+    marque: "Bosch",
     prix: 200,
-    id_cat: 4
+    id_cat: 4,
+    FicheTechnique: [
+        "Fonction AutoPilot : Oui",
+        "Fonction grill : Oui",
+        "Niveaux de puissance : 5",
+        "Capacité : 28L",
+        "Puissance micro-ondes : 900W",
+        "Couleur : Argent",
+        "Dimensions (L x H x P) : 50 x 29 x 43 cm"
+    ]
 };
 
 
