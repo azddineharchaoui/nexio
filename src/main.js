@@ -233,7 +233,7 @@ function afficheDetail(id_produit) {
   let prod = getproduit(id_produit);
   let card = document.createElement("card");
   let codeHtml = ` <div class="product-card flex lg:flex-row flex-col  ">
-                <div class="w-full lg:w-1/2"><img class="w-full h-100  lg-m-10" src="${prod.image}" alt="${prod.nom}"></div>
+                <div class="w-full lg:w-1/2"><img class="w-50 lg:w-92 mx-auto lg:mx-auto lg:m-10" src="${prod.image}" alt="${prod.nom}"></div>
                 <div class="flex flex-col justify-center p-2.5 w-full lg:p-10 lg:w-1/2 ">
                     <h3 class="lg:text-2xl  font-normal tracking-normal  leading-8  lg:leading-10">${prod.nom}-${prod.spec}</h3>
                     <br>
@@ -247,10 +247,12 @@ function afficheDetail(id_produit) {
   let codeHTMLficheTechnique="" ; 
  prod.FicheTechnique.forEach((f)=>{
   codeHTMLficheTechnique +=`<li>${f}</li>`
-
  }) ; 
-  codeHTMLficheTechnique +=` <li id="couleur"> couleur : <span> ${prod.couleur} <span> </li>`
+  codeHTMLficheTechnique +=` <li> couleur :  <span  id="couleur"> ${prod.couleur} <span>  </li>`
   document.getElementById("ulFicheTechnique").innerHTML = codeHTMLficheTechnique;
+
+
+
   afficheSpec(prod.id_cat);
   
 
@@ -289,6 +291,8 @@ function afficheSpec(id_cat) {
     //  console.log(" je suis telephone : " +prod.id_cat) ; break ;
     case 2: // pc
       document.getElementById("specPC").classList.remove("hidden");
+      console.log("mmmmmmmm"); 
+      console.log(id_cat) ; 
       afficheTypeStockagePC();
       processeurPc.forEach((processeur) => {
         const option = document.createElement("option");
@@ -475,9 +479,7 @@ SelectDpi.addEventListener("change", function () {
   gestionChangementPrix(this, "prixDPI", "DPI");
 });
 
-
-
-
+// btn increment decrement 
 document.getElementById("btnDecrement").addEventListener("click", DecrementQteProdDetailProduit);
 document.getElementById("btnIncrement").addEventListener("click", IncrementQteProdDetailProduit);
 
@@ -508,6 +510,14 @@ function DecrementQteProdDetailProduit() {
     divQte.innerHTML = prodAfficheSurPageDetail.qte ; 
   }
 }
+
+let listDisc = document.querySelector(".list-disc");
+function changeColor(c){
+  let couleur = document.getElementById("couleur");
+  couleur.innerHTML = c;
+}
+
+
 // on ajout un array d option to  objet prodafficheDETAIL pour savoir les option ajoute en plus , on a besoin car si l user change meme option deux fois le prix s ajout donc pour resoudre ca on stock un array d objet qui stock les options choisi ,
 //prodAfficheSurPageDetail
 function calculPrixProduit(prod, prixOpt, opt) {
@@ -571,6 +581,12 @@ function ajouterPanierDepuisPageDetail(){
   }
   localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier da
 }
+
+
+/************************************** */
+/********* produit offre  ************* */
+/************************************** */
+
 
 
 

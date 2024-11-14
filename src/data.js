@@ -19,8 +19,7 @@ let phone1 = {
         "Batterie 5000 mAh",
         "Mémoire RAM 4 GB",
         "Stockage interne 250 GB",
-        "Support 5G",
-        "Android 13"
+        "Support 5G"
     ],
 };
 

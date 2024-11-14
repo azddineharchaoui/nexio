@@ -60,7 +60,7 @@
                     <img src="./img/Search.png" alt="search logo">
                 </a>
 
-                <a href="#panier" class="text-white hover:text-gray-300">
+                <a href="./panier.html" class="text-white hover:text-gray-300">
                     <img src="./img/Cart.png" alt="cart logo">
                 </a>
             </div>
@@ -86,8 +86,8 @@
     <section class="bg-white  w-full  mb-10 lg:px-20 ">
         <diV class="p-10 px-30">
             <h3 class=" text-3xl  lg:text-4xl font-normal  lg:mb-10">Fiche technique :</h3>
-            <ul id="ulFicheTechnique"  class="list-disc m-5  leading-8  text-xl lg:leading-10  ">
-           </ul>
+            <ul id="ulFicheTechnique" class="list-disc m-5  leading-8  text-xl lg:leading-10  ">
+            </ul>
         </diV>
     </section>
 
@@ -140,14 +140,14 @@
                 </div>
             </div>
 
-             <div id="specPhone" class="hidden lg:w-1/3">
+            <div id="specPhone" class="hidden lg:w-1/3">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto items-center">
                     <div class="col-span-1  ">
                         <label class="block w-full lg:w-2/3 " for="processeur"> Processeur : </label>
 
                     </div>
                     <div class="col-span-1 ">
-                        <select class="bg-gray-200 rounded w-full lg:w-2/3"  id="selectProcesseurPhone">
+                        <select class="bg-gray-200 rounded w-full lg:w-2/3" id="selectProcesseurPhone">
                         </select>
                     </div>
 
@@ -156,7 +156,7 @@
                     </div>
                     <div class="col-span-1">
                         <select class="bg-gray-300 rounded w-full lg:w-2/3" id="selectStockagePhone">
-                       
+
                         </select>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
 
                 </div>
             </div>
- 
+
 
             <div id="specElectro" class="m-4 hidden">
                 <div class="grid grid-cols-2 gap-4">
@@ -189,7 +189,7 @@
                     </div>
                     <div class="col-span-1">
                         <select class="bg-gray-300 rounded w-full" id="SelectlitrageElectro">
-                         
+
                         </select>
                     </div>
                 </div>
@@ -207,7 +207,7 @@
                     </div>
                     <div class="col-span-1">
                         <select class="bg-gray-300 rounded w-full lg:w-2/3" id="SelectDpi">
-                   
+
                         </select>
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                     </div>
                     <div class="col-span-1">
                         <select class="bg-gray-300 rounded w-full lg:w-2/3" id="SelectTaille">
-                   
+
                         </select>
                     </div>
                 </div>
@@ -235,17 +235,17 @@
 
 
 
-            <div  class="flex flex-col gap-10  justify-between items-center ">
+            <div class="flex flex-col gap-10  justify-between items-center ">
                 <div id="color" class="col-span-1 flex gap-2.5 ">
 
-                    <div class="color-option w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-gray-900 via-gray-800 to-gray-600"
-                        data-color="black" title="Noir"></div>
-                    <div class="color-option w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-gray-400 via-gray-500 to-gray-300"
-                        data-color="silver" title="Argenté"></div>
-                    <div class="color-option w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300"
-                        data-color="gold" title="Doré"></div>
-                    <div class="color-option w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-red-600 via-red-400 to-red-600"
-                        data-color="red-brillant" title="Red Brillant"></div>
+                    <div class="w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-gray-900 via-gray-800 to-gray-600"
+                        id="black" title="Noir" onclick="changeColor('Noir')" data_color="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-600"></div>
+                    <div class="w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-gray-400 via-gray-500 to-gray-300"
+                        id="silver" title="Argenté" onclick="changeColor('Gris')" data_color="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-300"> </div>
+                    <div class="w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300"
+                        id="gold" title="Doré" onclick="changeColor('Jaune')" data_color="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300"></div>
+                    <div class="w-8 h-8 rounded-full cursor-pointer bg-gradient-to-r from-red-600 via-red-400 to-red-600" data_color="bg-gradient-to-r from-red-600 via-red-400 to-red-600"
+                        id="red" title="Red Brillant" onclick="changeColor('Rouge')"></div>
                 </div>
                 <div class="flex     ">
                     <img id="btnDecrement" src="./img/boutonmoins.png" class="pointer cursor-pointer">
@@ -298,11 +298,11 @@
     <section>
         <diV class="p-10 px-20">
 
-          
 
 
 
-            
+
+
 
             <div id="specTelevision" class="flex justify-bettwen  gap-10 border-1 border-gray-500  m-4 hidden">
                 <select id="SelectTauxRafraichissemnt">
