@@ -145,8 +145,8 @@ const TypeCarteGraphiquePC = [
 let arr_favoris=[
   { idproduit: 10,  reduction: 20 },
   { idproduit: 22, reduction: 30 },
-  { idproduit: 45,  reduction: 60 },
-  { idproduit: 72,  reduction: 70 }
+  { idproduit: 33,  reduction: 60 },
+  { idproduit: 45,  reduction: 70 }  ,
 ]
 
 
@@ -179,21 +179,43 @@ function getproduit(id_produit) {
 function afficheProduit(id_produit) {
   console.log("produit") ;
 
-    let prod = getproduit(id_produit);
+    let produit = getproduit(id_produit);
     console.log(prod) ;
   let card = document.createElement("card");
 
   let codeHtml = `
-          <div class="product-card  border-2 border-gray-200 m-2.5  p-2.5">
-              <img class="mx-auto "src="${prod.image}" alt="${prod.nom}">
-              <h3>${prod.nom}</h3>
-              <p>${prod.spec}</p>
-              <p>Prix : ${prod.prix} €</p>
-              <button onclick="ajoutFavori(${prod.id})"> ❤️ </button>
-              <button onclick="AjoutPanier(${prod.id}, ${prod.prix})"><span class="material-symbols-outlined">shopping_cart</span></button>
-               <a href="detail.html?id=${prod.id}">more</button>
-              </div>
-      `;
+  <div class="card  relative col-span-1 bg-white flex flex-col rounded-[25px] p-5 w-8/10   h-full justify-between">
+ <div class="absolute top-0 left-0 bg-red-400 text-white text-ms  opacity-75  rounded-full px-4 py-1 m-2">
+    -70%
+  </div>
+<div class="flex justify-center">
+  <img src="${produit.image}" class="mb-2.5" alt="">
+ 
+</div>
+  <div class=" flex gap-y-2 justify-between m-2">
+      <p class="text-xs px-2 py-1 bg-[#ECC013] rounded-full text-white  ">${produit.marque}</p> 
+      <button onclick="ajoutFavori(${produit.id})" class="left-align"> ❤️ </button>
+  </div>
+
+  <div class=" flex flex-col gap-y-2">
+      <p >${produit.nom}</p>
+      <p class="text-xs text-gray-400">${produit.spec}</p>
+
+      <div class="flex gap-1">
+          <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+          <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+          <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+          <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+          <i class="fa-solid fa-star text-[10px] text-[#ECC013]"></i>
+      </div>
+      <p>${produit.prix} $</p>
+      <div class="flex justify-between">
+          <button onclick="AjoutPanier(${produit.id}, ${produit.prix})"><span class="material-symbols-outlined">shopping_cart</span></button>
+          <button><a href="detail.html?id=${produit.id}">more</a></button>
+      </div>
+  </div>
+</div>
+`;
   card.innerHTML = codeHtml;
   document.getElementById("product-list").appendChild(card);
   return prod;
