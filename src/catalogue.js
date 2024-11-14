@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function getproduit(id_produit) {
         return arr_produits.find(prod => prod.id === id_produit);
     }
-// w-40 h-44
+// 
     // Function to display a product
     function afficheProduit(id_produit) {
         let produit = getproduit(id_produit);
         let codeHtml = `
-            <div class="card col-span-1 bg-white flex flex-col rounded-lg p-5 w-8/10">
+            <div class="card col-span-1 bg-white flex flex-col rounded-[25px] p-5 w-8/10">
             <div class="flex justify-center"> 
                 <img src=${produit.image} class="  mb-2.5" alt="">
             </div>
