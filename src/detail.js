@@ -378,6 +378,7 @@ function ajouterPanierDepuisPageDetail(){
       console.log( "------**  je suis else ****----") ;
 
   }
+  alert("Produit ajouté au panier!");
   localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier da
 }
 

@@ -185,6 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
             panier.push(produit);
           //  alert("Produit déjà ajouté aux favoris!");
         }
-
+        alert("Produit ajouté au panier!");
         localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier dans LocalStorage
     }
