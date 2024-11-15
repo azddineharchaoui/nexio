@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuButton.addEventListener('click', function () {
         collapsedMenu.classList.toggle('hidden');
     });
+});
 
     // Load products from localStorage
     let arr_produits = JSON.parse(localStorage.getItem("arr_produits")) || [];
@@ -24,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function afficheProduit(id_produit) {
         let produit = getproduit(id_produit);
         let codeHtml = `
-            <div class="card col-span-1 bg-white flex flex-col rounded-[25px] p-5 w-8/10">
+            <div class="card col-span-1 bg-white flex flex-col rounded-[25px] p-5 w-full">
             <div class="flex justify-center"> 
-                <img src=${produit.image} class="  mb-2.5" alt="">
+                <img src=${produit.image} class=" mb-2.5" alt="">
             </div>
           
             <div class=" flex gap-y-2 justify-between m-2">
@@ -114,25 +115,45 @@ document.addEventListener('DOMContentLoaded', function () {
     afficheAll(arr_produits, paginationStart, paginationEnd);
 
     // Pagination: Load the next set of products
-    function pagination() {
+    function pagination(start , end ) {
+        afficheAll(arr_produits, start, end);
         paginationStart = paginationEnd;
         paginationEnd = paginationEnd + 12;
-        afficheAll(arr_produits, paginationStart, paginationEnd);
+        console.log("start : "  + paginationStart );   
+        console.log("end : "  + paginationEnd );  
     }
 
     // Optionally, add event listeners for pagination buttons
-    const nextPageButton = document.getElementById('next-page');
-    if (nextPageButton) {
-        nextPageButton.addEventListener('click', function () {
-            pagination();
-        });
-    }
+
     
-});
+    let page2 = document.getElementById("page2");
+    page2.onclick = function(){
+        pagination(0,12);
+    }
+    let page3 = document.getElementById("page3");
+    page3.onclick = function(){
+        pagination(12,24);
+    }
+    let page4 = document.getElementById("page4");
+    page4.onclick = function(){
+        pagination(24,36);
+    }
+    let prevPage = document.getElementById("prev-page");
+    prevPage.onclick = function(){ 
+        paginationStart = paginationStart-12;
+        paginationEnd = paginationStart - 1;
+        pagination( paginationStart,paginationEnd);
+    }
+    let NextPage = document.getElementById("next-page");
+    NextPage.onclick = function(){
+        paginationStart = paginationStart+12;
+        paginationEnd = paginationStart + 1;
+        pagination( paginationStart,paginationEnd);
+    }
 
 
     // Add a product to the favorites list (just an example)
-    let arr_favori = [];  // List of favorites
+    // let arr_favori = [];  // List of favorites
     function ajoutFavori(produit) {
         // let produit = getProduit(id_produit);  // This line is commented out, if necessary, use it
         if (arr_favori.find(f => f.id === produit.id)) {
@@ -150,3 +171,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(`Produit ${id_produit} ajouté au panier pour ${prix} €.`);
     }
 
+  

@@ -13,6 +13,24 @@
     <link rel="stylesheet" href="./src/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes scroll {
+            0% {transform: translateX(80vw);}
+            100%{transform: translateX(-180vw);}
+        }
+        #logo1{
+            animation: scroll 10s linear infinite;
+        }
+        #logo2{
+            animation: scroll 10s linear infinite;
+        }
+        #logo3{
+            animation: scroll 10s linear infinite;
+        }
+        #logo4{
+            animation: scroll 10s linear infinite;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
@@ -73,100 +91,98 @@
     </header>
 
     <!-- body -->
-    <div class="flex flex-col gap-[10em]">
-        <div class="m-4 flex justify-center gap-10">
+    <div class="flex flex-col md:gap-[10em]">
+        <div class="m-4 grid-col-1 md:flex md:justify-center gap-10">
             <img src="img/aprepo1.png" alt="photo1">
             <div class="flex flex-col justify-around">
-                <h2 class="text-6xl">Hi, we are</h2>
-                <h2 class="text-6xl text-[#ECC013]">Inxo.</h2>
-                <p class="text-2xl">We are here to offer an alternative to new<br>
-                    devices. More affordable, better for the planet but<br>
+                <h2 class="md:text-6xl text-5xl ">Hi, we are</h2>
+                <h2 class="md:text-6xl text-5xl text-[#ECC013]">Inxo.</h2>
+                <p class="md:text-[2rem]">We are here to offer an alternative to new
+                    devices. More affordable, better for the planet but
                     just as efficient.</p>
             </div>
         </div>
-        <div class="m-4 flex justify-center gap-10">
+        <div class="m-4 grid-col-1 md:flex md:justify-center gap-10">
             <img src="img/apropos2.png" alt="photo2">
             <div class="flex flex-col justify-center">
-                <h2 class=" pb-10 text-6xl text-center">Mission</h2>
-                <p class="text-[32px]">At Nexio, our mission is to empower our<br> customers with technology that
+                <h2 class=" md:pb-10 pb-5 md:text-6xl text-5xl text-center">Mission</h2>
+                <p class="md:text-[2rem]">At Nexio, our mission is to empower our customers with technology that
                     simplifies
-                    <br> life, fuels creativity, and brings<br> communities closer together. We’re<br> committed to
+                    life, fuels creativity, and brings communities closer together. We’re committed to
                     excellence in
-                    every product<br> we deliver, ensuring that Nexio devices<br> are at the cutting edge of innovation
-                    and<br>
+                    every product we deliver, ensuring that Nexio devices are at the cutting edge of innovation
+                    and
                     quality.
                 </p>
             </div>
         </div>
-        <div class="m-4 flex justify-center gap-[6.5em]">
+        <div class="m-4 grid-col-1 md:flex md:justify-center gap-[6.5em]">
             <img src="img/apropos3.png" alt="photo2">
             <div class="flex flex-col justify-center">
-                <h2 class=" pb-10 text-6xl text-center">Values</h2>
-                <p class="text-[32px]">Quality: Ensuring that each Nexio<br> product meets the highest standards<br> for
-                    performance and durability.<br>
-                    Customer Satisfaction: Listening to<br> our users and delivering on their<br> needs and
-                    expectations<br>
-                    Innovation: Continually exploring<br> new ideas and solutions to stay at <br>the forefront of
+                <h2 class=" md:pb-10 pb-5 md:text-6xl text-5xl text-center text-center">Values</h2>
+                <p class="md:text-[2rem]">Quality: Ensuring that each Nexio product meets the highest standards for
+                    performance and durability.
+                    Customer Satisfaction: Listening to our users and delivering on their needs and
+                    expectations
+                    Innovation: Continually exploring new ideas and solutions to stay at the forefront of
                     technology.</p>
             </div>
         </div>
-        <div class="m-4 flex justify-center gap-[7em]">
+        <div class="m-4 grid-col-1 md:flex md:justify-center gap-[7em]">
             <img src="img/apropos4.png" alt="photo2">
             <div class="flex flex-col justify-center">
-                <h2 class=" pb-10 text-6xl text-center">Vision</h2>
-                <p class="text-[32px]">We envision a world where<br> technology connects and enriches<br> lives in
+                <h2 class="md:pb-10 pb-5 md:text-6xl text-5xl text-center text-center">Vision</h2>
+                <p class="md:text-[2rem]">We envision a world where technology connects and enriches lives in
                     meaningful
-                    ways. Nexio aims<br> to be a household name in<br> electronics, known for pushing<br> boundaries and
+                    ways. Nexio aims to be a household name in electronics, known for pushing boundaries and
                     setting
-                    new<br> standards in quality and customer<br> experience.</p>
+                    new standards in quality and customer experience.</p>
             </div>
         </div>
         <div class="hidden md:flex justify-around gap-[6em] relative overflow-hidden" id="carousel-track">
-            <img src="img/logo4.png" alt="nokia">
-            <img src="img/logo3.png" alt="huawei">
-            <img class="h-[162px]" src="img/logo2.png" alt="apple">
-            <img src="img/logo1.png" alt="samsung">
-            <img src="img/logo4.png" alt="nokia">
-            <img src="img/logo3.png" alt="huawei">
+            <img id="logo1" src="img/logo4.png" alt="nokia">
+            <img id="logo2" src="img/logo3.png" alt="huawei">
+            <img id="logo3" class="h-[162px]" src="img/logo2.png" alt="apple">
+            <img id="logo4" src="img/logo1.png" alt="samsung">
         </div>
         <div>
-            <h2 class="text-center text-[96px]">FAQ</h2>
-            <div class="flex justify-around m-[20px]">
+            <h2 class="text-center md:text-[96px] text-[5rem]">FAQ</h2>
+            <div class="md:flex justify-around m-[20px]">
                 <div class="flex flex-col m-[20px] gap-y-[2em]">
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">What types of products does Nexio offer?
+                        <summary class="text-bold md:text-[1.4rem] text-[1.2rem]  cursor-pointer">What types of products does Nexio offer?
                         </summary>
-                        <p class="text-[20px]">Nexio provides a wide range of electronics,<br>
-                            including smartphones, laptops, refrigerators,<br>
-                            and TVs, all designed with the latest technology<br>
+                        <p class="md:text-[1.2rem] text-[0.7rem]">Nexio provides a wide range of electronics,
+                            including smartphones, laptops, refrigerators,
+                            and TVs, all designed with the latest technology
                             to enhance your lifestyle.</p>
                     </details>
 
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">How can I purchase Nexio products?
+                        <summary class="md:text-[1.4rem] text-[1.2rem] cursor-pointer">How can I purchase Nexio products?
                         </summary>
-                        <p class="text-[20px]">Nexio products are available on our official website<br> and through
+                        <p class="md:text-[1.2rem] text-[0.7rem]">Nexio products are available on our official website and through
                             select retailers worldwide. Visit
-                            our<br> “Catalogue” page for more details.</p>
+                            our “Catalogue” page for more details.</p>
                     </details>
                 </div>
-                <br>
+
                 <div class="flex flex-col m-[20px] gap-y-[2em]">
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">Does Nexio offer product warranties?
+                        <summary class="text-bold md:text-[1.4rem] text-[1.2rem] cursor-pointer">Does Nexio offer product warranties?
                         </summary>
-                        <p class="text-[20px]">Yes, all Nexio products come with a one-year<br> warranty. Extended
-                            warranty options are also<br>
+                        <p class="md:text-[1.2rem] text-[0.7rem]">Yes, all Nexio products come with a one-year warranty. Extended
+                            warranty options are also
                             available.</p>
                     </details>
                     <details>
-                        <summary class="text-bold text-[24px] cursor-pointer">Can I return a product if I am not
+                        <summary class="text-bold md:text-[1.4rem] text-[1.2rem] cursor-pointer">Can I return a product if I am not
                             satisfied?</summary>
-                        <p class="text-[20px]">We want you to be fully satisfied with your purchase.<br> Our return
+                        <p class="md:text-[1.2rem] text-[0.7rem]">We want you to be fully satisfied with your purchase. Our return
                             policy allows returns within 30 days
-                            of<br> purchase, provided the product is in its original<br> condition. Visit our Returns &
+                            of purchase, provided the product is in its original condition. Visit our Returns &
                             Refunds page
-                            for<br> details.</p>
+                            for details.</p>
                     </details>
                 </div>
             </div>
@@ -262,21 +278,7 @@
     </footer>
 
     <script src="./src/main.js"></script>
-    <script>
-        const track = document.getElementById('carousel-track');
-        let position = 0;
 
-        function infiniteScroll() {
-            position -= 3.5;
-
-            if (position <= -track.scrollWidth / 1) {
-                position = 0;
-            }
-            track.style.transform = `translateX(${ position }px)`;
-            requestAnimationFrame(infiniteScroll);
-        }
-        infiniteScroll();
-    </script>
 
 </body>
 

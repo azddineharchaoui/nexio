@@ -765,7 +765,7 @@ let souris1 = {
     spec: "Sans fil, Bluetooth, capteur optique, 2 boutons programmables",
     couleur: "noir",
     dpi: 10,
-    image: "img/souris.png",
+    image: "https://m.media-amazon.com/images/I/61ni3t1ryQL.__AC_SX300_SY300_QL70_ML2_.jpg",
     marque:"samsung",
     prix: 30,
     id_cat: 5, // Correspond à "souris"
@@ -777,7 +777,7 @@ let souris2 = {
     spec: "Filaire, USB, capteur laser, 3 boutons programmables",
     couleur: "noir",
     dpi: 10,
-    image: "img/souris1.png",
+    image: "https://m.media-amazon.com/images/I/51nxsHroOLL.__AC_SX300_SY300_QL70_ML2_.jpg",
     marque:"samsung",
     prix: 25,
     id_cat: 5
@@ -789,7 +789,7 @@ let souris3 = {
     spec: "Sans fil, Bluetooth, capteur optique, 5 boutons programmables",
     couleur: "noir",
     dpi: 10,
-    image: "img/souris2.png",
+    image: "https://m.media-amazon.com/images/I/51RPDnJWb1L._AC_SX425_.jpg",
     marque:"samsung",
     prix: 40,
     id_cat: 5
@@ -813,7 +813,7 @@ let souris5 = {
     spec: "Sans fil, Bluetooth, rechargeable, capteur laser",
     couleur: "argent",
     dpi: 2000,
-    image: "img/souris4.png",
+    image: "https://m.media-amazon.com/images/I/61olRm7DV8L.__AC_SX300_SY300_QL70_ML2_.jpg",
     marque:"samsung",
     prix: 50,
     id_cat: 5
@@ -988,7 +988,7 @@ let refrigerateur1 = {
     id_cat: 4,
     couleur: "argent",
     litrage: "350L",
-    image: "img/em.png",
+    image: "https://m.media-amazon.com/images/I/61+cQCm3DRL._AC_SX522_.jpg",
     FicheTechnique: [
         "Technologie : No Frost",
         "Distributeur d'eau : Oui",
@@ -1007,7 +1007,7 @@ let refrigerateur2 = {
     id_cat: 4,
     couleur: "inox",
     litrage: "500L",
-    image: "img/em1.png",
+    image: "https://m.media-amazon.com/images/I/51SleTF8hqL._AC_SY500_.jpg",
     FicheTechnique: [
         "Technologie : Inverter Linear Compressor",
         "Réfrigérateur intelligent : Oui",
@@ -1025,7 +1025,7 @@ let refrigerateur3 = {
     id_cat: 4,
     couleur: "blanc",
     litrage: "400L",
-    image: "img/em2.png",
+    image: "https://m.media-amazon.com/images/I/61v8pWWLJQL.__AC_SX342_SY445_QL70_ML2_.jpg",
     FicheTechnique: [
         "Type de porte : Triple",
         "Technologie : Inverter",
@@ -1044,7 +1044,7 @@ let refrigerateur4 = {
     id_cat: 4,
     couleur: "inox",
     litrage: "450L",
-    image: "img/em3.png",
+    image: "https://m.media-amazon.com/images/I/61HuqCmn0TL.__AC_SX342_SY445_QL70_ML2_.jpg",
     FicheTechnique: [
         "Technologie : PlasmaCluster",
         "Technologie : No Frost",
@@ -1159,7 +1159,7 @@ let microOnde2 = {
     nom: "Micro-ondes Samsung Solo",
     spec: "Triple Distribution System, revêtement céramique",
     couleur: "argent",
-    image: "img/em9.png",
+    image: "https://m.media-amazon.com/images/I/41DaUCtyl8L._AC_SX679_.jpg",
     litrage: "23L",
     marque: "Samsung",
     prix: 120,
@@ -1180,7 +1180,7 @@ let microOnde3 = {
     nom: "Micro-ondes LG NeoChef",
     spec: "Smart Inverter, cuisson uniforme, fonction de décongélation",
     couleur: "noir",
-    image: "img/em10.png",
+    image: "https://m.media-amazon.com/images/I/71xa-kq1SnL.__AC_SY445_SX342_QL70_ML2_.jpg",
     litrage: "25L",
     marque: "LG",
     prix: 160,
@@ -1201,7 +1201,7 @@ let microOnde4 = {
     nom: "Micro-ondes Bosch Serie 4",
     spec: "AutoPilot, fonction grill, 5 niveaux de puissance",
     couleur: "argent",
-    image: "img/em11.png",
+    image: "https://m.media-amazon.com/images/I/51+EzU7JRXL._AC_SX342_SY445_.jpg",
     litrage: "28L",
     marque: "Bosch",
     prix: 200,
@@ -1222,8 +1222,8 @@ let microOnde4 = {
 
 
 
-produits = [phone1, phone2, phone3, phone4, phone5, phone6, phone7, phone8, phone9, phone10, phone11, phone12, PC1, PC2, PC3, PC4, PC5, PC6, PC7, PC8, PC9, PC10, PC11, PC12, casq1, casq2, casq3, casq4, casq5, casq6, casq7, casq8, casq9, casq10, casq11, casq12, souris1
-    , souris2, souris3, souris4, souris5, television1, television2, television3, television4, moniteur1, moniteur2, moniteur3, moniteur4,
+produits = [phone1,PC5, PC6, casq2, casq3, television1, television2,  moniteur1, moniteur2, phone2, phone3, souris4, souris5, phone4, phone5, phone6, phone7, phone8, phone9, phone10, phone11, phone12, PC1, PC2, PC3, PC4, PC7, PC8, PC9, PC10, PC11, PC12, casq1,  casq4, casq5, casq6, casq7, casq8, casq9, casq10, casq11, casq12, souris1
+    , souris2, souris3,  television3, television4, moniteur3, moniteur4,
     machineLaver1, machineLaver2, machineLaver3, machineLaver4, microOnde1, microOnde2, microOnde3, microOnde4, refrigerateur1, refrigerateur2,
     refrigerateur3, refrigerateur4
 ];
