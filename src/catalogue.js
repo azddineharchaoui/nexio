@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function afficheProduit(id_produit) {
         let produit = getproduit(id_produit);
         let codeHtml = `
-            <div class="card col-span-1 bg-white flex flex-col rounded-[25px] p-5 w-full">
+            <div class="card col-span-1 bg-white flex flex-col rounded-[25px] p-5 w-8/10   h-full justify-between">
             <div class="flex justify-center"> 
-                <img src=${produit.image} class=" mb-2.5" alt="">
+                <img src=${produit.image} class="  mb-2.5" alt="">
             </div>
           
             <div class=" flex gap-y-2 justify-between m-2">
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <p>${produit.prix} $</p>
                 <div class="flex justify-between">
                     <button onclick="AjoutPanier(${produit.id}, ${produit.prix})"><span class="material-symbols-outlined">shopping_cart</span></button>
-                    <button><a href="detail.html?id=${produit.id}">more</a></button>
+                    <button><a href="detail.html?id=${produit.id}"  class="border-2 border-yellow-400 rounded-full text-xs px-2.5">Voir Plus</a></button>
                 </div>
             </div>
         </div>
@@ -165,15 +165,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 
-    // Add a product to the cart (example function)
-    
-    function AjoutPanier(id_produit, prix) {
-        console.log(`Produit ${id_produit} ajouté au panier pour ${prix} €.`);
-    }
-
-<<<<<<< HEAD
   
-=======
+
+
     function AjoutPanier(id_produit, prixUnitaire) {
         let produit = getproduit(id_produit);
         let panier = JSON.parse(localStorage.getItem('panier')) || [];
@@ -191,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
             panier.push(produit);
           //  alert("Produit déjà ajouté aux favoris!");
         }
-
+        alert("Produit ajouté au panier!");
         localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier dans LocalStorage
     }
->>>>>>> 0cb36771b97b1cef302a468d94f2d112fa005bf5
