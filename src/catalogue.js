@@ -171,4 +171,27 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(`Produit ${id_produit} ajouté au panier pour ${prix} €.`);
     }
 
+<<<<<<< HEAD
   
+=======
+    function AjoutPanier(id_produit, prixUnitaire) {
+        let produit = getproduit(id_produit);
+        let panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+        let produitDansPanier = panier.find(prod => prod.id === id_produit);
+
+        if (produitDansPanier) {
+            produitDansPanier.qte++; // Augmente la quantité si le produit existe déjà
+            produitDansPanier.prixTotal = produitDansPanier.qte * prixUnitaire;
+            console.log("Produit ajouté aux favoris:", produit);
+        } else {
+
+            produit.qte = 1 ; 
+            produit.prixTotal= produit.qte * produit.prix ;
+            panier.push(produit);
+          //  alert("Produit déjà ajouté aux favoris!");
+        }
+
+        localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier dans LocalStorage
+    }
+>>>>>>> 0cb36771b97b1cef302a468d94f2d112fa005bf5
