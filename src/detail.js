@@ -48,7 +48,7 @@ function afficheDetail(id_produit) {
  prod.FicheTechnique.forEach((f)=>{
   codeHTMLficheTechnique +=`<li>${f}</li>`
  }) ; 
-  codeHTMLficheTechnique +=` <li> couleur :  <span  id="couleur"> ${prod.couleur} <span>  </li>`
+  codeHTMLficheTechnique +=` <li> couleur :  <span  class="text-yellow-900" id="couleur"> ${prod.couleur} <span>  </li>`
 
   document.getElementById("ulFicheTechnique").innerHTML = codeHTMLficheTechnique;
  
@@ -97,8 +97,6 @@ function afficheSpec(id_cat) {
     //  console.log(" je suis telephone : " +prod.id_cat) ; break ;
     case 2: // pc
       document.getElementById("specPC").classList.remove("hidden");
-      console.log("mmmmmmmm"); 
-      console.log(id_cat) ; 
       afficheTypeStockagePC();
       processeurPc.forEach((processeur) => {
         const option = document.createElement("option");
@@ -234,11 +232,13 @@ function gestionChangementPrix(selectElement, selectElementPrix, option) {
   const divPrix = document.createElement("div");
   divPrix.setAttribute("id", selectElementPrix); // prix de processeur / stock precise prix de quoi
   const optionSelect = selectElement.options[selectElement.selectedIndex];
+  const textOptionSelect = optionSelect.text ;  // je recupere le text de select genre -  Ryzen 7 5800X3D
   const prix = optionSelect.getAttribute("prix");
-  divPrix.innerHTML = `<div class="flex justify-between px-2.5"><h5 class="text-gray-500"> ${option} : </h5>  <div >$${prix}</div></div>`;
-  
+    // res exemple : Carte Graphique : ( Radeon RX 7800 XT)     $30
+  divPrix.innerHTML = `<div class="flex justify-between px-2.5"><h5 class="text-gray-500"> ${option} : ( ${textOptionSelect})</h5>  <div >$${prix}</div></div>`;
+   
   prixOptions.appendChild(divPrix);
-  calculPrixProduit(prodAfficheSurPageDetail, prix, option);
+  calculPrixProduit(prodAfficheSurPageDetail, prix, textOptionSelect );
 }
 // pc
 selectStockagePhone.addEventListener("change", function () {
@@ -247,7 +247,7 @@ selectStockagePhone.addEventListener("change", function () {
 
 
 selectStockagePC.addEventListener("change", function () {
-  gestionChangementPrix(this, "prixStockage", "Mémoire de stockage");
+  gestionChangementPrix(this, "prixStockage", "Mémoire de stockage" );
 });
 
 
@@ -366,21 +366,17 @@ function ajouterPanierDepuisPageDetail(){
   let produitDansPanier = panier.find(p => prod.id === p.id);
   let index = panier.findIndex(p => prod.id === p.id);
   console.log(" index : "  ) ; 
-  console.log( index ) ; 
-  compareOptions(prod.arr_option, produitDansPanier.arr_option);
+  console.log( prod.arr_option ) ; 
+ //compareOptions(prod.arr_option, produitDansPanier.arr_option);
   if ((index>-1)  && (  compareOptions(prod.arr_option, produitDansPanier.arr_option))) { //&& (prod.PrixConfigure  ==  produitDansPanier.PrixConfigure )
-   
-   /* console.log( "------******----") ; 
-   console.log( prod.arr_option) ; 
-   console.log( "---------") ; 
-    console.log( produitDansPanier.arr_option) ; 
-    console.log( "-----*******----") ; */
       produitDansPanier.qte += prod.qte ; // Augmente la quantité si le produit existe déjà  
         produitDansPanier.prix = produitDansPanier.qte * produitDansPanier.prixUnitaire; 
         console.log(" exist au panier: "  ) ; 
   } else {
      //produitDansPanier.prix = prod.prixTotal; 
       panier.push(prod);
+      console.log( "------**  je suis else ****----") ;
+
   }
   localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier da
 }
@@ -396,14 +392,14 @@ function compareOptions(optionProd1, optionProd2) {
   else { // on tri les element pr chaque table afin de facilite la recherche apres 
   optionProd1.sort((a, b) => a.option.localeCompare(b.option));
   optionProd2.sort((a, b) => a.option.localeCompare(b.option));
-  /*console.log(" option 1 : "  );
+  console.log(" option 1 : "  );
   console.log(optionProd1);
   console.log(" option 2 : "  );
-  console.log(optionProd2);*/
-   ; 
+  console.log(optionProd2);
+  
   for (let i = 0; i < optionProd1.length; i++) {   // on compare p.option et p.prix des deux produit 
-    if (optionProd1[i].option !== optionProd2[i].option || optionProd1[i].prixOption !== optionProd2[i].prixOption) {
-      //console.log(optionProd1[i].option + "false" + optionProd2[i].option );
+    if (optionProd1[i].option !== optionProd2[i].option || parseFloat(optionProd1[i].prixOption) !== parseFloat(optionProd2[i].prixOption)) {
+
       console.log("false");
       return false;  
     }
