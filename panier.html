@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -23,7 +27,7 @@
     </style>
 </head>
 
-<body class="bg-gray-100 flex flex-col font-sans min-h-screen ">
+<body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
 
     <!--header-->
     <header class="bg-black text-white p-4">
@@ -45,11 +49,12 @@
                 </button>
             </div>
 
-            <nav id="menu" class="hidden lg:flex space-x-6 justify-center flex-1">
-                <a href="index.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Home</a>
-                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Catalogue</a>
-                <a href="contact.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Contact Us </a>
-                <a href="about.html" class="hover:bg-white hover:text-black rounded px-3 py-1">About Us</a>
+            <nav id="menu" class="hidden lg:flex  space-x-6 justify-center 
+            border-2 border-white rounded-full ml-96">
+                <a href="index.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Home</a>
+                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Catalogue</a>
+                <a href="contact.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Contact Us </a>
+                <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">About Us</a>
             </nav>
 
             <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1 justify-end lg:justify-end">
@@ -63,7 +68,6 @@
 
                 <a href="panier.html" class="text-white hover:text-gray-300">
                     <img src="./img/Cart.png" alt="cart logo">
-                    <span id="cart-count" class="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
                 </a>
             </div>
         </div>
@@ -78,8 +82,38 @@
         </div>
 
     </header>
-
     <main class="container bg-white mx-auto p-4">
+        <div class="hidden md:flex justify-center gap-[2em] my-3 ">
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+              id="btn_smart">Smartphones</button>
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+              id="btn_electro">Electroménagers</button>
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+              id="btn_headphone">Headphones</button>
+              <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+              id="btn_Montre">Moniteurs</button>
+              <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+              id="btn_Mouse">Mouses</button>
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+              id="btn_Pc">Laptops</button>
+          </div>
+        
+          <div class="md:hidden flex justify-center gap-1 my-2 mx-2 ">
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10" 
+              id="btn_smart"><ion-icon name="phone-portrait-outline"></ion-icon></button>
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10"
+              id="btn_electro"><ion-icon name="journal-sharp"></ion-icon></button>
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10"
+              id="btn_headphone"><ion-icon name="headset-sharp"></ion-icon></button>
+              <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10"
+              id="btn_Montre"><ion-icon name="desktop-outline"></ion-icon></button>
+              <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10"
+              id="btn_Mouse"><i class="fas fa-mouse"></i></button>
+            <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10"
+              id="btn_Pc"><ion-icon name="laptop-outline"></ion-icon></button>
+          </div>
+        
+          
         <h1 class="text-2xl font-bold mb-4">Panier(<span id="compteurPanier">0</span>)</h1>
         <div  class="grid lg:grid-cols-4 gap-4">
             <div class="lg:col-span-3" id="cart-items">
@@ -90,19 +124,20 @@
 
         <div class="lg:col-span-1">
             <div  style="background-color: rgba(217, 217, 217, 0.21);" class="p-4 rounded-lg shadow sticky-container flex flex-col text-font space-y-6">
-                <h2 class="text-lg font-bold mb-4">Résumé de votre commande</h2>
+                <h2 class="text-lg font-bold mb-2">Résumé de votre commande</h2>
+                <hr>
                 <div class="flex justify-between">
                     <p>Prix total:</p>
                     <p id="total-price" class="font-bold">0 <span>$</span></p>
                 </div>
                 <hr>
-                <div class="flex justify-between">
-                    <p>Total (<span id="compteurPanier">0</span>articles):</span></p>
-                    <p id="total-price" class="font-bold">0<span>$</p>
-                </div>
                 
-                <button class="w-full bg-[#ECC013] text-white py-2 rounded-3xl mt-4" onclick="validateOrder()">Valider ma commande( <span id="compteurPanier">0</span>)</button>
-                <button class="w-full bg-black text-white py-2 rounded-3xl mt-2" onclick="requestQuote()">Demander un devis</button>
+                <a href="valider.html">
+                    
+                
+                    <button class="w-full bg-[#ECC013] text-white py-2 rounded-3xl mt-4">Valider ma commande</button>
+                </a>
+                <a href="devis.html" class="w-full bg-black text-center text-white py-2 rounded-3xl mt-2" >Demander un devis</a>
                 <a href="#"
                         class="underline self-center text-gray-500" onclick="clearCart()">Vider mon panier</a>
             </div>
@@ -196,221 +231,9 @@
         </div>
     </footer>
     <script src="src/data.js"></script>
-    <script src="src/function.js"></script>
+    <script src="src/panier.js"></script>
     <script src="src/main.js"></script>
-    <script>
-        // Chargement des produits dans le panier depuis localStorage
-        function loadCart() {
-            const cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
-            const cartItemsContainer = document.getElementById('cart-items');
-            cartItemsContainer.innerHTML = ''; // Réinitialiser les éléments du panier
-            let totalPrice = 0;
-            let totalItems = 0;
-
-            cart.forEach(product => {
-                const productElement = document.createElement('div');
-                productElement.classList.add('bg-white', 'p-4', 'rounded-lg');
-                productElement.setAttribute('data-product-id', product.id);
-                productElement.innerHTML = `
-                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <div class="flex text-font text-xl font-bold justify-between">
-                    <h2 >${product.nom}</h2>
-                    <p class="justify-end">${product.prix}$</p>
-                    </div>
-                    <p class="text-font">${product.spec}</p>
-                    <div class="flex items-center text-font space-x-4">
-                        <button class="text-red-500" onclick="removeItem(${product.id})">🗑️</button>
-                        <div class="flex items-center">
-                        <button class="px-2 py-1 bg-[#ECC013] text-white rounded-l" onclick="decrementQuantity(${product.id})">-</button>
-                        <span class="px-4 py-1 bg-white" id="quantity-${product.id}">${product.qte}</span>
-                        <button class="px-2 py-1 bg-[#ECC013] text-white rounded-r" onclick="incrementQuantity(${product.id})">+</button>
-                    </div>
-                </div>
-
-                `;
-
-                cartItemsContainer.appendChild(productElement);
-
-                totalItems += product.qte;
-                totalPrice += product.prix * product.qte;
-            });
-
-            // Mettre à jour le résumé de la commande
-            document.getElementById('total-price').textContent = totalPrice.toFixed(2) + '$';
-            document.getElementById('total-items').textContent = totalItems.toFixed(2) + ' articles';
-        }
-
-        function updateCart() {
-            const cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
-            let totalItems = 0;
-
-            // Calcul du nombre total d'articles dans le panier
-            cart.forEach(product => {
-                totalItems += product.qte;
-            });
-
-            // Mettre à jour le nombre d'articles dans le compteur du panier
-            document.getElementById('cart-count').textContent = totalItems;
-
-            // Mettre à jour l'affichage du panier
-            localStorage.setItem('arr_produits', JSON.stringify(cart));
-            loadCart(); // Recharger le panier avec les nouvelles valeurs
-        }
-
-
-        function removeItem(id) {
-            let cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
-            cart = cart.filter(item => item.id !== id);
-            localStorage.setItem('arr_produits', JSON.stringify(cart));
-            updateCart();
-        }
-
-        function incrementQuantity(id) {
-            let cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
-            const product = cart.find(item => item.id === id);
-            if (product) {
-                product.qte += 1;
-                updateCart();
-            }
-        }
-
-        function decrementQuantity(id) {
-            let cart = JSON.parse(localStorage.getItem('arr_produits')) || [];
-            const product = cart.find(item => item.id === id);
-            if (product && product.qte > 1) {
-                product.qte -= 1;
-                updateCart();
-            }
-        }
-
-        function clearCart() {
-            localStorage.removeItem('arr_produits');
-            updateCart();
-        }
-
-        // Fonction de validation de commande
-        function validateOrder() {
-            alert("Commande validée!");
-            clearCart();
-        }
-
-        // Fonction pour demander un devis
-        function requestQuote() {
-            alert("Demande de devis envoyée!");
-        }
-
-        // Charger le panier au démarrage
-        window.onload = loadCart;
-
-
-
-    // // Charger les produits dans le panier depuis LocalStorage
-    // function loadCart() {
-    //     const cart = JSON.parse(localStorage.getItem('panier')) || [];
-    //     const cartItemsContainer = document.getElementById('cart-items');
-    //     cartItemsContainer.innerHTML = ''; // Réinitialiser les éléments du panier
-
-    //     let totalPrice = 0;
-    //     let totalItems = 0;
-
-    //     cart.forEach(product => {
-    //         const productElement = document.createElement('div');
-    //         productElement.classList.add('bg-white', 'p-4', 'rounded-lg', 'mb-4', 'shadow');
-    //         productElement.setAttribute('data-product-id', product.id);
-
-    //         productElement.innerHTML = `
-    //             <div class="flex justify-between items-center">
-    //                 <img src="${product.image || '../img/placeholder.jpg'}" alt="${product.nom}" class="w-16 h-16 mr-4">
-    //                 <div class="flex-1">
-    //                     <h2 class="text-xl font-semibold">${product.nom}</h2>
-    //                     <p class="text-sm text-gray-500">${product.spec || 'Description non disponible'}</p>
-    //                 </div>
-    //                 <div>
-    //                     <p class="text-gray-800 font-bold">${product.prixUnitaire}dhs</p>
-    //                     <div class="flex items-center mt-2">
-    //                         <button class="px-2 py-1 bg-[#ECC013] text-white rounded-l" onclick="decrementQuantity(${product.id})">-</button>
-    //                         <span class="px-4 py-1 bg-gray-200" id="quantity-${product.id}">${product.qte}</span>
-    //                         <button class="px-2 py-1 bg-[#ECC013] text-white rounded-r" onclick="incrementQuantity(${product.id})">+</button>
-    //                     </div>
-    //                 </div>
-    //                 <button class="text-red-500 ml-4" onclick="removeItem(${product.id})">🗑️</button>
-    //             </div>
-    //             <hr class="my-2">
-    //         `;
-
-    //         cartItemsContainer.appendChild(productElement);
-
-    //         totalItems += product.qte;
-    //         totalPrice += product.prix; // Prix total par produit déjà calculé dans AjoutPanier
-    //     });
-
-    //     // Mettre à jour le résumé de la commande
-    //     document.getElementById('total-price').textContent = totalPrice.toFixed(2) + ' dhs';
-    //     document.getElementById('total-items').textContent = totalItems + ' articles';
-
-    //     // Mettre à jour le compteur du panier
-    //     document.getElementById('compteurPanier').textContent = totalItems;
-    //     document.getElementById('cart-count').textContent = totalItems; // Compteur sur l'icône du panier
-    // }
-
-    // // Mettre à jour le panier dans LocalStorage et l'affichage
-    // function updateCart() {
-    //     loadCart(); // Recharger le panier avec les nouvelles valeurs
-    // }
-
-    // // Fonction pour augmenter la quantité
-    // function incrementQuantity(id) {
-    //     let cart = JSON.parse(localStorage.getItem('panier')) || [];
-    //     const product = cart.find(item => item.id === id);
-    //     if (product) {
-    //         product.qte += 1;
-    //         product.prix = product.qte * product.prixUnitaire;
-    //         localStorage.setItem('panier', JSON.stringify(cart));
-    //         updateCart();
-    //     }
-    // }
-
-    // // Fonction pour diminuer la quantité
-    // function decrementQuantity(id) {
-    //     let cart = JSON.parse(localStorage.getItem('panier')) || [];
-    //     const product = cart.find(item => item.id === id);
-    //     if (product && product.qte > 1) {
-    //         product.qte -= 1;
-    //         product.prix = product.qte * product.prixUnitaire;
-    //         localStorage.setItem('panier', JSON.stringify(cart));
-    //         updateCart();
-    //     }
-    // }
-
-    // // Fonction pour supprimer un article du panier
-    // function removeItem(id) {
-    //     let cart = JSON.parse(localStorage.getItem('panier')) || [];
-    //     cart = cart.fèilter(item => item.id !== id);
-    //     localStorage.setItem('panier', JSON.stringify(cart));
-    //     updateCart();
-    // }
-
-    // // Fonction pour vider le panier
-    // function clearCart() {
-    //     localStorage.removeItem('panier');
-    //     updateCart();
-    // }
-
-    // // Fonction de validation de commande
-    // function validateOrder() {
-    //     alert("Commande validée !");
-    //     clearCart();
-    // }
-
-    // // Fonction pour demander un devis
-    // function requestQuote() {
-    //     alert("Demande de devis envoyée !");
-    // }
-
-    // // Charger le panier au démarrage
-    // window.onload = loadCart;
-
-</script>
+    
 
 </body>
 
