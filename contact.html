@@ -1,191 +1,191 @@
-<!DOCTYPE html>
-<html lang="fr">
+    <!DOCTYPE html>
+    <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="./src/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Play:wght@400;700&family=Sansita+Swashed:wght@300..900&display=swap"
-        rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="./src/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Play:wght@400;700&family=Sansita+Swashed:wght@300..900&display=swap"
+            rel="stylesheet">
+    </head>
 
-<body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
+    <body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
 
-    <!--header-->
-    <header class="bg-black text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
+        <!--header-->
+        <header class="bg-black text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
 
-            <div class="text-lg font-semibold">
-                <a href="/" class="text-white">
-                    <img src="./img/logo.png" alt="Logo" class="h-8">
-                </a>
-            </div>
-
-            <div class="lg:hidden ml-auto order-3">
-                <button id="menu-button" class="text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <nav id="menu" class="hidden lg:flex  space-x-6 justify-center 
-            border-2 border-white rounded-full ml-96">
-                <a href="index.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Home</a>
-                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Catalogue</a>
-                <a href="contact.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1 bg-white text-black">Contact Us </a>
-                <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">About Us</a>
-            </nav>
-
-            <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1 justify-end lg:justify-end">
-                <a href="#" class="text-white">
-                    <img src="./img/User.png" alt="user logo">
-                </a>
-
-                <a href="#search" class="text-white">
-                    <img src="./img/Search.png" alt="search logo">
-                </a>
-
-                <a href="#panier" class="text-white hover:text-gray-300">
-                    <img src="./img/Cart.png" alt="cart logo">
-                </a>
-            </div>
-        </div>
-
-        <div id="collapsed-menu" class="lg:hidden bg-black text-white p-4 absolute w-1/3 top-10 right-0 hidden">
-            <nav class="flex flex-col items-center">
-                <a href="index.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Home</a>
-                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Catalogue</a>
-                <a href="contact.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Contact Us</a>
-                <a href="about.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">About Us</a>
-            </nav>
-        </div>
-
-    </header>
-     <!--contact-->
-
-     <div class="flex flex-col items-center  mt-[50px] ml-[90px] w-2/4 ">
-        <p class="text-[#ECC013] text-3xl " >say hi to the team</p>
-        <h1 class="text-6xl">Contact us </h1>
-        <p class="text-[#ECC013] text-center text-3xl">feel free to contact us and we well get back <br>
-            to you a soon as we can</p>
-    </div>
-    <div class="grid grid-cols-1 mb-[50px] mx-[150px] lg:grid-cols-2">
-    <div class="flex flex-col flex-center mt-[50px] items-center ">
-        <label for="fullname"></label>
-        <input type="text" id="fullname" placeholder="Full Name" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded px-2"><br>
-        <label for="number"></label>
-        <input type="text"id="number" placeholder="Phone number" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded px-2"><br>
-        <label for="email"></label>
-        <input type="email"id="email" placeholder="Enter your Email" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded px-2"><br>
-        <textarea name="message" id="message" placeholder="Enter your message" class="w-[300px] bg-[#EFEEEE] h-[100px] rounded px-2"></textarea><br>
-        <label for="Send"></label>
-        <input type="submit" value="Send" id="Send" class="w-[300px] bg-[#ECC013] rounded-lg cursor-pointer text-xl">
-    </div>
-    <div class="mt-[50px] flex flex-col items-center  ">
-        <p class="text-[#ECC013] text-2xl">opening hours</p>
-        <p class="text-xl">Monday-Friday <br> 24/7</p>
-        <p class="text-[#ECC013] text-2xl">Addresse</p>
-        <p class="text-xl">Nexio Electronics <br>10 Rue de Rivoli <br>75004 Paris<br>France</p>
-        <p class="text-[#ECC013] text-2xl">Support</p>
-        <p class="text-xl">nexio@gmail.com <br> +02 31 6539-0636</p>
-    </div>
-   </div>    
-    <!--footer-->
-    <footer class="bg-black ">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <a href="./accueil.html" class="flex items-center">
-                        <img src="./img/logo.png" class="h-8 me-3" alt="Nexio Logo" />
+                <div class="text-lg font-semibold">
+                    <a href="/" class="text-white">
+                        <img src="./img/logo.png" alt="Logo" class="h-8">
                     </a>
                 </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                    
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Explore</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li>
-                                <a href="#" class="hover:underline ">Smartphones</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Laptops</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Electroménagers</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Manettes</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Casques</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Marketplace</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li>
-                                <a href="#" class="hover:underline">Modes et frais de livraison</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Politique de Retour</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Garantie</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Utiliser un coupon</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Assistance</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">FAQ</a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Evénement à venir</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li>
-                                <a href="#" class="hover:underline">Black Friday 2024</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="lg:hidden ml-auto order-3">
+                    <button id="menu-button" class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between flex justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Nexio™</a>. All Rights Reserved.</span>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-white hover:text-gray-300 text-2xl">
-                        <i class="fab fa-facebook-f"></i>
+
+                <nav id="menu" class="hidden lg:flex  space-x-6 justify-center 
+                border-2 border-white rounded-full ml-96">
+                    <a href="index.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Home</a>
+                    <a href="catalogue.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Catalogue</a>
+                    <a href="contact.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1 bg-white text-black">Contact Us </a>
+                    <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">About Us</a>
+                </nav>
+
+                <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1 justify-end lg:justify-end">
+                    <a href="#" class="text-white">
+                        <img src="./img/User.png" alt="user logo">
                     </a>
-                    <a href="#" class="text-white hover:text-gray-300 text-2xl">
-                        <i class="fab fa-instagram"></i>
+
+                    <a href="#search" class="text-white">
+                        <img src="./img/Search.png" alt="search logo">
                     </a>
-                    <a href="#" class="text-white hover:text-gray-300 text-2xl">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-gray-300 text-2xl">
-                        <i class="fab fa-youtube"></i>
+
+                    <a href="#panier" class="text-white hover:text-gray-300">
+                        <img src="./img/Cart.png" alt="cart logo">
                     </a>
                 </div>
             </div>
+
+            <div id="collapsed-menu" class="lg:hidden bg-black text-white p-4 absolute w-1/3 top-10 right-0 hidden">
+                <nav class="flex flex-col items-center">
+                    <a href="index.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Home</a>
+                    <a href="catalogue.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Catalogue</a>
+                    <a href="contact.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Contact Us</a>
+                    <a href="about.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">About Us</a>
+                </nav>
+            </div>
+
+        </header>
+        <!--contact-->
+
+        <div class="flex flex-col items-center  mt-[50px] ml-[90px] w-2/4 ">
+            <p class="text-[#ECC013] text-3xl " >say hi to the team</p>
+            <h1 class="text-6xl">Contact us </h1>
+            <p class="text-[#ECC013] text-center text-3xl">feel free to contact us and we well get back <br>
+                to you a soon as we can</p>
         </div>
-    </footer>
+        <div class="grid grid-cols-1 mb-[50px] mx-[150px] lg:grid-cols-2">
+        <div class="flex flex-col flex-center mt-[50px] items-center ">
+            <label for="fullname"></label>
+            <input type="text" id="fullname" placeholder="Full Name" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded px-2"><br>
+            <label for="number"></label>
+            <input type="text"id="number" placeholder="Phone number" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded px-2"><br>
+            <label for="email"></label>
+            <input type="email"id="email" placeholder="Enter your Email" class="w-[300px] bg-[#EFEEEE] h-[40px] rounded px-2"><br>
+            <textarea name="message" id="message" placeholder="Enter your message" class="w-[300px] bg-[#EFEEEE] h-[100px] rounded px-2"></textarea><br>
+            <label for="Send"></label>
+            <input type="submit" value="Send" id="Send" class="w-[300px] bg-[#ECC013] rounded-lg cursor-pointer text-xl">
+        </div>
+        <div class="mt-[50px] flex flex-col items-center  ">
+            <p class="text-[#ECC013] text-2xl">opening hours</p>
+            <p class="text-xl">Monday-Friday <br> 24/7</p>
+            <p class="text-[#ECC013] text-2xl">Addresse</p>
+            <p class="text-xl">Nexio Electronics <br>10 Rue de Rivoli <br>75004 Paris<br>France</p>
+            <p class="text-[#ECC013] text-2xl">Support</p>
+            <p class="text-xl">nexio@gmail.com <br> +02 31 6539-0636</p>
+        </div>
+    </div>    
+        <!--footer-->
+        <footer class="bg-black ">
+            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <a href="./accueil.html" class="flex items-center">
+                            <img src="./img/logo.png" class="h-8 me-3" alt="Nexio Logo" />
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Explore</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li>
+                                    <a href="#" class="hover:underline ">Smartphones</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Laptops</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Electroménagers</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Manettes</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Casques</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Marketplace</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li>
+                                    <a href="#" class="hover:underline">Modes et frais de livraison</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Politique de Retour</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Garantie</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Utiliser un coupon</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Assistance</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
 
-    <script src="./src/contact.js"></script>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Evénement à venir</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li>
+                                    <a href="#" class="hover:underline">Black Friday 2024</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-between flex justify-between">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Nexio™</a>. All Rights Reserved.</span>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-</body>
+        <script src="./src/contact.js"></script>
 
-</html>
+    </body>
+
+    </html>
