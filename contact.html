@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 flex flex-col font-sans min-h-screen">
+<body class="bg-gray-100 flex flex-col font-sans min-h-screen kanit-medium">
 
     <!--header-->
     <header class="bg-black text-white p-4">
@@ -18,23 +18,26 @@
 
             <div class="text-lg font-semibold">
                 <a href="/" class="text-white">
-                    <img src="./img/logo.png" alt="Logo" class="h-8">                 
+                    <img src="./img/logo.png" alt="Logo" class="h-8">
                 </a>
             </div>
 
             <div class="lg:hidden ml-auto order-3">
                 <button id="menu-button" class="text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
 
-            <nav id="menu" class="hidden lg:flex space-x-6 justify-center flex-1">
-                <a href="index.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Home</a>
-                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Catalogue</a>
-                <a href="contact.html" class="hover:bg-white hover:text-black rounded px-3 py-1">Contact Us </a>
-                <a href="about.html" class="hover:bg-white hover:text-black rounded px-3 py-1">About Us</a>
+            <nav id="menu" class="hidden lg:flex  space-x-6 justify-center 
+            border-2 border-white rounded-full ml-96">
+                <a href="index.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Home</a>
+                <a href="catalogue.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Catalogue</a>
+                <a href="contact.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1 bg-white text-black">Contact Us </a>
+                <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">About Us</a>
             </nav>
 
             <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1 justify-end lg:justify-end">
@@ -46,7 +49,7 @@
                     <img src="./img/Search.png" alt="search logo">
                 </a>
 
-                <a href="#panier" class="text-white hover:text-gray-300">
+                <a href="./panier.html" class="text-white hover:text-gray-300">
                     <img src="./img/Cart.png" alt="cart logo">
                 </a>
             </div>
@@ -60,9 +63,9 @@
                 <a href="about.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">About Us</a>
             </nav>
         </div>
-    
-    </header>
 
+    </header>
+    
     
     <!--footer-->
     <footer class="bg-black dark:bg-gray-900">
