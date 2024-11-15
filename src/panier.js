@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const searchButton = document.getElementById('search-button');
+    const collapsedsearch = document.getElementById('champRecherche');
+
+    searchButton.addEventListener('click', function () {
+        collapsedsearch.classList.remove('hidden');
+    });
+});
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('panier')) || [];
     const cartItemsContainer = document.getElementById('cart-items');
