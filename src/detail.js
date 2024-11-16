@@ -388,6 +388,8 @@ function ajouterPanierDepuisPageDetail(){
       produitDansPanier.qte += prod.qte ; // Augmente la quantité si le produit existe déjà  
         produitDansPanier.prix = produitDansPanier.qte * produitDansPanier.prixUnitaire; 
         console.log(" exist au panier: "  ) ; 
+        document.getElementById("prodConfigExist").innerHTML = ` ***  Sa quantité a été augmentée car il existe déjà avec cette configuration.  <br/>"`
+       
   } else {
      //produitDansPanier.prix = prod.prixTotal; 
       panier.push(prod);
@@ -437,7 +439,7 @@ function compareOptions(optionProd1, optionProd2) {
 /************************************** */
 /********* panier    ************* */
 /************************************** */
-function affichePanierModal(duration = 1000) {
+function affichePanierModal(duration = 2000) {
   const modal = document.getElementById("panierModal");
   modal.classList.remove("hidden");
   setTimeout(() => {
