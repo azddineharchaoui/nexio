@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue</title>
+
+  <link rel="stylesheet" href="./src/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <!--<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class=" relative  bg-gray-100 flex flex-col   font-sans min-h-screen kanit-medium">
+
+<!--mina-->
+
+
+  <div class="fixed right-0 top-56 bg-black  rounded-full p-2.5 w-10 h-42 max-auto flex flex-col items-center justify-center">
+    <span id="iconAfficheFavori" class=" block material-symbols-outlined text-xl text-red-500 cursor-pointer" 
+  onclick="afficheFavori()">favorite</span>
+  <button> <span id="btn_tri_nom" class=" material-symbols-outlined   text-xl text-gray-500 hover:text-yellow-500 ">
+      sort_by_alpha
+    </span></button>
+  <button > <span id="btn_tri" class=" material-symbols-outlined   text-xl text-gray-500 hover:text-yellow-500">
+      filter_alt
+    </span></button>
+    <a href="./panier.html">
+    <p id="nbProduit" class="text-xs w-4 h-4 bg-red-500 absolute top-20  right-5 rounded-full text-center flex items-center justify-center text-white mt-2.5">
+      0
+  </p>
+  <img src="img/cartEmpty.png" class="w-8 h-8 " alt="panier">
+</a>
+</div>
+
+<!--mina-->
+
+  <!--header-->
+  <header class="bg-black text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-lg font-semibold">
+        <a href="/" class="text-white">
+          <img src="./img/logo.png" alt="Logo" class="h-8">
+        </a>
+      </div>
+
+      <div class="lg:hidden ml-auto order-3">
+        <button id="menu-button" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav id="menu" class="hidden lg:flex space-x-6 justify-center border-2 border-white rounded-full ml-72">
+        <a href="index.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Home</a>
+        <a href="catalogue.html"
+          class="hover:bg-white hover:text-black rounded-full px-3 py-1 bg-white text-black">Catalogue</a>
+        <a href="contact.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">Contact Us</a>
+        <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">About Us</a>
+      </nav>
+
+
+
+
+
+
+
+      <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1  items-center  lg:justify-end">
+     
+<!--mina--> 
+        <div class="relative flex">
+          <input type="text" id="champRecherche" placeholder="Rechercher"
+            class=" m-2.5 p-1 border border-gray-300 w-32 rounded-full text-black" oninput="rechercherProduit()">
+          <img src="./img/Search.png" alt="search logo" class=" absolute right-5 top-2.5">
+        </div>
+
+<!--mina-->
+
+
+        <a href="#" class="text-white">
+          <img src="./img/User.png" alt="user logo">
+        </a>
+
+        <a href="panier.html" class="text-white hover:text-gray-300">
+          <img src="./img/Cart.png" alt="cart logo">
+        </a>
+      </div>
+    </div>
+
+    <div id="collapsed-menu" class="lg:hidden bg-black text-white p-4 absolute w-1/3 top-10 right-0 hidden">
+      <nav class="flex flex-col items-center">
+        <a href="index.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Home</a>
+        <a href="catalogue.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Catalogue</a>
+        <a href="contact.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">Contact Us</a>
+        <a href="about.html" class="hover:bg-white hover:text-black rounded px-3 py-1 mb-2">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- body -->
+  <div class="hidden md:flex justify-center gap-[2em] my-3  lg:mx-40 ">
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+      id="btn_smart">Smartphones</button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+      id="btn_electro">Electroménagers</button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+      id="btn_headphone">Headphones</button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+      id="btn_Montre">Moniteurs</button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+      id="btn_Mouse">Mouses</button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-[191px]"
+      id="btn_Pc">Laptops</button>
+  </div>
+
+  <div class="md:hidden flex justify-center gap-1 my-2 mx-2 ">
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10" id="btn_smart"><ion-icon
+        name="phone-portrait-outline"></ion-icon></button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10" id="btn_electro"><ion-icon
+        name="journal-sharp"></ion-icon></button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10"
+      id="btn_headphone"><ion-icon name="headset-sharp"></ion-icon></button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10" id="btn_Montre"><ion-icon
+        name="desktop-outline"></ion-icon></button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10" id="btn_Mouse"><i
+        class="fas fa-mouse"></i></button>
+    <button class="bg-black text-white m-2 p-2 rounded-full font-light text-center w-10 h-10" id="btn_Pc"><ion-icon
+        name="laptop-outline"></ion-icon></button>
+  </div>
+
+
+
+  <div id="product-list" class="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-5 mx-2 md:mx-40"></div>
+
+
+
+
+  <div class="flex justify-center m-4 gap-x-12 ">
+    <button id="prev-page" class="w-10 h-10 rounded-lg text-white bg-[#ECC013] hover:bg-[#94780A]">
+      < </button>
+        <button id="page2" class="w-10 h-10 rounded-lg text-white bg-[#ECC013] hover:bg-[#94780A]"> 1 </button>
+        <button id="page3" class="w-10 h-10 rounded-lg text-white bg-[#ECC013] hover:bg-[#94780A]"> 2 </button>
+        <button id="page4" class="w-10 h-10 rounded-lg text-white bg-[#ECC013] hover:bg-[#94780A]"> 3 </button>
+        <button id="next-page" class="w-10 h-10 rounded-lg text-white bg-[#ECC013] hover:bg-[#94780A]"> > </button>
+  </div>
+
+  <!-- footer -->
+  <footer class="bg-black dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="./accueil.html" class="flex items-center">
+            <img src="./img/logo.png" class="h-8 me-3" alt="Nexio Logo" />
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 ">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Explore</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li><a href="#" class="hover:underline">Smartphones</a></li>
+              <li><a href="#" class="hover:underline">Laptops</a></li>
+              <li><a href="#" class="hover:underline">Electroménagers</a></li>
+              <li><a href="#" class="hover:underline">Manetteus</a></li>
+              <li><a href="#" class="hover:underline">Casques</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Marketplace</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li><a href="#" class="hover:underline">Modes et frais de livraison</a></li>
+              <li><a href="#" class="hover:underline">Politique de Retour</a></li>
+              <li><a href="#" class="hover:underline">Garantie</a></li>
+              <li><a href="#" class="hover:underline">Utiliser un coupon</a></li>
+              <li><a href="#" class="hover:underline">Assistance</a></li>
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase text-white">Evénement à venir</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li><a href="#" class="hover:underline">Black Friday 2024</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between flex justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+            class="hover:underline">Nexio™</a>. All Rights Reserved.</span>
+        <div class="flex space-x-4">
+          <a href="#" class="text-white hover:text-gray-300 text-2xl">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-white hover:text-gray-300 text-2xl">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-white hover:text-gray-300 text-2xl">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-white hover:text-gray-300 text-2xl">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="src/catalogue.js"></script>
+  <script src="src/favori.js"></script>
+
+  <script src="src/data.js"></script>
+</body>
+
+</html>

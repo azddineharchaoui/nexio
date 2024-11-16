@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement par carte bancaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-font{
+            font-family: "kanit";
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-font">
+    
+    <div class="container mx-auto p-6">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+            <h1 class="text-2xl font-semibold text-center text-[#ECC013]  mb-6">Paiement par carte bancaire</h1>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Formulaire de paiement -->
+                <div class="space-y-6">
+                    <div>
+                        <label for="card-holder" class="block font-medium text-gray-700">Titulaire de la carte</label>
+                        <div class="relative mt-1">
+                            <input type="text" id="card-holder" name="card-holder" class="w-full focus:outline-none focus:border-2 rounded-lg sm:text-sm pl-6" placeholder="Titulaire de la carte">
+                            <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#ECC013]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 11c1.656854 0 3-1.343146 3-3s-1.343146-3-3-3-3 1.343146-3 3 1.343146 3 3 3zm0 0v2m0 4v-2m0-6v8m0-12v2"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="card-number" class="block font-medium text-gray-700">Numéro de carte</label>
+                        <div class="relative mt-1">
+                            <input type="text" id="card-number" name="card-number" class="w-full focus:outline-none focus:border-2 rounded-lg sm:text-sm pl-6" placeholder="Numéro de carte">
+                            <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#ECC013]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="col-span-2">
+                            <label for="expiration-date" class="block font-medium text-gray-700">Date d'expiration</label>
+                            <div class="flex gap-2">
+                                <select id="expiration-month" name="expiration-month" class="border-gray-300 focus:outline-none focus:border-2 rounded-lg ">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="03">04</option>
+                                    <option value="03">05</option>
+                                    <option value="03">06</option>
+                                    <option value="03">07</option>
+                                    <option value="03">08</option>
+                                    <option value="03">09</option>
+                                    <option value="03">10</option>
+                                    <option value="03">11</option>
+                                    <option value="03">12</option>
+                                    
+                                </select>
+                                <select id="expiration-year" name="expiration-year" class="border-gray-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500 ">
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="cvc" class="block font-medium text-gray-700">CVC</label>
+                            <input type="text" id="cvc" name="cvc" class="w-full focus:outline-none focus:border-2 rounded-lg " placeholder="CVC">
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <input type="checkbox" id="terms" name="terms" class="h-4 w-4 text-teal-600 border-gray-300 rounded focus:ring-teal-500">
+                        <label for="terms" class="ml-2 text-sm text-gray-600">Accepter les <a href="#" class="text-[#ECC013] underline">conditions générales d'utilisation</a></label>
+                    </div>
+                    <p class="text-sm text-gray-500">Les informations sur le paiement vous concernant resteront confidentielles.</p>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h2 class="text-lg font-medium text-gray-800 mb-4">Informations du client</h2>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><strong>Nom :</strong> Mrs Berrada Nabil</li>
+                        <li><strong>Adresse :</strong> Safi, SAFI MA</li>
+                        <li><strong>Tél :</strong> +212612345679</li>
+                        <li><strong>Email :</strong> nabilaberaada56@gmail.com</li>
+                    </ul>
+                    <div class="mt-4">
+                        <p class="font-semibold text-gray-800">Montant à payer :</p>
+                        <p id="total" class="text-2xl font-bold text-gray-800">0 <span>$</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center ">
+                <a href="devis.html" target="_blank" class="bg-[#ECC013] text-white font-semibold py-2 px-6 rounded-lg shadow-md " >
+                    Valider le paiement
+                </a>
+                <a href="devis.html" class="bg-black p-3  text-white rounded-lg">Demander un devis</a>
+                <div class="mt-4">
+                    <a href="#" class="text-black underline">Retour au mode de livraison</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

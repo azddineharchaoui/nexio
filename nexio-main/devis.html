@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devis</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Play:wght@400;700&family=Sansita+Swashed:wght@300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="  m-2.5 lg:p-32 ">
+    <div class="flex  lg:justify-between flex-col  lg:flex-row  ">
+
+        <div  class="mb-2.5 flex  justify-evenly ">
+            <div class="bg-black w-48   h-[51px] p-2.5 align-right">
+              
+                    <img src="./img/logo.png" alt="Logo" class="h-8">
+               
+            </div>
+            <div class="flex flex-col  ">
+                <div>
+                    <p class="bg-[#ECC013] w-[190px] flex items-center h-[51px] text-white pl-[10px]">Issue date:
+                        <span id="date_now"  class=" px-2.5 "> </span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="   mx-5 lg:mx-10  ">
+            <div class="flex gap-x-2 flex-row">
+                <img src="img/Address.png" class="" alt="">
+                <p class="self-center">123 anywhere st... any City,ST 1234</p>
+            </div>
+            <div class="flex gap-x-2  flex-row">
+                <img class="w-[29px]" src="img/Phone2x.png" alt="">
+                <p class="self-center">+123-456-7890</p>
+            </div>
+            <div class="flex gap-x-2  flex-row">
+                <img src="img/Letter.png" alt="">
+                <p class="self-center">nexio202@gmail.com</p>
+            </div>
+            <div class="flex gap-x-2 flex-row">
+                <img src="img/Internet.png" alt="">
+                <p class="self-center">www.nexio.com</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div
+        class="grid grid-cols-4 border-2 border-[#ECC013] rounded-lg py-5 mt-[50px] px-4 text-center text-xs sm:text-sm md:text-base lg:text-xl">
+        <p class="font-bold">PRODUCT</p>
+        <p class="font-bold">Price</p>
+        <p class="font-bold">Quantity</p>
+        <p class="font-bold">Total</p>
+    </div>
+
+    <!-- rows of produit -->
+    <div id="listDevis" class="font-semibold  border-2 border-[#ECC013] text-xl  text-center">
+        <!-- <div class="grid grid-cols-4 mx-[100px] py-5 px-4 text-center">
+        <p>Casque gaming</p>
+        <p>50$</p>
+        <p>2</p>
+        <p>100$</p>
+    </div>
+    <div class="grid grid-cols-4 mx-[100px] py-5 px-4 text-center">
+        <p>Casque gaming</p>
+        <p>30$</p>
+        <p>1</p>
+        <p>30$</p>
+    </div>
+    <div class="grid grid-cols-4 mx-[100px] py-5 px-4 text-center">
+        <p>Casque gaming</p>
+        <p>30$</p>
+        <p>1</p>
+        <p>30$</p>
+    </div>-->
+
+    </div>
+    <div class="bg-[#D9D9D9] pt-[20px]  flex  justify-between  border-2 border-[#ECC013] ">
+        <div>
+        <p class=" text-gray-600  text-2xl  ml-[20px] ">PAYMENT :</p>
+        </div>
+        <div>
+            <ul class="flex flex-col items-end  text-left  text-xl font-semibold p-2.5 text-gray-600 ">
+                <li class="flex">TOTAL HT :  <p id="totalHT" class="px-2.5 text-gray-900 "></p>
+                </li>
+                <li class="flex">TVA 20% :<p id="tva"  class="px-2.5 text-gray-900 "></p>
+                </li>
+                <li class="flex">TOTAL TTC :<p id="totalTCC"  class="px-2.5 text-gray-900 "></p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="bg-[#ECC013] flex flex-col items-center justify-center h-[60px] opacity-80">
+        <p class="text-3xl">THANK YOU</p>
+        <P>FOR SHOPPING WITH US</P>
+    </div>
+
+
+    <div class="flex flex-col mt-10 lg:flex-row justify-between">
+          <button class="bg-[#808080] rounded-lg w-[160px] h-[50px]" id="button">
+            <img src="img/Print 🖨.png" alt="print" class="ml-[40px] w-[90px]">
+        </button>
+        <button
+            class="bg-[#ECC013] rounded-lg w-[160px] h-[50px] mb-[10px] text-white text-2xl mr-4  " id="validate">Validate</button>
+      
+    </div>
+
+
+    <script src="./src/main.js"></script>
+    <script src="./src/devis.js"></script>
+
+</body>
+
+</html>
