@@ -266,3 +266,13 @@ function afficheFavori() {
     icon.classList.add("text-red-500");
   });
 }
+
+
+const params = new URLSearchParams(window.location.search);
+if (params.get("afficheFavori") === "true") {
+    afficheFavori(); // Appeler la fonction pour afficher les favoris
+}else if(params.get("afficheTriNom") === "true"){
+  triNom();
+}else if(params.get("afficheTriPrix") === "true"){
+  triPrix();
+}

@@ -548,7 +548,7 @@ let casq1 = {
         "Réduction de bruit active",
         "Bluetooth 5.0",
         "Autonomie : 20 heures",
-        "Couleur : Noir"
+      
     ],
 };
 
@@ -566,7 +566,7 @@ let casq2 = {
         "Type : Supra-aural",
         "Bluetooth",
         "Autonomie : 15 heures",
-        "Couleur : Noir"
+       
     ],
 };
 
@@ -584,7 +584,7 @@ let casq3 = {
         "Type : Intra-auriculaire",
         "Réduction de bruit passive",
         "Connexion : Filaire",
-        "Couleur : Noir"
+     
     ],
 };
 
@@ -596,13 +596,13 @@ let casq4 = {
     prix: 140,
     id_cat: 6,
     taille: "m",
-    couleur: "blanc",
+    couleur: "Blanc",
     image: "https://m.media-amazon.com/images/I/51JNhjr4McL.__AC_SX300_SY300_QL70_ML2_.jpg",
     FicheTechnique: [
         "Type : Over-ear",
         "Réduction de bruit",
         "Autonomie : 30 heures",
-        "Couleur : Blanc"
+       
     ],
 };
 
@@ -614,13 +614,13 @@ let casq5 = {
     prix: 200,
     id_cat: 6,
     taille: "s",
-    couleur: "argent",
+    couleur: "Argent",
     image: "https://m.media-amazon.com/images/I/61yp+9ZkcaL._AC_SX425_.jpg",
     FicheTechnique: [
         "Type : Intra-auriculaire",
         "Connexion : Sans fil (Bluetooth 5.2)",
         "Autonomie : 10 heures",
-        "Couleur : Argent"
+   
     ],
 };
 
@@ -639,7 +639,7 @@ let casq6 = {
         "Connexion : Sans fil (Bluetooth 5.3)",
         "Autonomie : 30 heures",
         "Réduction active du bruit",
-        "Couleur : Noir"
+     
     ],
 };
 
@@ -651,14 +651,14 @@ let casq7 = {
     prix: 200,
     id_cat: 6,
     taille: "S",
-    couleur: "Argent",
+    couleur: "Argenté",
     image: "https://m.media-amazon.com/images/I/61p1-gm4RwL.__AC_SX300_SY300_QL70_ML2_.jpg",
     FicheTechnique: [
         "Type : Intra-auriculaire",
         "Connexion : Sans fil (Bluetooth 5.2)",
         "Autonomie : 10 heures",
         "Son haute fidélité",
-        "Couleur : Argent"
+      
     ],
 };
 
@@ -670,14 +670,13 @@ let casq8 = {
     prix: 180,
     id_cat: 6,
     taille: "L",
-    couleur: "Bleu électrique",
+    couleur: "Bleu",
     image: "https://m.media-amazon.com/images/I/61NTYVZTtfL._AC_SX425_.jpg",
     FicheTechnique: [
         "Type : Supra-auriculaire",
         "Connexion : Sans fil (Bluetooth 5.0)",
         "Autonomie : 15 heures",
         "Commande tactile",
-        "Couleur : Bleu électrique"
     ],
 };
 
@@ -696,7 +695,7 @@ let casq9 = {
         "Connexion : Sans fil (Bluetooth 5.3)",
         "Autonomie : 12 heures",
         "Résistance à l'eau IPX7",
-        "Couleur : Noir mat"
+      
     ],
 };
 
@@ -715,7 +714,7 @@ let casq10 = {
         "Connexion : Sans fil (Bluetooth 5.0)",
         "Autonomie : 20 heures",
         "Réduction passive du bruit",
-        "Couleur : Gris argenté"
+       
     ],
 };
 
@@ -734,7 +733,7 @@ let casq11 = {
         "Connexion : Sans fil (Bluetooth 5.1)",
         "Autonomie : 8 heures",
         "Son stéréo dynamique",
-        "Couleur : Rouge"
+  
     ],
 };
 
@@ -753,7 +752,7 @@ let casq12 = {
         "Connexion : Sans fil (Bluetooth 5.0)",
         "Autonomie : 25 heures",
         "Confortable et léger",
-        "Couleur : Vert"
+     
     ],
 };
 
@@ -836,7 +835,7 @@ let television1 = {
         "Smart TV : Oui",
         "HDMI : 2.1",
         "Taux de rafraîchissement : 120Hz",
-        "Couleur : Noir"
+     
     ]
 };
 
@@ -856,7 +855,7 @@ let television2 = {
         "Smart TV : AI ThinQ",
         "HDMI : 2.1",
         "Taux de rafraîchissement : 60Hz",
-        "Couleur : Gris"
+       
     ]
 };
 
@@ -875,7 +874,7 @@ let television3 = {
         "Technologie : OLED",
         "Smart TV : Google TV",
         "Taux de rafraîchissement : 120Hz",
-        "Couleur : Noir"
+    
     ]
 };
 
@@ -895,7 +894,7 @@ let television4 = {
         "Dolby Vision : Oui",
         "HDMI : 2.1",
         "Taux de rafraîchissement : 60Hz",
-        "Couleur : Noir"
+     
     ]
 };
 
@@ -915,7 +914,7 @@ let moniteur1 = {
         "Technologie : LED",
         "Connexions : HDMI, DisplayPort",
         "Taux de rafraîchissement : 144Hz",
-        "Couleur : Noir"
+    
     ]
 };
 
@@ -935,7 +934,7 @@ let moniteur2 = {
         "Connexions : USB-C",
         "Ajustable : Oui",
         "Taux de rafraîchissement : 60Hz",
-        "Couleur : Argent"
+   
     ]
 };
 
@@ -946,7 +945,7 @@ let moniteur3 = {
     marque:"Samsung",
     prix: 1200,
     id_cat: 3,
-    couleur: "noir",
+    couleur: "Noir",
     tauxDeRafraichissement: "240Hz",
     image: "https://m.media-amazon.com/images/I/81UXBOWJ-uL.__AC_SY300_SX300_QL70_ML2_.jpg",
     FicheTechnique: [
@@ -954,7 +953,7 @@ let moniteur3 = {
         "Courbé : Oui",
         "Connexions : HDMI, DisplayPort",
         "Taux de rafraîchissement : 240Hz",
-        "Couleur : Noir"
+       
     ]
 };
 
@@ -974,7 +973,7 @@ let moniteur4 = {
         "G-Sync : Oui",
         "Connexions : DisplayPort",
         "Taux de rafraîchissement : 144Hz",
-        "Couleur : Noir"
+    
     ]
 };
 
@@ -994,7 +993,7 @@ let refrigerateur1 = {
         "Distributeur d'eau : Oui",
         "Type de congélateur : Supérieur",
         "Litrage : 350L",
-        "Couleur : Argent"
+      
     ]
 };
 
@@ -1012,7 +1011,7 @@ let refrigerateur2 = {
         "Technologie : Inverter Linear Compressor",
         "Réfrigérateur intelligent : Oui",
         "Litrage : 500L",
-        "Couleur : Inox"
+        
     ]
 };
 
@@ -1031,7 +1030,7 @@ let refrigerateur3 = {
         "Technologie : Inverter",
         "Fonctionnalité : Réfrigération rapide",
         "Litrage : 400L",
-        "Couleur : Blanc"
+       
     ]
 };
 
@@ -1050,7 +1049,7 @@ let refrigerateur4 = {
         "Technologie : No Frost",
         "Distributeur d'eau : Oui",
         "Litrage : 450L",
-        "Couleur : Inox"
+      
     ]
 };
 
@@ -1070,7 +1069,7 @@ let machineLaver1 = {
         "Programme rapide : 30 minutes",
         "Type de chargement : Frontal",
         "Litrage : 8kg",
-        "Couleur : Blanc"
+      
     ]
 };
 
@@ -1089,7 +1088,7 @@ let machineLaver2 = {
         "Programme rapide : Oui",
         "Type de chargement : Par le haut",
         "Litrage : 7kg",
-        "Couleur : Gris"
+       
     ]
 };
 
@@ -1108,7 +1107,7 @@ let machineLaver3 = {
         "Programme vapeur : Oui",
         "Type de chargement : Frontal",
         "Litrage : 9kg",
-        "Couleur : Blanc"
+
     ]
 };
 
@@ -1127,7 +1126,7 @@ let machineLaver4 = {
         "Programme rapide : Oui",
         "Type de chargement : Frontal",
         "Litrage : 8kg",
-        "Couleur : Gris"
+   
     ]
 };
 
@@ -1148,7 +1147,7 @@ let microOnde1 = {
         "Fonction grill : Oui",
         "Décongélation rapide : Oui",
         "Capacité : 30L",
-        "Couleur : Noir",
+       
         "Puissance micro-ondes : 900W",
         "Dimensions (L x H x P) : 51 x 30 x 40 cm"
     ]
@@ -1170,8 +1169,7 @@ let microOnde2 = {
         "Capacité : 23L",
         "Puissance micro-ondes : 800W",
         "Fonction de décongélation : Oui",
-        "Couleur : Argent",
-        "Dimensions (L x H x P) : 48 x 27 x 39 cm"
+             "Dimensions (L x H x P) : 48 x 27 x 39 cm"
     ]
 };
 
@@ -1191,7 +1189,7 @@ let microOnde3 = {
         "Fonction de décongélation : Oui",
         "Capacité : 25L",
         "Puissance micro-ondes : 1000W",
-        "Couleur : Noir",
+      
         "Dimensions (L x H x P) : 51 x 30 x 40 cm"
     ]
 };
@@ -1212,7 +1210,6 @@ let microOnde4 = {
         "Niveaux de puissance : 5",
         "Capacité : 28L",
         "Puissance micro-ondes : 900W",
-        "Couleur : Argent",
         "Dimensions (L x H x P) : 50 x 29 x 43 cm"
     ]
 };

@@ -298,10 +298,13 @@ function afficheAllFavoris() {
   afficheAllPromo(produitsAffiches, 0, 4)
 
 }
+/********************************** ******************/
+////// chemin sur server  local /////
+/********************************** ******************/
+ // gestion des chemins en local (appel au fonctions sur page index.html et detail.html:
 
-
-
-  // appel au fonction sur les pages :
+const path = window.location.pathname;
+ 
   if (window.location.pathname === "/") {
     console.log("index.html  je suis la ");
     afficheAllFavoris() ; 
@@ -318,3 +321,42 @@ function afficheAllFavoris() {
    else {
     console.log(window.location.pathname );
   }
+
+/******************************************************** */
+
+
+/********************************** ******************/
+////// chemin sur server  local /////
+/********************************** ******************/
+
+// Gestion des chemins selon hitHub Pages
+
+if (path.endsWith("/nexio/") || path.endsWith("/nexio/index.html")) {
+    console.log("index.html  je suis là");
+    afficheAllFavoris();
+} else if (path.endsWith("/nexio/detail.html")) {
+    const param = new URLSearchParams(window.location.search);
+    const id = param.get("id"); // Récupère la valeur de 'id'
+    console.log("Je suis sur detail.html avec ID :", id);
+    afficheDetail(id);
+} else {
+    console.log("Chemin non reconnu :", path);
+}
+
+
+
+  // Obtenir le chemin relatif correctement pour GitHub Pages
+/*const path = window.location.pathname;
+
+// Gestion des chemins selon GitHub Pages
+if (path.endsWith("/nexio/") || path.endsWith("/nexio/index.html")) {
+    console.log("index.html  je suis là");
+    afficheAllFavoris();
+} else if (path.endsWith("/nexio/detail.html")) {
+    const param = new URLSearchParams(window.location.search);
+    const id = param.get("id"); // Récupère la valeur de 'id'
+    console.log("Je suis sur detail.html avec ID :", id);
+    afficheDetail(id);
+} else {
+    console.log("Chemin non reconnu :", path);
+}*/
