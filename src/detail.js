@@ -30,16 +30,29 @@ const divQte = document.getElementById("divqte");
 let prodAfficheSurPageDetail; // faire une copie de produit pour manipule et le rendre ligne de cmd apres
 
 function afficheDetail(id_produit) {
+  const panier = JSON.parse(localStorage.getItem('panier')) || [];
+  document.getElementById("nbProduit").innerHTML = panier.length;
+  document.getElementById("nbProduit1").innerHTML = panier.length;
+
+
   let prod = getproduit(id_produit);
   let card = document.createElement("card");
-  let codeHtml = ` <div class="product-card flex lg:flex-row flex-col  ">
-                <div class="w-full lg:w-1/2"><img class="w-50 lg:w-92 mx-auto lg:mx-auto lg:m-10" src="${prod.image}" alt="${prod.nom}"></div>
-                <div class="flex flex-col justify-center p-2.5 w-full lg:p-10 lg:w-1/2 ">
-                    <h3 class="lg:text-2xl px-8 font-normal tracking-normal  leading-8  lg:leading-10">${prod.nom}-${prod.spec}</h3>
-                    <br>
-                    <p class="lg:text-2xl px-8 text-xl">Prix : $${prod.prix} </p>
-                </div>
-            </div>
+  let codeHtml = `<div class="product-card flex lg:flex-row flex-col">
+    <!-- Section Image -->
+    <div class="w-full lg:w-1/2 flex items-center justify-center">
+        <img 
+            class="w-full max-w-[300px] h-auto lg:max-w-[300px] mx-auto lg:mx-0 lg:m-10 object-contain" 
+            src="${prod.image}" 
+            alt="${prod.nom}">
+    </div>
+    
+   
+    <div class="flex flex-col justify-center p-4 w-full lg:p-10 lg:w-1/2">
+        <h3 class="lg:text-2xl px-8 font-normal tracking-normal leading-8 lg:leading-10">${prod.nom}-${prod.spec}</h3>
+        <br>
+        <p class="lg:text-2xl px-8 text-xl">Prix : $${prod.prix}</p>
+    </div>
+</div>
     `;
   card.innerHTML = codeHtml;
   document.getElementById("product-list").appendChild(card);
@@ -75,6 +88,7 @@ function afficheDetail(id_produit) {
 
 function changeColor(c){
   let couleur = document.getElementById("couleur");
+  couleur.innerHTML=`` ;
   couleur.innerHTML = c;
 }
 function afficheSpec(id_cat) {
@@ -357,6 +371,8 @@ function calculPrixProduit(prod, prixOpt, opt) {
 
 document.getElementById("btnAjoutPanier").addEventListener('click' , function(){
   ajouterPanierDepuisPageDetail(prod)
+  document.getElementById("nbProduit").innerHTML= panier.length
+  
 })
 
 
@@ -372,14 +388,24 @@ function ajouterPanierDepuisPageDetail(){
       produitDansPanier.qte += prod.qte ; // Augmente la quantité si le produit existe déjà  
         produitDansPanier.prix = produitDansPanier.qte * produitDansPanier.prixUnitaire; 
         console.log(" exist au panier: "  ) ; 
+        document.getElementById("prodConfigExist").innerHTML = ` ***  Sa quantité a été augmentée car il existe déjà avec cette configuration.  <br/>"`
+       
   } else {
      //produitDansPanier.prix = prod.prixTotal; 
       panier.push(prod);
       console.log( "------**  je suis else ****----") ;
 
   }
-  alert("Produit ajouté au panier!");
+  affichePanierModal(duration = 1000);
+
+
   localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier da
+   panier = JSON.parse(localStorage.getItem('panier')) || [];
+  document.getElementById("nbProduit").innerHTML = panier.length;
+  document.getElementById("nbProduit1").innerHTML = panier.length;
+
+
+  location.reload(); 
 }
 
 
@@ -411,8 +437,16 @@ function compareOptions(optionProd1, optionProd2) {
 }
 
 /************************************** */
-/********* produit offre  ************* */
+/********* panier    ************* */
 /************************************** */
+function affichePanierModal(duration = 2000) {
+  const modal = document.getElementById("panierModal");
+  modal.classList.remove("hidden");
+  setTimeout(() => {
+      modal.classList.add("hidden");
+  }, duration);
+}
+
 
 
 

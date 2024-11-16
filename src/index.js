@@ -1,16 +1,5 @@
 
 
-
-  /*function afficheAllFavoris() {
-    // Get a subset (slice) of products from arr_produits
-    let produitsAffiches = arr_produits.slice(0, 2);  // Slice the first 2 products (adjust indices as needed)
-
-    produitsAffiches.forEach((prod) => {
-        console.log(prod);  // Log the product details
-        afficheProduit(prod.id);  // Display product details by ID
-    });
-}
-*/
 function afficheAllFavoris() {
 
     let produitsAffiches =[] ; 

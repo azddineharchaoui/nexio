@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Panier - Fondu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .fixed {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #FFEB3B;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cart {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            transition: opacity 1s ease;
+        }
+
+        #cart-empty {
+            z-index: 1;
+        }
+
+        #cart-full {
+            z-index: 2;
+            display: none;
+            opacity: 0;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #FF9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #E65100;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fixed">
+        <img id="cart-empty" src="img/cartEmpty.png" alt="panier vide" class="cart" />
+                <!-- Image du panier rempli -->
+                <img id="cart-full" src="img/cartFull.png" alt="panier rempli" class="cart hidden" />
+
+        <p id="nbProduit">0 produit(s)</p>
+        <button onclick="addProductToCart()">Ajouter au panier</button>
+    </div>
+
+    <script>
+        function addProductToCart() {
+            const cartEmpty = document.getElementById("cart-empty");
+            const cartFull = document.getElementById("cart-full");
+            const nbProduit = document.getElementById("nbProduit");
+
+            // Panier vide devient transparent
+            cartEmpty.style.opacity = 0;
+
+            // Après un délai, le panier rempli devient visible
+            setTimeout(() => {
+                cartEmpty.style.display = 'none';
+                cartFull.style.display = 'block';
+                cartFull.style.opacity = 1;
+                nbProduit.textContent = `${parseInt(nbProduit.textContent.split(' ')[0]) + 1} produit(s)`;
+
+                // Réinitialisation après un délai
+                setTimeout(() => {
+                    cartFull.style.opacity = 0;
+                    setTimeout(() => {
+                        cartFull.style.display = 'none';
+                        cartEmpty.style.display = 'block';
+                        cartEmpty.style.opacity = 1;
+                    }, 1000);
+                }, 1000);
+            }, 500); // Délai avant d'afficher le panier rempli
+        }
+    </script>
+</body>
+</html>

@@ -4,8 +4,8 @@ let produits;
 // smartphone
 let phone1 = {
     id: 10,
-    nom: "Samsung Galaxy A05",
-    spec: "Smartphone Apple avec écran OLED 6.1 pouces",
+    nom: "Samsung Galaxy",
+    spec: "Apple avec pcOLED 6.1pc",
     prix: 2000,
     marque:"Samsung",
     id_cat: 1,
@@ -14,7 +14,7 @@ let phone1 = {
     stockage: "250gb",
     processeur: "Exynos",
     FicheTechnique: [
-        "Écran OLED 6.1 pouces",
+        "pcOLED 6.1pc",
         "Processeur Exynos",
         "Caméra arrière 50 MP",
         "Batterie 5000 mAh",
@@ -27,7 +27,7 @@ let phone1 = {
 let phone2 = {
     id: 11,
     nom: "REDMI 14C",
-    spec: "Smartphone avec écran Dynamic AMOLED 6.8 pouces et caméra 200 MP",
+    spec: "Dynamic AMOLED 6.8pc et caméra 200 MP",
     marque:"REDMI",
     prix: 1300,
     id_cat: 1,
@@ -36,7 +36,7 @@ let phone2 = {
     stockage: "256gb",
     processeur: "Exynos",
     FicheTechnique: [
-        "Écran Dynamic AMOLED 6.8 pouces",
+        "pcDynamic AMOLED 6.8pc",
         "Processeur Exynos",
         "Caméra arrière 200 MP",
         "Batterie 5000 mAh",
@@ -49,7 +49,7 @@ let phone2 = {
 let phone3 = {
     id: 12,
     nom: "XIAOMI Redmi A3x",
-    spec: "Smartphone avec écran Dynamic AMOLED 6.8 pouces et caméra 200 MP",
+    spec: "Dynamic AMOLED 6.8 p caméra 200 MP",
     marque:"XIAOMI",
     prix: 1300,
     id_cat: 1,
@@ -58,7 +58,7 @@ let phone3 = {
     stockage: "250gb",
     processeur: "Exynos",
     FicheTechnique: [
-        "Écran Dynamic AMOLED 6.8 pouces",
+        "pcDynamic AMOLED 6.8pc",
         "Processeur Exynos",
         "Caméra arrière 200 MP",
         "Batterie 5000 mAh",
@@ -71,7 +71,7 @@ let phone3 = {
 let phone4 = {
     id: 13,
     nom: "OPPO Reno8 T",
-    spec: "Smartphone pliable avec écran flexible AMOLED 7.2 pouces",
+    spec: "pcflexible AMOLED 7.2pc",
     marque:"OPPO",
     prix: 2500,
     id_cat: 1,
@@ -80,7 +80,7 @@ let phone4 = {
     stockage: "512gb",
     processeur: "Snapdragon",
     FicheTechnique: [
-        "Écran flexible AMOLED 7.2 pouces",
+        "pcflexible AMOLED 7.2pc",
         "Processeur Snapdragon",
         "Caméra arrière 108 MP",
         "Batterie 4500 mAh",
@@ -92,8 +92,8 @@ let phone4 = {
 
 let phone5 = {
     id: 14,
-    nom: "Samsung Galaxy S23+",
-    spec: "Smartphone compact avec écran OLED 5.4 pouces",
+    nom: "SaGalaxy  S23+",
+    spec: "OLED 5.4pc",
     marque:"Samsung",
     prix: 900,
     id_cat: 1,
@@ -102,7 +102,7 @@ let phone5 = {
     stockage: "128gb",
     processeur: "A15 Bionic",
     FicheTechnique: [
-        "Écran OLED 5.4 pouces",
+        "pcOLED 5.4pc",
         "Processeur A15 Bionic",
         "Caméra arrière 50 MP",
         "Batterie 3800 mAh",
@@ -114,8 +114,8 @@ let phone5 = {
 
 let phone6 = {
     id: 15,
-    nom: "Xiaomi Redmi Note 13 Pro",
-    spec: "Smartphone haut de gamme avec écran AMOLED 6.1 pouces",
+    nom: "Xiaomi 13 Pro",
+    spec: " pcAMOLED 6.1pc",
     marque:"Xiaomi",
     prix: 849,
     id_cat: 1,
@@ -124,7 +124,7 @@ let phone6 = {
     stockage: "128GB",
     processeur: "Snapdragon 8 Gen 2",
     FicheTechnique: [
-        "Écran AMOLED 6.1 pouces",
+        "pcAMOLED 6.1pc",
         "Processeur Snapdragon 8 Gen 2",
         "Caméra arrière 200 MP",
         "Batterie 5000 mAh",
@@ -137,7 +137,7 @@ let phone6 = {
 let phone7 = {
     id: 16,
     nom: "Apple iPhone 15 Pro Max",
-    spec: "256GB Titane Bleu 6,7\" Bouton Action A17 Pro 8GB RAM iOS 17",
+    spec: "Bouton Action A17 Pro 8GB RAM iOS 17",
     marque:"Apple",
     prix: 699,
     id_cat: 1,
@@ -146,7 +146,7 @@ let phone7 = {
     stockage: "128GB",
     processeur: "Google Tensor G3",
     FicheTechnique: [
-        "Écran OLED 6.2 pouces",
+        "pcOLED 6.2pc",
         "Processeur Google Tensor G3",
         "Caméra arrière 50 MP",
         "Batterie 4000 mAh",
@@ -159,7 +159,7 @@ let phone7 = {
 let phone8 = {
     id: 17,
     nom: "Samsung Galaxy M53",
-    spec: "Smartphone performant avec écran AMOLED 6.7 pouces",
+    spec: " avec pcAMOLED 6.7pc",
     marque:"Samsung",
     prix: 799,
     id_cat: 1,
@@ -168,7 +168,7 @@ let phone8 = {
     stockage: "256GB",
     processeur: "Snapdragon 8 Gen 2",
     FicheTechnique: [
-        "Écran AMOLED 6.7 pouces",
+        "pcAMOLED 6.7pc",
         "Processeur Snapdragon 8 Gen 2",
         "Caméra arrière 108 MP",
         "Batterie 5000 mAh",
@@ -181,7 +181,7 @@ let phone8 = {
 let phone9 = {
     id: 18,
     nom: "INFINIX NOTE 30",
-    spec: "Smartphone avec écran AMOLED 6.73 pouces et caméra Leica",
+    spec: " AMOLED 6.73pc et caméra Leica",
     marque:"INFINIX",
     prix: 999,
     id_cat: 1,
@@ -190,7 +190,7 @@ let phone9 = {
     stockage: "256GB",
     processeur: "Snapdragon 8 Gen 2",
     FicheTechnique: [
-        "Écran AMOLED 6.73 pouces",
+        "pcAMOLED 6.73pc",
         "Processeur Snapdragon 8 Gen 2",
         "Caméra Leica 108 MP",
         "Batterie 4500 mAh",
@@ -203,7 +203,7 @@ let phone9 = {
 let phone10 = {
     id: 19,
     nom: "Samsung Galaxy Z Flip 6",
-    spec: "Smartphone premium avec écran AMOLED 6.7 pouces et 5G ",
+    spec: "premium avec pcAMOLED 6.7pc et 5G ",
     marque:"Samsung",
     prix: 1100,
     id_cat: 1,
@@ -212,7 +212,7 @@ let phone10 = {
     stockage: "256GB",
     processeur: "Snapdragon 8 Gen 1",
     FicheTechnique: [
-        "Écran AMOLED 6.7 pouces",
+        "pcAMOLED 6.7pc",
         "Processeur Snapdragon 8 Gen 1",
         "Caméra arrière 50 MP",
         "Batterie 4000 mAh",
@@ -225,7 +225,7 @@ let phone10 = {
 let phone11 = {
     id: 20,
     nom: "APPLE iPhone 14 ",
-    spec: "Smartphone haut de gamme avec écran AMOLED 6.7 pouces et 5G",
+    spec: "haut de gamme avec pcAMOLED 6.7pc et 5G",
     marque:"Apple",
     prix: 749,
     id_cat: 1,
@@ -234,7 +234,7 @@ let phone11 = {
     stockage: "128GB",
     processeur: "Snapdragon 8 Gen 1",
     FicheTechnique: [
-        "Écran AMOLED 6.7 pouces",
+        "pcAMOLED 6.7pc",
         "Processeur Snapdragon 8 Gen 1",
         "Caméra arrière 48 MP",
         "Batterie 3300 mAh",
@@ -247,7 +247,7 @@ let phone11 = {
 let phone12 = {
     id: 21,
     nom: "Samsung Galaxy Z Fold 6",
-    spec: "Smartphone haut de gamme avec écran AMOLED 6.7 pouces et 5G",
+    spec: "haut de gamme avec pcAMOLED 6.7pc et 5G",
     marque:"Samsung",
     prix: 749,
     id_cat: 1,
@@ -256,7 +256,7 @@ let phone12 = {
     stockage: "128GB",
     processeur: "Snapdragon 8 Gen 3",
     FicheTechnique: [
-        "Écran AMOLED 6.7 pouces",
+        "pcAMOLED 6.7pc",
         "Processeur Snapdragon 8 Gen 3",
         "Caméra arrière 50 MP",
         "Batterie 4500 mAh",
@@ -270,8 +270,8 @@ let phone12 = {
 //laptop
 let PC1 = {
     id: 22,
-    nom: "PC PORTABLE W11 LENOVO",
-    spec: "Ordinateur portable Dell avec écran 15.6 pouces 4K OLED, processeur Intel i7-12700H, carte graphique Nvidia RTX 3050, 16GB RAM",
+    nom: "PORTABLE W11 LENOVO",
+    spec: "Intel i7-12700H, carte graphique Nvidia ",
     marque:"LONOVO",
     prix: 1500,
     id_cat: 2,
@@ -281,7 +281,7 @@ let PC1 = {
     processeur: { id: 1, marque: "AMD", nom: "Ryzen 5 7600", prix: 0 },
     carteGraphique: { id: 1, marque: "Nvidia", nom: "RTX 4090", prix: 0 },
     FicheTechnique: [
-        "Écran 15.6 pouces 4K OLED",
+        "pc15.6pc 4K OLED",
         "Processeur Intel i7-12700H",
         "Carte graphique Nvidia RTX 3050",
         "Mémoire RAM 16 GB",
@@ -293,7 +293,7 @@ let PC1 = {
 let PC2 = {
     id: 23,
     nom: "ASUS ExpertBook B1",
-    spec: "PC de jeu HP Omen 16 avec écran 16.1 pouces Full HD, processeur AMD Ryzen 7 5800H, carte graphique Nvidia RTX 3060, 32GB RAM",
+    spec: "avec pc16.1pc Full HD, processeur AMD ",
     marque:"ASUS",
     prix: 2200,
     id_cat: 2,
@@ -303,7 +303,7 @@ let PC2 = {
     processeur: { id: 1, marque: "AMD", nom: "Ryzen 5 7600", prix: 0 },
     carteGraphique: { id: 1, marque: "Nvidia", nom: "RTX 4090", prix: 0 },
     FicheTechnique: [
-        "Écran 16.1 pouces Full HD",
+        "pc16.1pc Full HD",
         "Processeur AMD Ryzen 7 5800H",
         "Carte graphique Nvidia RTX 3060",
         "Mémoire RAM 32 GB",
@@ -314,8 +314,8 @@ let PC2 = {
 
 let PC3 = {
     id: 24,
-    nom: "HP Victus PC Portable Gaming",
-    spec: "Ordinateur portable Apple avec écran Retina 16 pouces, processeur Apple M1 Pro, carte graphique intégrée Apple, 32GB RAM",
+    nom: "HP Victus PC ",
+    spec: "Ordinateur Apple M1 Pro, carte 32GB RAM",
     marque:"HP",
     prix: 2800,
     id_cat: 2,
@@ -325,7 +325,7 @@ let PC3 = {
     processeur: { id: 1, marque: "AMD", nom: "Ryzen 5 7600", prix: 0 },
     carteGraphique: { id: 1, marque: "Nvidia", nom: "RTX 4090", prix: 0 },
     FicheTechnique: [
-        "Écran Retina 16 pouces",
+        "pcRetina 16pc",
         "Processeur Apple M1 Pro",
         "Carte graphique intégrée Apple",
         "Mémoire RAM 32 GB",
@@ -337,7 +337,7 @@ let PC3 = {
 let PC4 = {
     id: 25,
     nom: "HUAWEI MateBook 14 2023", 
-    spec: "Ordinateur portable HUAWEI avec écran 14 pouces OLED, processeur Ryzen 9 5900HX, 16GB RAM", 
+    spec: " processeur Ryzen 9 5900HX, 16GB RAM", 
     marque:"HUAWEI",
     prix: 2000, 
     id_cat: 2,
@@ -347,7 +347,7 @@ let PC4 = {
     processeur: { id: 2, marque: "AMD", nom: "Ryzen 9 5900HX", prix: 100 },
     carteGraphique: { id: 2, marque: "Nvidia", nom: "RTX 3060", prix: 0 },
     FicheTechnique: [
-        "Écran OLED 14 pouces",
+        "pcOLED 14pc",
         "Processeur Ryzen 9 5900HX",
         "Carte graphique Nvidia RTX 3060",
         "Mémoire RAM 16 GB",
@@ -358,8 +358,8 @@ let PC4 = {
 
 let PC5 = {
     id: 26,
-    nom: "PC Portable INFINIX Inbook X1 Pro", 
-    spec: "Ordinateur portable INFINIX avec écran 13.5 pouces Full HD, Intel i5-1135G7, 8GB RAM, SSD 512GB", 
+    nom: "INFINIX Inbook X1 Pro", 
+    spec: "pc13.5pc Full HD, Intel i5-1135G7, 8GB RAM, SSD 512GB", 
     marque:"INFINIX",
     prix: 1300,
     id_cat: 2,
@@ -369,7 +369,7 @@ let PC5 = {
     processeur: { id: 3, marque: "Intel", nom: "Core i5-1135G7", prix: 50 }, 
     carteGraphique: { id: 3, marque: "Intel", nom: "Iris Xe", prix: 0 },
     FicheTechnique: [
-        "Écran Full HD 13.5 pouces",
+        "pcFull HD 13.5pc",
         "Processeur Intel i5-1135G7",
         "Carte graphique Intel Iris Xe",
         "Mémoire RAM 8 GB",
@@ -380,8 +380,8 @@ let PC5 = {
 
 let PC6 = {
     id: 27,
-    nom: "ACER PC PORTABLE ASPIRE 3 Pro", 
-    spec: "Ordinateur portable ACER avec écran 15.6 pouces, Intel i7-1165G7, 16GB RAM, SSD 512GB", 
+    nom: "ACER PC PORTABLE ASPIRE", 
+    spec: "ACER avec pc15.6pc, SSD 512GB", 
     marque:"ACER",
     prix: 1400, 
     id_cat: 2,
@@ -391,7 +391,7 @@ let PC6 = {
     processeur: { id: 4, marque: "Intel", nom: "Core i7-1165G7", prix: 150 },
     carteGraphique: { id: 4, marque: "Intel", nom: "Iris Xe", prix: 0 },
     FicheTechnique: [
-        "Écran 15.6 pouces Full HD",
+        "pc15.6pc Full HD",
         "Processeur Intel i7-1165G7",
         "Carte graphique Intel Iris Xe",
         "Mémoire RAM 16 GB",
@@ -403,7 +403,7 @@ let PC6 = {
 let PC7 = {
     id: 28,
     nom: "HP ProBook 440 G8 2023", 
-    spec: "HP ProBook 440 G8 avec écran 14 pouces, Intel i7-1185G7, 16GB RAM, 512GB SSD", 
+    spec: "Intel i7-1185G7, 16GB RAM, 512GB SSD", 
     marque:"HP",
     prix: 1500, 
     id_cat: 2,
@@ -413,7 +413,7 @@ let PC7 = {
     processeur: { id: 5, marque: "Intel", nom: "Core i7-1185G7", prix: 200 },
     carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 },
     FicheTechnique: [
-        "Écran 14 pouces Full HD",
+        "pc14pc Full HD",
         "Processeur Intel i7-1185G7",
         "Carte graphique Intel Iris Xe",
         "Mémoire RAM 16 GB",
@@ -424,8 +424,8 @@ let PC7 = {
 
 let PC8 = {
     id: 29,
-    nom: "PC portable Acer Aspire 2023", 
-    spec: "Ordinateur portable Acer avec écran 15.6 pouces, Intel i7-1165G7, 16GB RAM, 512GB SSD",
+    nom: "portable Acer Aspire 2023", 
+    spec: " Intel i7-1165G7, 16GB RAM, 512GB SSD",
     marque:"Acer",
     prix: 1450, 
     id_cat: 2,
@@ -435,7 +435,7 @@ let PC8 = {
     processeur: { id: 4, marque: "Intel", nom: "Core i7-1165G7", prix: 150 },
     carteGraphique: { id: 4, marque: "Intel", nom: "Iris Xe", prix: 0 },
     FicheTechnique: [
-        "Écran 15.6 pouces Full HD",
+        "pc15.6pc Full HD",
         "Processeur Intel i7-1165G7",
         "Carte graphique Intel Iris Xe",
         "Mémoire RAM 16 GB",
@@ -447,7 +447,7 @@ let PC8 = {
 let PC9 = {
     id: 30,
     nom: "DELL LATITUDE 5540 2023", 
-    spec: "Ordinateur portable Dell avec écran 14 pouces, Intel i7-1185G7, 16GB RAM, 512GB SSD", 
+    spec: "Dell avec pc14pc, 16GB RAM, 512GB SSD", 
     marque:"DELL",
     prix: 1600, 
     id_cat: 2,
@@ -457,7 +457,7 @@ let PC9 = {
     processeur: { id: 5, marque: "Intel", nom: "Core i7-1185G7", prix: 200 },
     carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 },
     FicheTechnique: [
-        "Écran 14 pouces Full HD",
+        "pc14pc Full HD",
         "Processeur Intel i7-1185G7",
         "Carte graphique Intel Iris Xe",
         "Mémoire RAM 16 GB",
@@ -469,7 +469,7 @@ let PC9 = {
 let PC10 = {
     id: 31,
     nom: "Acer Swift 3 2023", 
-    spec: "Ordinateur portable Acer avec écran 13.5 pouces, Intel i7-1165G7, 16GB RAM, 512GB SSD", 
+    spec: " Intel i7-1165G7, 16GB RAM, 512GB SSD", 
     marque:"Acer",
     prix: 1550, 
     id_cat: 2,
@@ -479,7 +479,7 @@ let PC10 = {
     processeur: { id: 5, marque: "Intel", nom: "Core i7-1165G7", prix: 200 },
     carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 },
     FicheTechnique: [
-        "Écran 13.5 pouces Full HD",
+        "pc13.5pc Full HD",
         "Processeur Intel i7-1165G7",
         "Carte graphique Intel Iris Xe",
         "Mémoire RAM 16 GB",
@@ -491,7 +491,7 @@ let PC10 = {
 let PC11 = {
     id: 32,
     nom: "Apple - 15,3\" MacBook Air M2", 
-    spec: "Ordinateur portable Huawei avec écran 13.9 pouces, Intel i7-1185G7, 16GB RAM, SSD 512GB", 
+    spec: " Intel i7-1185G7, 16GB RAM, SSD 512GB", 
     marque:"Apple",
     prix: 1700, 
     id_cat: 2,
@@ -501,7 +501,7 @@ let PC11 = {
     processeur: { id: 5, marque: "Intel", nom: "Core i7-1185G7", prix: 200 },
     carteGraphique: { id: 5, marque: "Intel", nom: "Iris Xe", prix: 0 },
     FicheTechnique: [
-        "Écran 13.9 pouces Full HD",
+        "pc13.9pc Full HD",
         "Processeur Intel i7-1185G7",
         "Carte graphique Intel Iris Xe",
         "Mémoire RAM 16 GB",
@@ -513,7 +513,7 @@ let PC11 = {
 let PC12 = {
     id: 33,
     nom: "Apple MacBook Air M2 2023", 
-    spec: "MacBook Air avec puce M2, écran 15.3 pouces, 16GB RAM, 512GB SSD", 
+    spec: "MacBook Air avec puce M2,512GB SSD", 
     marque:"Apple",
     prix: 1800, 
     id_cat: 2,
@@ -523,7 +523,7 @@ let PC12 = {
     processeur: { id: 6, marque: "Apple", nom: "Puce Apple M2", prix: 0 }, 
     carteGraphique: { id: 6, marque: "Apple", nom: "Puce Apple M2", prix: 0 },
     FicheTechnique: [
-        "Écran 15.3 pouces Retina",
+        "pc15.3pc Retina",
         "Puce Apple M2",
         "Carte graphique intégrée Apple",
         "Mémoire RAM 16 GB",
@@ -536,7 +536,7 @@ let PC12 = {
 let casq1 = {
     id: 34,
     nom: "Sony WH-1000XM4",
-    spec: "Circum-aural, réduction de bruit active, Bluetooth 5.0, autonomie 20 heures",
+    spec: "Circum-aural, autonomie 20 heures",
     marque: "Sony",
     prix: 120,
     id_cat: 6,
@@ -548,13 +548,13 @@ let casq1 = {
         "Réduction de bruit active",
         "Bluetooth 5.0",
         "Autonomie : 20 heures",
-        "Couleur : Noir"
+      
     ],
 };
 
 let casq2 = {
     id: 35,
-    nom: "Bose QuietComfort 35 II",
+    nom: "Bose Quiet35",
     spec: "Supra-aural, Bluetooth, autonomie 15 heures",
     marque: "Bose",
     prix: 90,
@@ -566,14 +566,14 @@ let casq2 = {
         "Type : Supra-aural",
         "Bluetooth",
         "Autonomie : 15 heures",
-        "Couleur : Noir"
+       
     ],
 };
 
 let casq3 = {
     id: 36,
     nom: "Sennheiser CX 400BT",
-    spec: "Intra-auriculaire, réduction de bruit passive, filaire",
+    spec: "Intra-auri réduction de bruit",
     marque: "Sennheiser",
     prix: 50,
     id_cat: 6,
@@ -584,50 +584,50 @@ let casq3 = {
         "Type : Intra-auriculaire",
         "Réduction de bruit passive",
         "Connexion : Filaire",
-        "Couleur : Noir"
+     
     ],
 };
 
 let casq4 = {
     id: 37,
     nom: "JBL Club One",
-    spec: "Over-ear, réduction de bruit, autonomie 30 heures",
+    spec: "Over-ear, réduction de bruit",
     marque: "JBL",
     prix: 140,
     id_cat: 6,
     taille: "m",
-    couleur: "blanc",
+    couleur: "Blanc",
     image: "https://m.media-amazon.com/images/I/51JNhjr4McL.__AC_SX300_SY300_QL70_ML2_.jpg",
     FicheTechnique: [
         "Type : Over-ear",
         "Réduction de bruit",
         "Autonomie : 30 heures",
-        "Couleur : Blanc"
+       
     ],
 };
 
 let casq5 = {
     id: 38,
     nom: "Beats Fit Pro",
-    spec: "Intra-auriculaire, sans fil, Bluetooth 5.2, autonomie 10 heures",
+    spec: "Intra-auriculaire, sans fil autonomie 10 heures",
     marque: "JBL",
     prix: 200,
     id_cat: 6,
     taille: "s",
-    couleur: "argent",
+    couleur: "Argent",
     image: "https://m.media-amazon.com/images/I/61yp+9ZkcaL._AC_SX425_.jpg",
     FicheTechnique: [
         "Type : Intra-auriculaire",
         "Connexion : Sans fil (Bluetooth 5.2)",
         "Autonomie : 10 heures",
-        "Couleur : Argent"
+   
     ],
 };
 
 let casq6 = {
     id: 39,
     nom: "Bose 700",
-    spec: "Over-ear, sans fil, Bluetooth 5.3, autonomie 30 heures, réduction active du bruit",
+    spec: "Over-ear, sans fil, Bluetooth, réduction active du bruit",
     marque: "Bose",
     prix: 250,
     id_cat: 6,
@@ -639,52 +639,51 @@ let casq6 = {
         "Connexion : Sans fil (Bluetooth 5.3)",
         "Autonomie : 30 heures",
         "Réduction active du bruit",
-        "Couleur : Noir"
+     
     ],
 };
 
 let casq7 = {
     id: 40,
     nom: "Beats Studio Buds",
-    spec: "Intra-auriculaire, sans fil, Bluetooth 5.2, autonomie 10 heures, son haute fidélité",
+    spec: "Intra-auriculaire, sans fil  son haute fidélité",
     marque: "JBL",
     prix: 200,
     id_cat: 6,
     taille: "S",
-    couleur: "Argent",
+    couleur: "Argenté",
     image: "https://m.media-amazon.com/images/I/61p1-gm4RwL.__AC_SX300_SY300_QL70_ML2_.jpg",
     FicheTechnique: [
         "Type : Intra-auriculaire",
         "Connexion : Sans fil (Bluetooth 5.2)",
         "Autonomie : 10 heures",
         "Son haute fidélité",
-        "Couleur : Argent"
+      
     ],
 };
 
 let casq8 = {
     id: 41,
     nom: "Sony WH-XB900N",
-    spec: "Casque supra-auriculaire, sans fil, Bluetooth 5.0, autonomie 15 heures, commande tactile",
+    spec: "Bluetooth 5.0, autonomie 15 heures, commande tactile",
     marque: "Sony",
     prix: 180,
     id_cat: 6,
     taille: "L",
-    couleur: "Bleu électrique",
+    couleur: "Bleu",
     image: "https://m.media-amazon.com/images/I/61NTYVZTtfL._AC_SX425_.jpg",
     FicheTechnique: [
         "Type : Supra-auriculaire",
         "Connexion : Sans fil (Bluetooth 5.0)",
         "Autonomie : 15 heures",
         "Commande tactile",
-        "Couleur : Bleu électrique"
     ],
 };
 
 let casq9 = {
     id: 42,
     nom: "Jabra Elite 75t",
-    spec: "Intra-auriculaire, sans fil, Bluetooth 5.3, autonomie 12 heures, résistance à l'eau IPX7",
+    spec: "Bluetooth 5.3, autonomie 12 heures",
     marque: "Jabra",
     prix: 220,
     id_cat: 6,
@@ -696,14 +695,14 @@ let casq9 = {
         "Connexion : Sans fil (Bluetooth 5.3)",
         "Autonomie : 12 heures",
         "Résistance à l'eau IPX7",
-        "Couleur : Noir mat"
+      
     ],
 };
 
 let casq10 = {
     id: 43,
     nom: "Sennheiser Momentum 3",
-    spec: "Over-ear, sans fil, Bluetooth 5.0, autonomie 20 heures, réduction passive du bruit",
+    spec: "autonomie 20 heures, réduction passive du bruit",
     marque: "Sennheiser",
     prix: 230,
     id_cat: 6,
@@ -715,14 +714,14 @@ let casq10 = {
         "Connexion : Sans fil (Bluetooth 5.0)",
         "Autonomie : 20 heures",
         "Réduction passive du bruit",
-        "Couleur : Gris argenté"
+       
     ],
 };
 
 let casq11 = {
     id: 44,
     nom: "Sony WF-1000XM4",
-    spec: "Intra-auriculaire, sans fil, Bluetooth 5.1, autonomie 8 heures, son stéréo dynamique",
+    spec: "Intra-auriculaire, sans fil, Bluetooth 5.1",
     marque: "Sony",
     prix: 150,
     id_cat: 6,
@@ -734,14 +733,14 @@ let casq11 = {
         "Connexion : Sans fil (Bluetooth 5.1)",
         "Autonomie : 8 heures",
         "Son stéréo dynamique",
-        "Couleur : Rouge"
+  
     ],
 };
 
 let casq12 = {
     id: 4,
     nom: "Bose SoundSport Free",
-    spec: "Casque supra-auriculaire, sans fil, Bluetooth 5.0, autonomie 25 heures, confortable et léger",
+    spec: "Casque supra-auriculaire, sans fil, Bluetooth 5.0,",
     marque: "Bose",
     prix: 200,
     id_cat: 6,
@@ -753,7 +752,7 @@ let casq12 = {
         "Connexion : Sans fil (Bluetooth 5.0)",
         "Autonomie : 25 heures",
         "Confortable et léger",
-        "Couleur : Vert"
+     
     ],
 };
 
@@ -762,7 +761,7 @@ let casq12 = {
 let souris1 = {
     id: 46,
     nom: "Logitech MX Master 3",  // Marque réelle
-    spec: "Sans fil, Bluetooth, capteur optique, 2 boutons programmables",
+    spec: "Sans fil, Bluetooth, capteur optique,",
     couleur: "noir",
     dpi: 10,
     image: "https://m.media-amazon.com/images/I/61ni3t1ryQL.__AC_SX300_SY300_QL70_ML2_.jpg",
@@ -774,7 +773,7 @@ let souris1 = {
 let souris2 = {
     id: 47,
     nom: "Razer DeathAdder V2",  // Marque réelle
-    spec: "Filaire, USB, capteur laser, 3 boutons programmables",
+    spec: "Filaire, USB, capteur laser, programmables",
     couleur: "noir",
     dpi: 10,
     image: "https://m.media-amazon.com/images/I/51nxsHroOLL.__AC_SX300_SY300_QL70_ML2_.jpg",
@@ -786,7 +785,7 @@ let souris2 = {
 let souris3 = {
     id: 48,
     nom: "Logitech G Pro X Superlight",  // Marque réelle
-    spec: "Sans fil, Bluetooth, capteur optique, 5 boutons programmables",
+    spec: "Sans fil, Bluetooth, capteur optique, 5programmables",
     couleur: "noir",
     dpi: 10,
     image: "https://m.media-amazon.com/images/I/51RPDnJWb1L._AC_SX425_.jpg",
@@ -798,7 +797,7 @@ let souris3 = {
 let souris4 = {
     id: 49,
     nom: "SteelSeries Rival 600",  // Marque réelle
-    spec: "Filaire, USB, capteur optique, 6 boutons programmables",
+    spec: "Filaire, USB, capteur optique, 6programmables",
     couleur: "rouge",
     dpi: 1600,
     image: "img/souris3.png",
@@ -836,7 +835,7 @@ let television1 = {
         "Smart TV : Oui",
         "HDMI : 2.1",
         "Taux de rafraîchissement : 120Hz",
-        "Couleur : Noir"
+     
     ]
 };
 
@@ -856,7 +855,7 @@ let television2 = {
         "Smart TV : AI ThinQ",
         "HDMI : 2.1",
         "Taux de rafraîchissement : 60Hz",
-        "Couleur : Gris"
+       
     ]
 };
 
@@ -875,7 +874,7 @@ let television3 = {
         "Technologie : OLED",
         "Smart TV : Google TV",
         "Taux de rafraîchissement : 120Hz",
-        "Couleur : Noir"
+    
     ]
 };
 
@@ -895,7 +894,7 @@ let television4 = {
         "Dolby Vision : Oui",
         "HDMI : 2.1",
         "Taux de rafraîchissement : 60Hz",
-        "Couleur : Noir"
+     
     ]
 };
 
@@ -915,7 +914,7 @@ let moniteur1 = {
         "Technologie : LED",
         "Connexions : HDMI, DisplayPort",
         "Taux de rafraîchissement : 144Hz",
-        "Couleur : Noir"
+    
     ]
 };
 
@@ -935,7 +934,7 @@ let moniteur2 = {
         "Connexions : USB-C",
         "Ajustable : Oui",
         "Taux de rafraîchissement : 60Hz",
-        "Couleur : Argent"
+   
     ]
 };
 
@@ -946,7 +945,7 @@ let moniteur3 = {
     marque:"Samsung",
     prix: 1200,
     id_cat: 3,
-    couleur: "noir",
+    couleur: "Noir",
     tauxDeRafraichissement: "240Hz",
     image: "https://m.media-amazon.com/images/I/81UXBOWJ-uL.__AC_SY300_SX300_QL70_ML2_.jpg",
     FicheTechnique: [
@@ -954,7 +953,7 @@ let moniteur3 = {
         "Courbé : Oui",
         "Connexions : HDMI, DisplayPort",
         "Taux de rafraîchissement : 240Hz",
-        "Couleur : Noir"
+       
     ]
 };
 
@@ -974,7 +973,7 @@ let moniteur4 = {
         "G-Sync : Oui",
         "Connexions : DisplayPort",
         "Taux de rafraîchissement : 144Hz",
-        "Couleur : Noir"
+    
     ]
 };
 
@@ -982,7 +981,7 @@ let moniteur4 = {
 let refrigerateur1 = {
     id: 70,
     nom: "Réfrigérateur Samsung Double Porte",
-    spec: "Technologie No Frost, distributeur d'eau, congélateur supérieur",
+    spec: "Technologie No Frost, ",
     marque:"samsung",
     prix: 600,
     id_cat: 4,
@@ -994,7 +993,7 @@ let refrigerateur1 = {
         "Distributeur d'eau : Oui",
         "Type de congélateur : Supérieur",
         "Litrage : 350L",
-        "Couleur : Argent"
+      
     ]
 };
 
@@ -1012,7 +1011,7 @@ let refrigerateur2 = {
         "Technologie : Inverter Linear Compressor",
         "Réfrigérateur intelligent : Oui",
         "Litrage : 500L",
-        "Couleur : Inox"
+        
     ]
 };
 
@@ -1031,14 +1030,14 @@ let refrigerateur3 = {
         "Technologie : Inverter",
         "Fonctionnalité : Réfrigération rapide",
         "Litrage : 400L",
-        "Couleur : Blanc"
+       
     ]
 };
 
 let refrigerateur4 = {
     id: 73,
     nom: "Réfrigérateur Sharp Double Porte",
-    spec: "Technologie PlasmaCluster, No Frost, distributeur d'eau",
+    spec: "Technologie distributeur d'eau",
     marque:"samsung",
     prix: 950,
     id_cat: 4,
@@ -1050,7 +1049,7 @@ let refrigerateur4 = {
         "Technologie : No Frost",
         "Distributeur d'eau : Oui",
         "Litrage : 450L",
-        "Couleur : Inox"
+      
     ]
 };
 
@@ -1058,7 +1057,7 @@ let refrigerateur4 = {
 let machineLaver1 = {
     id: 80,
     nom: "Machine à Laver Bosch Série 6",
-    spec: "EcoSilence Drive, programme rapide 30 min, chargement frontal",
+    spec: "EcoSilence Drive, chargement frontal",
     marque:"samsung",
     prix: 400,
     id_cat: 4,
@@ -1070,14 +1069,14 @@ let machineLaver1 = {
         "Programme rapide : 30 minutes",
         "Type de chargement : Frontal",
         "Litrage : 8kg",
-        "Couleur : Blanc"
+      
     ]
 };
 
 let machineLaver2 = {
     id: 81,
     nom: "Machine à Laver Whirlpool FreshCare+",
-    spec: "SteamCare, programme rapide, chargement par le haut",
+    spec: "SteamCare, chargement par le haut",
     marque:"samsung",
     prix: 350,
     id_cat: 4,
@@ -1089,14 +1088,14 @@ let machineLaver2 = {
         "Programme rapide : Oui",
         "Type de chargement : Par le haut",
         "Litrage : 7kg",
-        "Couleur : Gris"
+       
     ]
 };
 
 let machineLaver3 = {
     id: 82,
     nom: "Machine à Laver LG TurboWash",
-    spec: "Direct Drive, chargement frontal, programme vapeur",
+    spec: "Direct Drive, programme vapeur",
     marque:"samsung",
     prix: 500,
     id_cat: 4,
@@ -1108,7 +1107,7 @@ let machineLaver3 = {
         "Programme vapeur : Oui",
         "Type de chargement : Frontal",
         "Litrage : 9kg",
-        "Couleur : Blanc"
+
     ]
 };
 
@@ -1127,7 +1126,7 @@ let machineLaver4 = {
         "Programme rapide : Oui",
         "Type de chargement : Frontal",
         "Litrage : 8kg",
-        "Couleur : Gris"
+   
     ]
 };
 
@@ -1136,7 +1135,7 @@ let machineLaver4 = {
 let microOnde1 = {
     id: 90,
     nom: "Micro-ondes Panasonic Inverter",
-    spec: "Inverter Technology, fonction grill, décongélation rapide",
+    spec: "Inverter  décongélation rapide",
     couleur: "noir",
     image: "https://m.media-amazon.com/images/I/51ghoPy3ptL.__AC_SX300_SY300_QL70_ML2_.jpg",
     litrage: "30L",
@@ -1148,7 +1147,7 @@ let microOnde1 = {
         "Fonction grill : Oui",
         "Décongélation rapide : Oui",
         "Capacité : 30L",
-        "Couleur : Noir",
+       
         "Puissance micro-ondes : 900W",
         "Dimensions (L x H x P) : 51 x 30 x 40 cm"
     ]
@@ -1157,7 +1156,7 @@ let microOnde1 = {
 let microOnde2 = {
     id: 91,
     nom: "Micro-ondes Samsung Solo",
-    spec: "Triple Distribution System, revêtement céramique",
+    spec: "Triple revêtement céramique",
     couleur: "argent",
     image: "https://m.media-amazon.com/images/I/41DaUCtyl8L._AC_SX679_.jpg",
     litrage: "23L",
@@ -1170,15 +1169,14 @@ let microOnde2 = {
         "Capacité : 23L",
         "Puissance micro-ondes : 800W",
         "Fonction de décongélation : Oui",
-        "Couleur : Argent",
-        "Dimensions (L x H x P) : 48 x 27 x 39 cm"
+             "Dimensions (L x H x P) : 48 x 27 x 39 cm"
     ]
 };
 
 let microOnde3 = {
     id: 92,
     nom: "Micro-ondes LG NeoChef",
-    spec: "Smart Inverter, cuisson uniforme, fonction de décongélation",
+    spec: "Smart Inverter, fonction de décongélation",
     couleur: "noir",
     image: "https://m.media-amazon.com/images/I/71xa-kq1SnL.__AC_SY445_SX342_QL70_ML2_.jpg",
     litrage: "25L",
@@ -1191,7 +1189,7 @@ let microOnde3 = {
         "Fonction de décongélation : Oui",
         "Capacité : 25L",
         "Puissance micro-ondes : 1000W",
-        "Couleur : Noir",
+      
         "Dimensions (L x H x P) : 51 x 30 x 40 cm"
     ]
 };
@@ -1199,7 +1197,7 @@ let microOnde3 = {
 let microOnde4 = {
     id: 93,
     nom: "Micro-ondes Bosch Serie 4",
-    spec: "AutoPilot, fonction grill, 5 niveaux de puissance",
+    spec: "AutoPilot, 5 niveaux de puissance",
     couleur: "argent",
     image: "https://m.media-amazon.com/images/I/51+EzU7JRXL._AC_SX342_SY445_.jpg",
     litrage: "28L",
@@ -1212,7 +1210,6 @@ let microOnde4 = {
         "Niveaux de puissance : 5",
         "Capacité : 28L",
         "Puissance micro-ondes : 900W",
-        "Couleur : Argent",
         "Dimensions (L x H x P) : 50 x 29 x 43 cm"
     ]
 };

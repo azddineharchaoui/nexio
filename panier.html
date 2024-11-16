@@ -57,19 +57,19 @@
                 <a href="about.html" class="hover:bg-white hover:text-black rounded-full px-3 py-1">About Us</a>
             </nav>
 
-            <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1 justify-end lg:justify-end">
+            <div class="flex space-x-6 lg:ml-auto lg:flex-row flex-1  items-center  lg:justify-end">
+                <div class="relative flex">
+                  <input type="text" id="champRecherche" placeholder="Rechercher"
+                    class=" m-2.5 p-1 border border-gray-300 w-32 rounded-full text-black" oninput="rechercherProduit()">
+                  <img src="./img/Search.png" alt="search logo" class=" absolute right-5 top-2.5">
+                </div>
+        
                 <a href="#" class="text-white">
-                    <img src="./img/User.png" alt="user logo">
+                  <img src="./img/User.png" alt="user logo">
                 </a>
-
-                <button id="search-button">
-                        <img  src="./img/Search.png" alt="search logo">
-                    </button>
-                <input type="text" id="champRecherche" placeholder="Rechercher un produit..." class="hidden w-full p-2 border border-gray-300 rounded text-black" oninput="rechercherProduit()">
-                
-
+        
                 <a href="panier.html" class="text-white hover:text-gray-300">
-                    <img src="./img/Cart.png" alt="cart logo">
+                  <img src="./img/Cart.png" alt="cart logo">
                 </a>
             </div>
         </div>
@@ -139,7 +139,9 @@
                 
                     <button class="w-full bg-[#ECC013] text-white py-2 rounded-3xl mt-4">Valider ma commande</button>
                 </a>
-                <a href="devis.html" class="w-full bg-black text-center text-white py-2 rounded-3xl mt-2" >Demander un devis</a>
+                <a href="devis.html" target="_blank"  class="w-full bg-black text-center text-white py-2 rounded-3xl mt-2" >Demander un devis</a>
+      
+                
                 <a href="#"
                         class="underline self-center text-gray-500" onclick="clearCart()">Vider mon panier</a>
             </div>
